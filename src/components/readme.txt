@@ -1,0 +1,1 @@
+this is components folder where we create components in this folder not pages 
