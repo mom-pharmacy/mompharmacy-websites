@@ -24,7 +24,6 @@ function App() {
       <Route path='/investors' Component={Investors} />
       <Route path='/contactus' Component={ContactUs} />
       <Route path='/jobdetails' Component={JobDetails} />
-
       <Route path='/career' Component={Career}/>
     </Routes>
     </>
