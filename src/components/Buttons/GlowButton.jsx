@@ -31,7 +31,7 @@ function Button({ title = 'submit', link = '/', icon = null }) {
   return (
     <Link to={link}>
       <motion.button
-        className="relative flex items-center justify-center min-w-[120px] max-w-[280px] h-[48px] px-4 bg-teal-500 text-white rounded-2xl
+        className="relative flex flex-row items-center justify-center min-w-[120px] max-w-[280px] h-[48px] px-4 bg-teal-500 text-white rounded-2xl
                    overflow-hidden text-lg font-semibold cursor-pointer"
         initial="initial"
         whileHover="hover"
