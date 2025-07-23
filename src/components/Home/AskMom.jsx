@@ -2,7 +2,7 @@ import React from 'react'
 
 function AskMom() {
     return ( 
-        <div className=' flex justify-center bg-[#00A79B1A] items-center  border-2 rounded-xl border-[#00A79B] mt-25 mb-25 p-[20px] gap-[50px] w-[60%] m-auto'>
+        <div className=' flex justify-center bg-[#00A79B1A] items-center  border-4 rounded-4xl border-[#00A79B] mt-25 mb-25 p-[20px] gap-[50px] w-[60%] m-auto'>
             <div className='w-40 animate-pulse'>
                 <img src="/Home/askmom.jpg" alt="askmom pillman" />
             </div>
