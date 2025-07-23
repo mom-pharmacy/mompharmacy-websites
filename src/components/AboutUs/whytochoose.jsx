@@ -57,6 +57,7 @@ export default function WhyChooseUsBanner() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
+    pauseOnHover: false,
     beforeChange: (_, next) => setActiveIndex(next),
   };
 
@@ -68,13 +69,19 @@ export default function WhyChooseUsBanner() {
   return (
     <div className='flex items-center justify-center'>
     <div className="bg-white md:px-8 rounded-xl shadow max-w-7xl text-center items-center justify-center">
-      <h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-['Fredoka_One'] ">why to choose us</h2>
+      <motion.h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-['Fredoka_One']"
+      whileHover={{scale: 1.05}}
+      transition={{duration: 0.3, ease: 'easeOut'}}
+      >why to choose us</motion.h2>
       <p className="text-gray-600 max-w-2xl font-['DM_Sans'] mx-auto font-normal text-xl mb-6">
         every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
       </p>
       <motion.div className="flex flex-wrap gap-10 mb-8 bg-teal-500 rounded-xl h-15">
         {tabs.map((tab, index) => (
-          <button
+          <motion.button
+          whileHover={{scale: 1.1}}
+          transition={{duration: 0.1, ease: 'easeOut'}}
+          whileTap={{scale: 0.90}}
             key={tab.key}
             onClick={() => handleTabClick(index)}
             className={`p-2 m-1 pr-10 font-medium rounded-lg transition h-13 font-sans text-2xl
@@ -84,7 +91,7 @@ export default function WhyChooseUsBanner() {
             `}
           >
             {tab.label}
-          </button>
+          </motion.button>
         ))}
       </motion.div>
       <Slider {...settings} ref={sliderRef}>
