@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Details() {
   return (
-    <div className='flex'>
+    <div className='flex px-20 pb-10 gap-10'>
         <div>
             <h2 className="text-3xl font-bold text-[#00a79b] mb-2">the successful candidate will demonstrate the following skills and competencies:</h2>
             <ul className="list-disc pl-8 text-black-700 text-lg">
