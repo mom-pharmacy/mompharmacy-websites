@@ -24,6 +24,7 @@ export default function EnquiryForm() {
         body: JSON.stringify(formData)
       });
 
+
       if (response.ok) {
         alert("Enquiry submitted successfully!");
         setFormData({
@@ -41,22 +42,21 @@ export default function EnquiryForm() {
       alert("An error occurred.");
     }
   };
-
   return (
-    <div className="bg-white-500 rounded-xl shadow h-120 w-200 border-2 shadow border-[#00a99d]">
+    <div className="bg-white rounded-xl shadow h-120 w-200 border-2 shadow border-[#00a99d] mt-15">
       <div className="bg-[#00a99d] rounded-2xl flex flex-wrap h-113 w-65 inline-block text-left p-1 m-3">
         <div className="p-1 ml-3 mb-30">
           <h1 className="text-white text-3xl font-bold mt-2">enquiry form</h1>
           <p className="text-white text-2xl">invest in us to create a healthy experience</p>
         </div>
         <div className="justify-left mb-2">
-          <p className="text-white"><img className="h-5 w-5 inline-block ml-2 mr-3" src="/src/assets/call.png" alt="call" />+917702068334</p>
+          <p className="text-white"><img className="h-5 w-5 inline-block ml-2 mr-3" src="/src/assets/Investors/call.png" alt="call" />+917702068334</p>
         </div>
         <div className="justify-left mb-2">
-          <p className="text-[#fadb14]"><img className="h-5 w-5 inline-block ml-2 mr-3" src="/src/assets/email.png" alt="email" />ps@mompharmacy.in</p>
+          <p className="text-[#fadb14]"><img className="h-5 w-5 inline-block ml-2 mr-3" src="/src/assets/Investors/email.png" alt="email" />ps@mompharmacy.in</p>
         </div>
         <div className="justify-left">
-          <img className="h-5 w-5 inline ml-2 mr-3" src="/src/assets/location.png" alt="location" /><p className="text-white inline">
+          <img className="h-5 w-5 inline ml-2 mr-3" src="/src/assets/Investors/location.png" alt="location" /><p className="text-white inline">
             100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081</p>
         </div>
       </div>
