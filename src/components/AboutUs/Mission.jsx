@@ -18,6 +18,7 @@ function ConcentricCircle() {
 function Mission() {
     return (
         <>
+        <div>
             <div className='flex justify-between items-center px-20'>
 
                 <div className="flex items-center gap-4">
@@ -77,6 +78,7 @@ function Mission() {
                             alt='capsule' />
                     </motion.div>
                 </div>
+            </div>
             </div>
         </>
     );

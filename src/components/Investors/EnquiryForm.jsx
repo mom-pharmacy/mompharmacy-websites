@@ -3,7 +3,7 @@ import React, {useRef, useState} from "react";
 export default function EnquiryForm(){
     return (
         <>
-        <div className="bg-white-500 rounded-xl shadow h-120 w-200 border-2 shadow border-[#00a99d] ">
+        <div className="bg-white rounded-xl shadow h-120 w-200 border-2 shadow border-[#00a99d] ">
             <div className="bg-[#00a99d] rounded-2xl flex flex-wrap h-113 w-65 inline-block text-left p-1 m-3 ">
                 <div className="p-1 ml-3 mb-30">
                 <h1 className="text-white text-3xl font-bold mt-2">enquiry form</h1>
