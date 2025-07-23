@@ -64,19 +64,19 @@ export default function WhyChooseUsBanner() {
   };
 
   return (
-    <div className="bg-white py-10 px-4 md:px-8 rounded-xl shadow max-w-5xl mx-auto text-center">
-      <h2 className="text-teal-600 font-bold text-2xl mb-2 capitalize">why to choose us</h2>
-      <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-6">
+    <div className="bg-white md:px-8 rounded-xl shadow max-w-7xl text-center">
+      <h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-fredoka-one ">why to choose us</h2>
+      <p className="text-gray-600 max-w-2xl font-sans mx-auto font-normal text-xl mb-6">
         every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
       </p>
-      <div className="flex flex-wrap justify-center gap-4 mb-8 bg-teal-500 rounded-xl p-2">
+      <div className="flex flex-wrap gap-10 mb-8 bg-teal-500 rounded-xl h-15">
         {tabs.map((tab, index) => (
           <button
             key={tab.key}
             onClick={() => handleTabClick(index)}
-            className={`p-2 m-1 pr-10 text-sm font-medium rounded-lg transition
+            className={`p-2 m-1 pr-10 font-medium rounded-lg transition h-13 font-sans text-2xl
               ${activeIndex === index
-                ? 'bg-yellow-500 text-black p-10'
+                ? 'bg-yellow-500 text-black'
                 : 'bg-teal-500 text-white'}
             `}
           >
@@ -87,15 +87,15 @@ export default function WhyChooseUsBanner() {
       <Slider {...settings} ref={sliderRef}>
         {tabs.map((tab) => (
           <div key={tab.key}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-teal-100 h-auto rounded-lg border border-teal-500 p-5">
-              <div className="max-w-md text-gray-600 font-bold text-xl mb-4 md:mb-0 text-center md:text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-teal-100 h-150 w-280 rounded-lg border border-teal-500 m-7">
+              <div className="max-w-md text-gray-600 font-semibold text-4xl  md:text-center">
                 {tab.text}
               </div>
               <div>
                 <img
                   src={tab.image}
                   alt={tab.label}
-                  className="w-48 h-auto rounded-lg shadow-md"
+                  className="w-75 h-auto rounded-lg shadow-md ml-25"
                 />
               </div>
             </div>
