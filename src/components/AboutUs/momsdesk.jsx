@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const MomsDesk = () => {
   const [current, setCurrent] = useState(0);
@@ -44,10 +45,11 @@ const MomsDesk = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center gap-8 p-4 sm:p-6 md:p-8 bg-white">
+    <div className="flex flex-col justify-center items-center gap-8 p-4 sm:p-6 md:p-8 bg-white">
       <motion.h1
         className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center"
         whileHover={{ scale: 1.1, rotate: -1 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
         style={{ fontFamily: '"Fredoka One", sans-serif' }}
       >
         from mom’s desk
@@ -60,10 +62,16 @@ const MomsDesk = () => {
       >
         <Slider ref={sliderRef} {...settings}>
           {slides.map((item, index) => (
+
             <div
               key={index}
               className="flex flex-col justify-center items-center text-center"
             >
+
+              <div className="flex justify-center">
+                <FaQuoteLeft size={50} color="#00a99d" />
+              </div>
+
               <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 lowercase">
                 {item.quote}
               </p>

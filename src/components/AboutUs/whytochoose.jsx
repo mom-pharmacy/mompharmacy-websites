@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import easyLogin from '/src/assets/easy_login.png';
-import prescriptionOrder from '/src/assets/prescription_orser.png';
-import quickDelivery from '/src/assets/quick_delivery.png';
-import trustedCare from '/src/assets/trusted_care.png';
-import bloodDonation from '/src/assets/blood_donation.png';
+import {motion} from 'framer-motion';
+import easyLogin from '/src/assets/AboutUs/whytochoose/easy_login.png';
+import prescriptionOrder from '/src/assets/AboutUs/whytochoose/prescription_orser.png';
+import quickDelivery from '/src/assets/AboutUs/whytochoose/quick_delivery.png';
+import trustedCare from '/src/assets/AboutUs/whytochoose/trusted_care.png';
+import bloodDonation from '/src/assets/AboutUs/whytochoose/blood_donation.png';
 
 const tabs = [
   {
@@ -83,7 +83,7 @@ export default function WhyChooseUsBanner() {
             {tab.label}
           </button>
         ))}
-      </div>
+      </motion.div>
       <Slider {...settings} ref={sliderRef}>
         {tabs.map((tab) => (
           <div key={tab.key}>

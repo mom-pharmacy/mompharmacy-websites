@@ -15,7 +15,6 @@ function ConcentricCircle() {
 }
 
 // main component 
-
 function Mission() {
     return (
         <>
@@ -30,7 +29,6 @@ function Mission() {
                     </motion.h1>
                 </div>
 
-                {/* Group 2: Vision Text + Circle */}
                 <div className="flex items-center gap-4">
                     <motion.h1 className="font-['Fredoka_One'] text-2xl md:text-4xl lg:text-6xl font-bold text-[#00a99d]"
                         whileHover={{ scale: 1.05, rotate: -2 }}
@@ -46,7 +44,7 @@ function Mission() {
                 {/* Mission code */}
                 <div className='flex flex-col items-start p-5 ml-20'>
                     <motion.div
-                        className='relative bg-white w-auto h-auto rounded-lg border-2 border-dashed border-[#00a99d] p-4 hover:border-solid'
+                        className='relative bg-white w-auto h-auto rounded-lg border-2 border-dashed border-[#00a99d] p-4 hover:border-solid overflow-visible'
                         whileHover={{ scale: 1.1, boxShadow: '0px 10px 20px rgba(0,0,0,0.6)' }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}>
 
@@ -56,13 +54,10 @@ function Mission() {
                             every home is just moments away from well-being.</p>
 
                         <img src={ImageCapsule}
-                            className='absolute bottom-[-130px] right-[50px] transform translate-x-1/2 w-[550px] h-[250px] md:w-32'
+                            className='absolute bottom-[-100px] right-[-40px] w-32 h-auto md:w-48'
                             alt='capsule' />
                     </motion.div>
                 </div>
-
-
-
 
                 {/* vision code */}
                 <div className='flex flex-col p-5 mr-20'>
@@ -75,10 +70,10 @@ function Mission() {
                          delivering not just medicines, but peace of mind, through <br />
                          technology that feels like a mother's care: fast, reliable,<br /> 
                         and full of heart, making exceptional wellness accessible.<br /> </p>
-
+                        
                         <img
                             src={ImageCapsule}
-                            className='absolute bottom-[-130px] right-[45px] transform translate-x-1/2 w-[550px] h-[250px] md:w-32'
+                            className='absolute bottom-[-100px] right-[-40px] w-32 h-auto md:w-48'
                             alt='capsule' />
                     </motion.div>
                 </div>
