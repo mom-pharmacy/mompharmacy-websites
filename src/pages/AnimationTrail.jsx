@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 function AnimationTrail(){
 
-   
+//    const x = useTransform()
 
     return <div>
         <motion.div>
