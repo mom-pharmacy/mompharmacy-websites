@@ -11,13 +11,13 @@ export default function EnquiryForm(){
                 </div>
             <div className="justify-left mb-2">
                 
-                <p className="text-white"><img className="h-5 w-5 inline-block ml-2 mr-3"src='/src/assets/call.png' alt='call icon' />+917702068334</p>
+                <p className="text-white"><img className="h-5 w-5 inline-block ml-2 mr-3"src='/src/assets/Investors/call.png' alt='call icon' />+917702068334</p>
             </div>
             <div className="justify-left text-left items-left mb-2">
-                <p className="text-[#fadb14]"><img className="h-5 w-5 inline-block ml-2 mr-3"src='/src/assets/email.png' alt='call icon' />ps@mompharmacy.in</p>
+                <p className="text-[#fadb14]"><img className="h-5 w-5 inline-block ml-2 mr-3"src='/src/assets/Investors/email.png' alt='call icon' />ps@mompharmacy.in</p>
             </div>
             <div className="justify-left text-left items-left">
-               <img className="h-5 w-5 inline ml-2 mr-3"src='/src/assets/location.png' alt='call icon' /> <p className="text-white inline">100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </p>
+               <img className="h-5 w-5 inline ml-2 mr-3"src='/src/assets/Investors/location.png' alt='call icon' /> <p className="text-white inline">100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </p>
             </div>
             </div>
             <div className="inline-block ml-7 bg-white-500">
