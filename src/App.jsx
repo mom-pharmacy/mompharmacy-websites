@@ -9,6 +9,7 @@ import Investors from './pages/Investors'
 import ContactUs from './pages/ContactUs'
 import JobDetails from './pages/Careers/JobDetails'
 
+import { Career } from './pages/Careers/Career'
 
 function App() {
  
@@ -23,7 +24,7 @@ function App() {
       <Route path='/investors' Component={Investors} />
       <Route path='/contactus' Component={ContactUs} />
       <Route path='/jobdetails' Component={JobDetails} />
-
+      <Route path='/career' Component={Career}/>
     </Routes>
     </>
   )
