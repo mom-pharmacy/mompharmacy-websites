@@ -7,7 +7,7 @@ function Button({ title = 'Button', link = '/', icon = null }) {
     <Link to={link}>
       <motion.button
         className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-white rounded-[104px]
-                   whitespace-nowrap overflow-hidden text-ellipsis text-sm font-semibold transition-all duration-300"
+                   whitespace-nowrap overflow-hidden text-ellipsis text-sm font-semibold transition-all duration-300 cursor-pointer flex flex-row items-center justify-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
