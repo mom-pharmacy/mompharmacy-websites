@@ -3,6 +3,7 @@ import '@fontsource/fredoka-one';
 import Button from '../Buttons/Button';
 import GlowButton from '../Buttons/GlowButton';
 import { motion } from 'framer-motion';
+import EnquiryForm from './EnquiryForm';
 
 function Header() {
     return (
@@ -21,6 +22,8 @@ function Header() {
                 <GlowButton title="invest in us" link="/EnquiryForm" />
                 <Button title="view pitch deck" link='/home' /> 
                 </div>
+
+                <EnquiryForm />
 
             </div>
         </div>
