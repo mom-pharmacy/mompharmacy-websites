@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import easyLogin from '/src/assets/easy_login.png';
-import prescriptionOrder from '/src/assets/prescription_orser.png';
-import quickDelivery from '/src/assets/quick_delivery.png';
-import trustedCare from '/src/assets/trusted_care.png';
-import bloodDonation from '/src/assets/blood_donation.png';
+import {motion} from 'framer-motion';
+import easyLogin from '/src/assets/AboutUs/whytochoose/easy_login.png';
+import prescriptionOrder from '/src/assets/AboutUs/whytochoose/prescription_orser.png';
+import quickDelivery from '/src/assets/AboutUs/whytochoose/quick_delivery.png';
+import trustedCare from '/src/assets/AboutUs/whytochoose/trusted_care.png';
+import bloodDonation from '/src/assets/AboutUs/whytochoose/blood_donation.png';
 
 const tabs = [
   {
@@ -69,7 +69,8 @@ export default function WhyChooseUsBanner() {
       <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-6">
         every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
       </p>
-      <div className="flex flex-wrap justify-center gap-4 mb-8 bg-teal-500 rounded-xl p-2">
+      <motion.div className="flex flex-wrap justify-center gap-4 mb-8 bg-teal-500 rounded-xl p-2"
+      whileHover={{scale: 1.05}}>
         {tabs.map((tab, index) => (
           <button
             key={tab.key}
@@ -83,11 +84,11 @@ export default function WhyChooseUsBanner() {
             {tab.label}
           </button>
         ))}
-      </div>
+      </motion.div>
       <Slider {...settings} ref={sliderRef}>
         {tabs.map((tab) => (
           <div key={tab.key}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-teal-100 h-auto rounded-lg border border-teal-500 p-5">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-[#00A79B1A] h-auto rounded-lg border border-teal-500 p-5">
               <div className="max-w-md text-gray-600 font-bold text-xl mb-4 md:mb-0 text-center md:text-center">
                 {tab.text}
               </div>
