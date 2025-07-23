@@ -1,5 +1,5 @@
 import React from "react";
-import { FiArrowRight } from "react-icons/fi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const CareerProgram = () => {
 
@@ -21,11 +21,14 @@ const CareerProgram = () => {
 
       <div className="p-10 text-center flex flex-wrap justify-center">
         {programs.map((program, index) => (
-          <button key={index} className="border-2 border-teal-600 text-teal-600 font-semibold py-2 px-6 
-          rounded-md m-2 hover:bg-[#FADB14] hover:border-none hover:text-black hover text-xl transition
-          duration-300 w-60 p-10 text-2xl flex items-center justify-between h-14">
+          <button
+            key={index}
+            className=" group border-2 border-teal-600 text-teal-600 font-semibold py-2 px-6 
+          rounded-md m-2 hover:bg-[#FADB14] hover:border-[#FADB14] hover:text-black hover text-xl transition
+          duration-300 w-60 p-10 text-2xl flex items-center justify-between h-14"
+          >
             <span>{program}</span>
-            <FiArrowRight className="ml-3 text-2xl" />
+            <FaArrowRightLong className="ml-3 text-2xl transition-transform duration-700 ease-in-out group-hover:-rotate-45" />
           </button>
         ))}
       </div>
