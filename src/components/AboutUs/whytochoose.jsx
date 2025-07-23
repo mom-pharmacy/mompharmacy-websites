@@ -90,8 +90,8 @@ export default function WhyChooseUsBanner() {
       <Slider {...settings} ref={sliderRef}>
         {tabs.map((tab) => (
           <div key={tab.key}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-teal-100 h-150 w-280 rounded-lg border border-teal-500 m-7">
-              <div className="max-w-md text-gray-600 text-4xl  md:text-center font-['DM_Sans']">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-[#d5ece9] h-150 w-280 rounded-lg border border-teal-500 m-7">
+              <div className="max-w-md text-gray-600 text-4xl md:text-center font-['DM_Sans']">
                 {tab.text}
               </div>
               <div>
