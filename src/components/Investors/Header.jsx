@@ -19,7 +19,7 @@ function Header() {
                 </motion.div>
                 
                 <div className='flex flex-row gap-5 mt-10'>
-                <GlowButton title="invest in us" link="/EnquiryForm" />
+                <GlowButton title="invest in us" link="/investors" />
                 <Button title="view pitch deck" link='/home' /> 
                 </div>
 
