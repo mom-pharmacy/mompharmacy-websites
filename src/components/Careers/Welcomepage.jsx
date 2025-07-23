@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../../assets/Careerpage/image.png'
+import Image from '../../assets/Careerpage/tablets.png'
 
 const Welcome = () => {
     return (
@@ -14,7 +14,7 @@ const Welcome = () => {
             </div>
             <div className='flex flex-col items-center'>
                 <div className='flex-1 p-10'>
-                    <button className='text-black  bg-white hover:bg-yellow-300 text-3xl font-semibold  h-15 w-60 rounded-full'><p className='text-center'>explore jobs</p></button>
+                    <button className='text-black bg-white hover:bg-yellow-300 text-3xl font-semibold  h-15 w-60 rounded-full'><p className='text-center'>explore jobs</p></button>
                 </div>
                 <div className='flex-1 mb-100'>
                     <img src={Image} className='h-50 w-120' />
@@ -22,6 +22,6 @@ const Welcome = () => {
             </div>
         </div>
 
-    )
-}
+    );
+};
 export default Welcome
