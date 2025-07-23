@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 export default function EnquiryForm() {
@@ -71,6 +72,7 @@ export default function EnquiryForm() {
             <div className="w-1/2">
               <label htmlFor="name" className="block mb-2 text-xl font-medium text-teal-500">your name *</label>
               <input type="text" id="name" value={formData.name} onChange={handleChange} className="bg-gray-50 border-2 border-teal-500 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="enter your name" required/>
+
             </div>
             <div className="w-1/2">
               <label htmlFor="mobile" className="block mb-2 text-xl font-medium text-teal-500">your contact *</label>

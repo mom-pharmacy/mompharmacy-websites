@@ -2,12 +2,14 @@ import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import easyLogin from '/src/assets/easy_login.png';
-import prescriptionOrder from '/src/assets/prescription_orser.png';
-import quickDelivery from '/src/assets/quick_delivery.png';
-import trustedCare from '/src/assets/trusted_care.png';
-import bloodDonation from '/src/assets/blood_donation.png';
+import {motion} from 'framer-motion';
+import easyLogin from '/src/assets/AboutUs/whytochoose/easy_login.png';
+import prescriptionOrder from '/src/assets/AboutUs/whytochoose/prescription_orser.png';
+import quickDelivery from '/src/assets/AboutUs/whytochoose/quick_delivery.png';
+import trustedCare from '/src/assets/AboutUs/whytochoose/trusted_care.png';
+import bloodDonation from '/src/assets/AboutUs/whytochoose/blood_donation.png';
+import '@fontsource/fredoka-one';
+import '@fontsource/dm-sans';
 
 const tabs = [
   {
@@ -64,12 +66,13 @@ export default function WhyChooseUsBanner() {
   };
 
   return (
-    <div className="bg-white md:px-8 rounded-xl shadow max-w-7xl text-center">
-      <h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-fredoka-one ">why to choose us</h2>
-      <p className="text-gray-600 max-w-2xl font-sans mx-auto font-normal text-xl mb-6">
+    <div className='flex items-center justify-center'>
+    <div className="bg-white md:px-8 rounded-xl shadow max-w-7xl text-center items-center justify-center">
+      <h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-['Fredoka_One'] ">why to choose us</h2>
+      <p className="text-gray-600 max-w-2xl font-['DM_Sans'] mx-auto font-normal text-xl mb-6">
         every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
       </p>
-      <div className="flex flex-wrap gap-10 mb-8 bg-teal-500 rounded-xl h-15">
+      <motion.div className="flex flex-wrap gap-10 mb-8 bg-teal-500 rounded-xl h-15">
         {tabs.map((tab, index) => (
           <button
             key={tab.key}
@@ -83,12 +86,12 @@ export default function WhyChooseUsBanner() {
             {tab.label}
           </button>
         ))}
-      </div>
+      </motion.div>
       <Slider {...settings} ref={sliderRef}>
         {tabs.map((tab) => (
           <div key={tab.key}>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-teal-100 h-150 w-280 rounded-lg border border-teal-500 m-7">
-              <div className="max-w-md text-gray-600 font-semibold text-4xl  md:text-center">
+              <div className="max-w-md text-gray-600 text-4xl  md:text-center font-['DM_Sans']">
                 {tab.text}
               </div>
               <div>
@@ -102,6 +105,7 @@ export default function WhyChooseUsBanner() {
           </div>
         ))}
       </Slider>
+    </div>
     </div>
   );
 }
