@@ -19,7 +19,7 @@ function Workflow() {
         </div>
       </div>
       <div>
-        <img src="/Home/pill.png " className="w-345  ml-17 " />
+        <img src="/Home/pillmotion1.png " className="w-345  ml-17 " />
       </div>
       <Flowwork
         name="Upload it "
@@ -41,7 +41,7 @@ function Workflow() {
         </div>
       </div>
       <div>
-        <img src="/Home/pill.png " className="w-345  ml-12" />
+        <img src="/Home/pillmotion1.png " className="w-345  ml-12" />
       </div>
       <div className=" flex flex-col  text-5xl font-bold text-[#00A79B]  ">
         <div className=" flex justify-end ">
