@@ -1,0 +1,189 @@
+import React, { useRef, useEffect } from "react";
+import { motion, useScroll, useInView, useAnimation } from "framer-motion";
+
+export default function KeyDetails() {
+  const containerRef = useRef(null);
+  const inInView = useInView(containerRef, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (inInView) {
+      mainControls.start("visible");
+    }
+  }, [inInView, mainControls]);
+
+  return (
+    <div className="flex items-center py-10 px-20 gap-10 justify-center">
+      <div ref={containerRef} className="flex-1">
+        <motion.p
+          whileHover={{ scale: 1.05, rotate: 2 }}
+          transition={{ duration: 1, ease: "easeOut" ,delay:0.1 }}
+          className="text-4xl mb-2 font-bold text-[#00a79b] text-left"
+        >
+          the role
+        </motion.p>
+        <motion.p
+          animate={mainControls}
+          initial="hidden"
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay:0.2 }}
+          className="text-xl text-black-700 text-left font-400"
+        >
+          As a Principal Functional Architect you will leverage your extensive
+          experience in S/4 HANA integrations and financial modules to drive
+          impactful solutions in the Corporate and Finance and Utilities
+          domains. You will work in a hybrid model collaborating with
+          cross-functional teams to optimize business processes and enhance
+          system efficiencies. Your expertise in Generative AI and S/4 HANA will
+          be pivotal in transforming financial operations and achieving
+          strategic objectives.
+        </motion.p>
+      </div>
+
+      <div className="flex-initial">
+        <motion.div
+          // whileHover={{ scale: 1.05, rotate: -2 , boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.6)"}}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ mainControls, opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="w-100 p-2 rounded-lg shadow-md border-2 border-dashed border-[#00a79b]"
+        >
+          <h2 className="text-3xl font-bold text-[#00a79b] mb-2">
+            key job details
+          </h2>
+
+          <form ref={containerRef} className="space-y-2 text-lg">
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">job no:</label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                00064663191
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.2 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">
+                travel required:
+              </label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                no
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }}
+              className="flex items-center"
+            >
+              <label className="w-40  text-black-700 font-medium ">
+                job category:
+              </label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                Digital
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.4 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">
+                location:
+              </label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                Hyderabad,India
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.5 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">
+                date published:
+              </label>
+              <p className=" font-semibold ml-2 border-1 p-1 w-50 rounded text-[#00a79b] bg-[#00A79B1A] ">
+                15 July 2024
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.6 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">
+                employment type:
+              </label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                Full Time
+              </p>
+            </motion.div>
+            <motion.div
+              animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x: "70px", opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.7 }}
+              className="flex items-center"
+            >
+              <label className="w-40 text-black-700 font-medium">
+                work model:
+              </label>
+              <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
+                In-office
+              </p>
+            </motion.div>
+          </form>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
