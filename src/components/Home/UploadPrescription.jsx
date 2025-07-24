@@ -71,9 +71,9 @@ const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}
 
             <div className="flex flex-col gap-3">
               <h1 className="whitespace-pre text-[#00A79B]">Your subject*                                                          20 words</h1>
-              <input type="text-area" placeholder="" className="outline-1 w-105  h-2 rounded-sm outline-[#00A79B]  p-5"/>
+              <input type="text-area" placeholder="" className="outline-1 w-105  h-6 rounded-sm outline-[#00A79B] "/>
               <h1 className="whitespace-pre text-[#00A79B]">additional details*                                                  100 words</h1>
-              <input type="text-area" placeholder="write message here" className="outline-1 w-105 h-15 rounded-sm outline-[#00A79B] p-5 "/>
+              <input type="text-area" placeholder="write message here" className="outline-1 w-105 h-15 rounded-sm outline-[#00A79B]  "/>
                
             </div>
                 <div className='flex flex-row justify-between'>
