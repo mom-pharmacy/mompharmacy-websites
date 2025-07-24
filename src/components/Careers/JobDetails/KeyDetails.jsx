@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { motion, useScroll, useInView, useAnimation } from "framer-motion";
-
+import {CareerContext} from "../../../context/career";
 export default function KeyDetails() {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
   const mainControls = useAnimation();
+  const career = useContext(CareerContext);
 
   useEffect(() => {
     if (inInView) {
@@ -70,7 +71,7 @@ export default function KeyDetails() {
             >
               <label className="w-40 text-black-700 font-medium">job no:</label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                00064663191
+                {career.job_no}
               </p>
             </motion.div>
             <motion.div
@@ -88,7 +89,7 @@ export default function KeyDetails() {
                 travel required:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                no
+                {career.travel}
               </p>
             </motion.div>
             <motion.div
@@ -124,7 +125,8 @@ export default function KeyDetails() {
                 location:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                Hyderabad,India
+                
+                {career.location}
               </p>
             </motion.div>
             <motion.div
