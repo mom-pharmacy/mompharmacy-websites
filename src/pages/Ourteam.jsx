@@ -9,7 +9,7 @@ import Departments from "../components/OurTeam/Departments";
 function Ourteam() {
   return (
     <div className="">
-      <Maincard></Maincard>
+      <Maincard />
       <Founder></Founder>
       <Departments></Departments>
       <MomsDesk></MomsDesk>

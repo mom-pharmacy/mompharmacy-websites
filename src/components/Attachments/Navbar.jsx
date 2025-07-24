@@ -50,6 +50,12 @@ export const navbarList = [
         imageUrl:null   ,
         link:"/contactus"   
     },
+    {
+        id:8 , 
+        title:"animation" , 
+        imageUrl:null   ,
+        link:"/animation"   
+    },
     
     
 ]
