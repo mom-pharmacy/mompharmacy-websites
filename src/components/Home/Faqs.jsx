@@ -31,9 +31,9 @@ function Faqs() {
 
     console.log(activeAnswer)
 
-    return <div className="w-[100%] m-auto bg-white pt-15 ">
+    return <div className="w-[100%] m-auto bg-white pt-20 ">
         <div className="flex items-center justify-center mb-[-20px]">
-            <div className="font-bold text-[50px] text-[#00A79B]">
+            <div className="font-bold text-[65px] text-[#00A79B]">
                 frequently asked questions?
             </div>
             <div className="animate-bounce">

@@ -21,7 +21,7 @@ const scale6 = useTransform(scrollYProgress , [0,0] , [0,1])
             <motion.div style={{scale:scale4}} className='sticky bg-white w-screen top-0 absolute '>
                 <div  className=' h-[30vh]   '>
                     <p className='flex justify-center items-center text-[250px] text-[#00A79B] '><motion.h1  style={{scale:scale5}}>st</motion.h1><span >
-                        <img src="/Home/ourStory.jpg" alt="ourstory image" className='h-[250px] w-[250px] rounded-full fill placeholder-blur object-fit'></img>
+                        <img src="/Home/ourStory.jpg" alt="ourstory image" className='h-[250px] w-[250px] rounded-full fill blur-[0.5px] object-fit'></img>
                         </span><motion.h1  style={{scale:scale6}} >ry</motion.h1></p>
                 </div>
             </motion.div>
