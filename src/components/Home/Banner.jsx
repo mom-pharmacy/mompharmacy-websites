@@ -21,9 +21,9 @@ const Banner = () => {
           <DownloadApp downloadapp={downloadapp} setDownloadApp={setDownloadApp}/>
     </>
 
-      <div className="overflow-x-hidden ">   
+      <div className="overflow-x-hidden">   
                
-        <div className="bg-[#00A79B] w-100% h-180 flex flex-col gap-15 items-center justify-center">
+        <div className="bg-[#00A79B] w-100% h-110 flex flex-col gap-15 items-center justify-center"> 
           <div className="flex">
             <div>
              
@@ -66,9 +66,8 @@ const Banner = () => {
               </span>
             </button>
           </div>
-
         </div>
-      {/* <EarlyAccess/> */}
+      
       </div>
 
      
