@@ -7,7 +7,7 @@ const Welcome = () => {
     <div className="bg-[#00a79b] w-full py-10 px-4">
      
       <div className="text-center space-y-4 mb-10">
-        <p className="text-white text-4xl md:text-5xl lg:text-7xl font-bold ml-115">
+        <p className="text-white text-4xl md:text-5xl lg:text-7xl sm:text:3xl font-bold ml-100">
           <BlurText
             text="welcome to careers"
             delay={50}
@@ -15,7 +15,7 @@ const Welcome = () => {
             direction="top"
           />
         </p>
-        <p className="text-yellow-300 text-4xl md:text-5xl lg:text-7xl font-bold ml-115">
+        <p className="text-yellow-300 text-4xl md:text-5xl lg:text-7xl font-bold ml-100">
            <BlurText
             text=" @mom pharmacy"
             delay={100}
@@ -23,7 +23,7 @@ const Welcome = () => {
             direction="top"
           />  
         </p>
-        <p className="text-white text-3xl md:text-4xl lg:text-7xl font-bold ml-115">
+        <p className="text-white text-3xl md:text-4xl lg:text-7xl font-bold ml-100">
            <BlurText
             text="let's work together"
             delay={150}

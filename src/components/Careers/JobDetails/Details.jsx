@@ -13,7 +13,7 @@ export default function Details() {
   }, [inInView, mainControls]);
 
   return (
-    <div  className='flex px-20 pb-10 gap-10'>
+    <div  className='items-center px-20 gap-10 justify-center flex flex-col md:flex-row sm:flex-row'>
         <div ref={containerRef}>
             <motion.h2 
             animate={mainControls}
@@ -35,7 +35,7 @@ export default function Details() {
               exit={{ x: "50%", opacity: 0 }}
               transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }} 
             className="list-disc pl-8 text-black-700 text-lg">
-                <li>xperience of delivering several project/programs in SAP FICO with specialization in Treasury</li>
+                <li>Experience of delivering several project/programs in SAP FICO with specialization in Treasury</li>
                 <li>Experience of S/4 HANA BAM – Bank Account Management</li>
                 <li>Experience in APM – Advanced Payment Management</li>
                 <li>Experience in S/4 HANA complete scope Cash Management</li>
@@ -86,7 +86,7 @@ export default function Details() {
               }}
               exit={{ x: "50%", opacity: 0 }}
               transition={{ duration: 0.78, ease: "easeInOut", delay: 0.7 }} 
-            className="list-disc pl-8 text-black-700 text-lg">
+            className="list-disc pl-8 text-black-700 text-lg ">
                 <li>Lead the design and implementation of S/4 HANA FI-SD and FI-MM integrations to streamline financial processes and improve data accuracy.</li>
                 <li>Oversee the integration of S/4 HANA Accounts Receivables and Profitability Analysis to enhance financial reporting and decision-making.</li>
                 <li>Provide expert guidance on S/4 HANA Cost Center Accounting and SAP Controlling to optimize cost management and resource allocation.</li>
