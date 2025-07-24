@@ -40,7 +40,7 @@ function Faqs() {
                 <img src="/Home/pillmanFaqs.jpg" alt="pillman" />
             </div>
         </div>
-        {faqsList.map(item => <div key={item.id} className="cursor-pointer w-[80%] m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] mt-5 mb-5 rounded-xl">
+        {faqsList.map(item => <div key={item.id} className="cursor-pointer w-[80%] m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] mt-5  rounded-xl">
             <div className="flex justify-between items-center">
                 <button onClick={() => {
                     console.log("this is logging")
