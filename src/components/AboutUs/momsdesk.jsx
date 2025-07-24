@@ -41,6 +41,7 @@ const MomsDesk = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
+    pauseOnHover: false,
     beforeChange: (_, next) => setCurrent(next),
   };
 

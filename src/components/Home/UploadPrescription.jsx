@@ -19,9 +19,13 @@ const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}
   }
   return (
     <AnimatePresence mode='wait'>
+
     {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0, display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center ' >
         <div className="flex flex-row gap-12 outline-1 w-200  items-center justify-center rounded-xl bg-white fixed p-5 outline-[#00A79B] ">
           <div className="flex flex-col gap-5">
+    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-30' >
+        <div className="flex flex-row gap-12 outline-1 w-220   items-center justify-center rounded-xl bg-white fixed p-5 outline-[#00A79B]">
+          <div className="flex flex-col gap-5 ">
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-[#00A79B] text-2xl">Fill Prescription Form</h1>
               <p>

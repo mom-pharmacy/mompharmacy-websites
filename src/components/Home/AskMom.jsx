@@ -27,5 +27,3 @@ function AskMom() {
 }
 
 export default AskMom
-
-

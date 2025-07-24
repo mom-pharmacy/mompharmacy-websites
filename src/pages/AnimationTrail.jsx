@@ -1,9 +1,13 @@
-import { useTransform , motion } from "framer-motion"
+import { useTransform , motion, useScroll } from "framer-motion"
 import { useEffect } from "react"
 
 function AnimationTrail(){
 
-   
+//    const x = useTransform()
+
+const x  = useScroll(scrollX)
+
+console.log(x)
 
     return <div>
         <motion.div>

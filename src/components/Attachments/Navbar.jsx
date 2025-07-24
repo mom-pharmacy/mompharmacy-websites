@@ -10,14 +10,14 @@ export const navbarList = [
     {
         id:1 , 
         title:"home" , 
-        imageUrl:null  ,
+        imageUrl:null ,
         link:"/"
     },
     {
         id:2 , 
         title:"about us" , 
         imageUrl:null , 
-        link:"/animation"
+        link:"/about"
 
     },
     {
@@ -36,20 +36,26 @@ export const navbarList = [
         id:5 , 
         title:"careers" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/jobdetails"   
     },
     {
         id:6 , 
         title:"investors" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/investors"   
     },
     {
         id:7 , 
         title:"contact us" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/contactus"   
     },
+    // {
+    //     id:8 , 
+    //     title:"animation" , 
+    //     imageUrl:null   ,
+    //     link:"/animation"   
+    // },
     
     
 ]
@@ -123,7 +129,7 @@ function Navbar(){
          handleActiveLanguage()
     }, [activeLanguage])
 
-    return <div className="bg-[#00A79B] px-2 md:px-10 py-6 flex justify-between items-center ">
+    return <div className="bg-[#00A79B] px-2 md:px-10 py-2 z-10 flex justify-between items-center sticky top-0">
 
         {/* modal for mobilel and smaller devices view */}
         <AnimatePresence mode="wait">

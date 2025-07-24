@@ -7,12 +7,15 @@ import OurStory from "../components/Home/OurStory"
 const Home = () => {
   return (
 
+
    <div className=''> 
+   <div className=''>
+     {/* <Navbar />  */}
     <Banner/>
     <OurStory/>
           <Faqs />
           <AskMom />
-          <Footer />
+          {/* <Footer /> */}
           </div>
 
   )
