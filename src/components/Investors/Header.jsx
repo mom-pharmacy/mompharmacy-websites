@@ -7,7 +7,7 @@ import EnquiryForm from './EnquiryForm';
 
 function Header() {
     return (
-        <div className='bg-[#00A79B] h-[100vh]'>
+        <div className='bg-[#00A79B] h-auto'>
             <div className='flex flex-col items-center justify-center'>
                 <h1 className="text-[clamp(2.5rem,8vw,5.625rem)] text-white font-['Fredoka_One']">become a investor</h1>
 
@@ -19,12 +19,12 @@ function Header() {
                 </motion.div>
                 
                 <div className='flex flex-row gap-5 mt-10'>
-                <GlowButton title="invest in us" link="/investors" />
+               <GlowButton title="invest in us" link="#form" />
                 <Button title="view pitch deck" link='/home' /> 
                 </div>
-
+                <div id="form" className='m-25'>
                 <EnquiryForm />
-
+                </div>
             </div>
         </div>
     )
