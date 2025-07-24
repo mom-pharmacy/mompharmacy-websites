@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 
 export default function CardComp(props) 
 {
-  const [color , setColor]=useState("a")
   const [rotate , setRotate]=useState()
   const [isHovered , setIsHovered]=useState(false)
    console.log(isHovered)
@@ -14,13 +13,20 @@ export default function CardComp(props)
   return (
     <div className=''>
       <motion.div className='h-60 w-60   border  rounded-xl relative'
-       onHoverStart={()=>setIsHovered(true)}
-       onHoverEnd={()=>setIsHovered(false)}
+       onHoverStart={()=>setIsHovered(
+        {
+          state:true,
+          rotate:-35
+        })}
+       onHoverEnd={()=>setIsHovered({
+          state:false,
+          rotate:0
+        })}
        
       >
  
             <img src='/dev1.png' className='w-full h-full object-cover pad rounded-xl'></img>
-            <motion.div className={`w-full flex justify-between absolute bottom-0 left-0 text-white ${isHovered?'bg-black':'bg-white/5'} backdrop-blur-sm rounded-b-lg p-2.5`}
+            <motion.div className={`w-full flex justify-between absolute bottom-0 left-0 text-white ${isHovered.state?'bg-black':'bg-white/5'} backdrop-blur-sm rounded-b-lg p-2.5`}
 
            >
 
@@ -31,7 +37,7 @@ export default function CardComp(props)
                 </motion.div>
 
                 <motion.div className='h-8 w-7 m-2' 
-                 whileHover={{ rotate:-35}}
+                 animate={{ rotate:isHovered.rotate}}
                  whileTap={{ scale: 0.8 }
                 }
             >
