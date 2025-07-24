@@ -1,8 +1,10 @@
+import { div } from 'framer-motion/client'
 import React from 'react'
 
 function AskMom() {
     return ( 
-        <div className=' flex justify-center bg-[#00A79B1A] items-center  border-4 rounded-4xl border-[#00A79B] mt-25 mb-25 p-[20px] gap-[50px] w-[60%] m-auto '>
+        <div className='bg-white z-[1] pt-25 pb-25'>
+            <div className=' flex justify-center bg-[#00A79B1A] items-center border-4 rounded-4xl border-[#00A79B] p-[20px] gap-[50px] w-[60%] m-auto '>
             <div className='w-40 animate-pulse'>
                 <img src="/Home/askmom.jpg" alt="askmom pillman" />
             </div>
@@ -20,9 +22,8 @@ function AskMom() {
                 <span class="relative">ask mom</span>
             </button>
         </div>
+        </div>
     )
 }
 
 export default AskMom
-
-
