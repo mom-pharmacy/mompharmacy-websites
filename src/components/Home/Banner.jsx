@@ -66,9 +66,9 @@ const Banner = () => {
               </span>
             </button>
           </div>
-          
+
         </div>
-      <EarlyAccess/>
+      {/* <EarlyAccess/> */}
       </div>
 
      
