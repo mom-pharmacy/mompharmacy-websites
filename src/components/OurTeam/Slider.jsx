@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "@fontsource/fredoka-one";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 import Teamwork from "./Teamwork";
 
 const MomsDesk = () => {
@@ -50,17 +51,26 @@ const MomsDesk = () => {
   };
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6 gap-8">
-      <h1 className="text-5xl text-[#00A79B] font-bold text-center">
+      <motion.h1
+        className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center animate-bounce"
+        whileHover={{ scale: 1.1, rotate: -1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
         teamwork
-      </h1>
-      <div className="w-full max-w-3xl border-4 border-[#00A79B] rounded-4xl pt-9 pb-10 ">
+      </motion.h1>
+      <motion.div
+        className="w-full max-w-3xl border-4 border-[#00A79B] rounded-3xl pt-6 pb-10 px-6"
+        whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.6)" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
         <Slider {...sliderSettings} ref={slider}>
           {quotes.map((item, index) => (
             <Teamwork key={index} quote={item.quote} role={item.role} />
           ))}
         </Slider>
-      </div>
-      <div className="flex justify-center mt-2">
+      </motion.div>
+
+      <div className="flex justify-center mt-2 ">
         {quotes.map((_quote, i) => (
           <button
             key={i}

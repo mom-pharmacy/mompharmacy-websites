@@ -10,7 +10,7 @@ export const navbarList = [
     {
         id:1 , 
         title:"home" , 
-        imageUrl:null  ,
+        imageUrl:null ,
         link:"/"
     },
     {
