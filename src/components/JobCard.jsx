@@ -9,7 +9,7 @@ const JobCard = ({role, experience, location, vacancies}) => {
           <p className="flex-1 text-teal-600 text-3xl group-hover:text-black ">
             {role}
           </p>
-          <span className="transition-transform duration-700 ease-in-out group-hover:-rotate-45 ">
+          <span className="transition-transform duration-700 ease-in-out group-hover:-rotate-390 ">
             <FaArrowRightLong className="ml-3 text-2xl text-teal-600 group-hover:text-black" />
           </span>
         </div>
@@ -19,7 +19,7 @@ const JobCard = ({role, experience, location, vacancies}) => {
         <div className="flex">
           <p className="flex-1 text-xl pl-2 bp-2">{location}</p>
 
-          <p className="text-xl pr-2 pb-2">vacancies: {vacancies}</p>
+          <p className="text-xl pr-2 pb-2">vacancies: {vacancies}</p> 
         </div>
       </div>
     </div>

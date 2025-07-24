@@ -5,6 +5,7 @@ import BlurText from "./BlurText";
 const Welcome = () => {
   return (
     <div className="bg-[#00a79b] w-full py-10 px-4">
+     
       <div className="text-center space-y-4 mb-10">
         <p className="text-white text-4xl md:text-5xl lg:text-7xl font-bold ml-115">
           <BlurText
@@ -31,11 +32,13 @@ const Welcome = () => {
           />  
         </p>
       </div>
+
       <div className="flex justify-center mb-6">
         <button className="text-black bg-white hover:bg-yellow-300 text-xl md:text-2xl lg:text-3xl font-semibold px-6 py-3 rounded-full transition duration-300">
           explore jobs
         </button>
       </div>
+
       <div className="flex justify-center">
         <img
           src={Image}
