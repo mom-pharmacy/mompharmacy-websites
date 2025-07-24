@@ -27,30 +27,40 @@ const buttonVariants = {
   },
 };
 
-function Button({ title = 'submit', link = '/', icon = null }) {
-  return (
-    <Link to={link}>
-      <motion.button
-        className="relative flex flex-row items-center justify-center min-w-[120px] max-w-[280px] h-[48px] px-4 bg-teal-500 text-white rounded-2xl
-                   overflow-hidden text-lg font-semibold cursor-pointer"
-        initial="initial"
-        whileHover="hover"
-        whileTap={{ scale: 0.90 }}
-        variants={buttonVariants}
-      >
-        <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-[#FADB14] z-0"
-          style={{ transformOrigin: 'bottom' }}
-          variants={blossomVariants}
-        />
+function GlowButton({ title = 'submit', link = '/', icon = null }) {
+  const handleClick = () => {
+    if (link.startsWith('#')) {
+      const id = link.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = link;
+    }
+  };
 
-        <span className="relative z-10 flex items-center justify-center gap-2">
-          {title}
-          {icon && <span className='text-lg'>{icon}</span>}
-        </span>
-      </motion.button>
-    </Link>
+  return (
+    <motion.button
+      onClick={handleClick}
+      className="relative flex flex-row items-center justify-center min-w-[120px] max-w-[280px] h-[48px] px-4 bg-teal-400 text-white rounded-2xl
+                 overflow-hidden text-lg font-semibold cursor-pointer"
+      initial="initial"
+      whileHover="hover"
+      whileTap={{ scale: 0.90 }}
+      variants={buttonVariants}
+    >
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full bg-[#FADB14] z-0"
+        style={{ transformOrigin: 'bottom' }}
+        variants={blossomVariants}
+      />
+      <span className="relative z-10 flex items-center justify-center gap-2">
+        {title}
+        {icon && <span className='text-lg'>{icon}</span>}
+      </span>
+    </motion.button>
   );
 }
 
-export default Button;
+export default GlowButton;

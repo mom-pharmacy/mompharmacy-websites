@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import easyLogin from '/src/assets/AboutUs/whytochoose/easy_login.png';
 import prescriptionOrder from '/src/assets/AboutUs/whytochoose/prescription_orser.png';
 import quickDelivery from '/src/assets/AboutUs/whytochoose/quick_delivery.png';
@@ -67,52 +67,54 @@ export default function WhyChooseUsBanner() {
   };
 
   return (
-    <div className='flex items-center justify-center'>
-    <div className="bg-white md:px-8 rounded-xl shadow max-w-7xl text-center items-center justify-center">
-      <motion.h2 className="text-[#00a79b] font-extrabold text-6xl mb-2 font-['Fredoka_One']"
-      whileHover={{scale: 1.05}}
-      transition={{duration: 0.3, ease: 'easeOut'}}
-      >why to choose us</motion.h2>
-      <p className="text-gray-600 max-w-2xl font-['DM_Sans'] mx-auto font-normal text-xl mb-6">
-        every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
-      </p>
-      <motion.div className="flex flex-wrap gap-10 mb-8 bg-teal-500 rounded-xl h-15">
-        {tabs.map((tab, index) => (
-          <motion.button
-          whileHover={{scale: 1.1}}
-          transition={{duration: 0.1, ease: 'easeOut'}}
-          whileTap={{scale: 0.90}}
-            key={tab.key}
-            onClick={() => handleTabClick(index)}
-            className={`p-2 m-1 pr-10 font-medium rounded-lg transition h-13 font-sans text-2xl
-              ${activeIndex === index
-                ? 'bg-yellow-500 text-black'
-                : 'bg-teal-500 text-white'}
-            `}
-          >
-            {tab.label}
-          </motion.button>
-        ))}
-      </motion.div>
-      <Slider {...settings} ref={sliderRef}>
-        {tabs.map((tab) => (
-          <div key={tab.key}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-[#d5ece9] h-150 w-280 rounded-lg border border-teal-500 m-7">
-              <div className="max-w-md text-gray-600 text-4xl md:text-center font-['DM_Sans']">
-                {tab.text}
-              </div>
-              <div>
+    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="bg-white rounded-xl shadow max-w-screen-xl w-full text-center py-6 sm:py-8 md:py-10 lg:py-12">
+        <motion.h2
+          className="text-[#00a79b] font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 font-['Fredoka_One']"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          why to choose us
+        </motion.h2>
+
+        <p className="text-gray-600 font-['DM_Sans'] mx-auto font-normal text-base sm:text-lg md:text-xl max-w-3xl mb-6 px-4">
+          every package we deliver carries not just medicine, but also a promise to be timely, to be trustworthy, to show up — like mom would.
+        </p>
+
+        <motion.div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 px-4 sm:px-6">
+          {tabs.map((tab, index) => (
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.1, ease: 'easeOut' }}
+              key={tab.key}
+              onClick={() => handleTabClick(index)}
+              className={`py-2 px-4 sm:px-6 lg:px-8 rounded-lg font-semibold text-sm sm:text-base md:text-lg lg:text-xl capitalize
+                ${activeIndex === index ? 'bg-yellow-500 text-black' : 'bg-teal-500 text-white'}
+              `}
+            >
+              {tab.label}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        <Slider {...settings} ref={sliderRef}>
+          {tabs.map((tab) => (
+            <div key={tab.key}>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-[#d5ece9] rounded-lg border border-teal-500 mx-4 sm:mx-6 md:mx-10 lg:mx-16 py-6 px-4 sm:py-8 sm:px-6">
+                <div className="text-gray-600 font-['DM_Sans'] text-base sm:text-xl md:text-2xl lg:text-2xl max-w-lg text-center md:text-left">
+                  {tab.text}
+                </div>
                 <img
                   src={tab.image}
                   alt={tab.label}
-                  className="w-75 h-auto rounded-lg shadow-md ml-25"
+                  className="w-full sm:w-64 md:w-72 lg:w-80 h-auto rounded-lg shadow-md"
                 />
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

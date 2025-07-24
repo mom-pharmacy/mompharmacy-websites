@@ -19,26 +19,27 @@ const AllJobs = () => {
           />
         </button>
       </div>
-      <div className=" pl-15 bl-1">
+      <div className=" pl-15 pl-1">
         <p className="text-3xl p-2 border-l-3">departments</p>
       </div>
       <div className="pl-15 pb-10 pt-10">
         <div className="flex flex-wrap gap-5">
-         
-            {career.map((job, index) => (
-               <button onClick={()=>navigate("/jobdetails")} key={index}>
+
+          {career.map(({role,experience,location,vacancy,job_no,travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect}, index) => (
             
+            <button onClick={() => navigate("/jobdetails",{state:{job_no,travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect}})} key={index}>
+
               <JobCard
-                
-                role={job.role}
-                experience={job.experience}
-                location={job.location}
-                vacancies={job.vacancy}
+
+                role={role}
+                experience={experience}
+                location={location}
+                vacancies={vacancy}
               />
-            
-              </button>
-            ))}
-          
+
+            </button>
+          ))}
+
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const JobCard = ({role, experience, location, vacancies}) => {
           </span>
         </div>
         <div className="flex">
-          <p className="text-xl  p-2">experience: {experience}</p>
+          <p className="text-x">experience: {experience}</p>
         </div>
         <div className="flex">
           <p className="flex-1 text-xl pl-2 bp-2">{location}</p>

@@ -3,7 +3,7 @@ import React from 'react';
 import CardComp from './CardComp';
 import Departments from './Departments';
 
-const Founder = () => {
+const Founders = () => {
   return (
     <>
     <div className="h-screen flex items-center justify-center flex-col">
@@ -22,6 +22,6 @@ const Founder = () => {
   );
 };
 
-export default Founder;
+export default Founders;
 
 

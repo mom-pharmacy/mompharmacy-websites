@@ -5,7 +5,7 @@ import save from '../../../assets/jobrole/save.svg'
 import GlowButton from '../../Buttons/GlowButton'
 import BorderButton from '../../Buttons/BorderButton'
 
-export default function Apply() {
+export default function Apply({we_offer}) {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
   const mainControls = useAnimation();
@@ -38,11 +38,12 @@ export default function Apply() {
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }}
           className="list-disc pl-8 text-black-700 text-lg">
-          <li>A career in one of the largest and fastest growing IT services providers worldwide</li>
+          {/* <li>A career in one of the largest and fastest growing IT services providers worldwide</li>
           <li>SAP Training and Certifications</li>
           <li>Competitive Salary in line with market rates and experience</li>
           <li>Opportunity to work for the large multinationals and other leading companies</li>
-          <li>Personal development in hard and soft skills</li>
+          <li>Personal development in hard and soft skills</li> */}
+          {we_offer}
         </motion.ul>
       </div>
       <div>

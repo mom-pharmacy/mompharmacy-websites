@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useContext } from "react";
 import { motion, useScroll, useInView, useAnimation } from "framer-motion";
-import {CareerContext} from "../../../context/career";
-export default function KeyDetails() {
+
+export default function KeyDetails({job_no,travel,job_category,date_published,employment_type,work_model,role_description,}) {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
   const mainControls = useAnimation();
-  const career = useContext(CareerContext);
+
 
   useEffect(() => {
     if (inInView) {
@@ -33,14 +33,15 @@ export default function KeyDetails() {
           transition={{ duration: 0.5, ease: "easeInOut", delay:0.2 }}
           className="text-xl text-black-700 text-left font-400"
         >
-          As a Principal Functional Architect you will leverage your extensive
+          {/* As a Principal Functional Architect you will leverage your extensive
           experience in S/4 HANA integrations and financial modules to drive
           impactful solutions in the Corporate and Finance and Utilities
           domains. You will work in a hybrid model collaborating with
           cross-functional teams to optimize business processes and enhance
           system efficiencies. Your expertise in Generative AI and S/4 HANA will
           be pivotal in transforming financial operations and achieving
-          strategic objectives.
+          strategic objectives. */}
+          {role_description}
         </motion.p>
       </div>
 
@@ -71,7 +72,7 @@ export default function KeyDetails() {
             >
               <label className="w-40 text-black-700 font-medium">job no:</label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                {career.job_no}
+                {job_no}
               </p>
             </motion.div>
             <motion.div
@@ -89,7 +90,7 @@ export default function KeyDetails() {
                 travel required:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                {career.travel}
+                {travel?"yes":"no"}
               </p>
             </motion.div>
             <motion.div
@@ -107,7 +108,7 @@ export default function KeyDetails() {
                 job category:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                Digital
+                {job_category}
               </p>
             </motion.div>
             <motion.div
@@ -126,7 +127,7 @@ export default function KeyDetails() {
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
                 
-                {career.location}
+              location
               </p>
             </motion.div>
             <motion.div
@@ -144,7 +145,7 @@ export default function KeyDetails() {
                 date published:
               </label>
               <p className=" font-semibold ml-2 border-1 p-1 w-50 rounded text-[#00a79b] bg-[#00A79B1A] ">
-                15 July 2024
+                {date_published}
               </p>
             </motion.div>
             <motion.div
@@ -162,7 +163,7 @@ export default function KeyDetails() {
                 employment type:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                Full Time
+               {employment_type}
               </p>
             </motion.div>
             <motion.div
@@ -180,7 +181,7 @@ export default function KeyDetails() {
                 work model:
               </label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                In-office
+                {work_model}
               </p>
             </motion.div>
           </form>
