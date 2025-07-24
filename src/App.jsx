@@ -11,6 +11,8 @@ import JobDetails from './pages/Careers/JobDetails'
 import Ourteam from './pages/Ourteam'
 
 import { Career } from './pages/Careers/Career'
+import Footer from './components/Home/Footer'
+import EarlyAccess from './components/Home/EarlyAccess'
 
 function App() {
  
@@ -28,6 +30,8 @@ function App() {
       <Route path='/jobdetails' Component={JobDetails} />
       <Route path='/career' Component={Career}/>
     </Routes>
+    <EarlyAccess/>
+    <Footer/>
     </>
   )
 }

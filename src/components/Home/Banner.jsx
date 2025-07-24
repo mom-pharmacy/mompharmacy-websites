@@ -15,9 +15,9 @@ const Banner = () => {
     <>
 
     <> 
-      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
+      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
           <UploadPrescription showUploadPrescription={showUploadPrescription} setShowUploadPrescription={setShowUploadPrescription}/>
-          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
+          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
           <DownloadApp downloadapp={downloadapp} setDownloadApp={setDownloadApp}/>
     </>
 
