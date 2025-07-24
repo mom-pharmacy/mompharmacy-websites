@@ -13,8 +13,8 @@ export default function KeyDetails() {
   }, [inInView, mainControls]);
 
   return (
-    <div className="flex items-center py-10 px-20 gap-10 justify-center">
-      <div ref={containerRef} className="flex-1">
+    <div className=" items-center py-10 px-20 gap-10 justify-center flex flex-col md:flex-row sm:flex-row">
+      <div ref={containerRef} className="flex flex-col md:flex-col sm:flex-row">
         <motion.p
           whileHover={{ scale: 1.05, rotate: 2 }}
           transition={{ duration: 1, ease: "easeOut" ,delay:0.1 }}
@@ -43,14 +43,14 @@ export default function KeyDetails() {
         </motion.p>
       </div>
 
-      <div className="flex-initial">
+      <div className="flex-initial items-center justify-center ">
         <motion.div
           // whileHover={{ scale: 1.05, rotate: -2 , boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.6)"}}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ mainControls, opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-100 p-2 rounded-lg shadow-md border-2 border-dashed border-[#00a79b]"
+          className=" w-100 p-2 rounded-lg shadow-md border-2 border-dashed border-[#00a79b] items-center gap-10 justify-center"
         >
           <h2 className="text-3xl font-bold text-[#00a79b] mb-2">
             key job details
