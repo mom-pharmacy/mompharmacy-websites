@@ -88,7 +88,7 @@ const CarouselComponent = () => {
   ];
 
   return (
-    <div className="bg-[#00a99d] relative overflow-hidden">
+    <div className="bg-[#00A79B] relative overflow-hidden">
       <Slider {...settings}>
         {slides.map((_, index) => (
           <div key={index} className="h-[60vh] md:h-[60vh]"></div>
