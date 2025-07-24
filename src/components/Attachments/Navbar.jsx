@@ -17,7 +17,7 @@ export const navbarList = [
         id:2 , 
         title:"about us" , 
         imageUrl:null , 
-        link:"/animation"
+        link:"/about"
 
     },
     {
@@ -36,19 +36,25 @@ export const navbarList = [
         id:5 , 
         title:"careers" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/jobdetails"   
     },
     {
         id:6 , 
         title:"investors" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/investors"   
     },
     {
         id:7 , 
         title:"contact us" , 
         imageUrl:null   ,
-        link:"/ourteams"   
+        link:"/contactus"   
+    },
+    {
+        id:8 , 
+        title:"animation" , 
+        imageUrl:null   ,
+        link:"/animation"   
     },
     
     
