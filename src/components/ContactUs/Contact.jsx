@@ -4,6 +4,7 @@ import Email from '../../assets/contactUs/email.png'
 import Location from '../../assets/contactUs/location.png'
 import Pills from '../../assets/contactUs/pills.png'
 import GlowButton from '../../components/Buttons/GlowButton'
+import {motion} from "framer-motion";
 export default function Contact() {
 
 const[visible, setVisible]=useState(false)
@@ -13,17 +14,37 @@ const handleChange =()=>{
 }
     return (
       <div className="bg-[#00A79B] h-screen w-full flex items-center justify-center">
-        <div className="flex items-center justify-center w-250 h-110 bg-white rounded-4xl shadow-lg border-5 border-[#00A79B] p-5 m-30">
-          <div className="bg-[#00A79B] text-white p-4 rounded-lg w-100 flex-initial">
+        <motion.div
+        initial={{opacity:0, scale:0.8}}
+        animate={{opacity:1,scale:1}}
+        exit={{opacity:0,scale:0.8}}
+        transition={{duration:1,ease:"easeOut"}} 
+        className="flex items-center justify-center w-250 h-110 bg-white rounded-4xl shadow-lg border-5 border-[#00A79B] p-5 m-30">
+          <motion.div 
+           initial={{opacity:0, scale:0.8}}
+        animate={{opacity:1,scale:1}}
+        exit={{opacity:0,scale:0.8}}
+        transition={{duration:1,ease:"easeOut"}}
+          className="bg-[#00A79B] text-white p-4 rounded-lg w-100 flex-initial">
             <div>
-              <div className="mb-10">
+              <motion.div 
+                initial={{x: "-70px", opacity: 0 }}
+              animate={{x: 0, opacity: 1 }}
+              exit={{ x: "-50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3}}
+              className="mb-10">
                 <h1 className="text-3xl font-bold mb-3">let's get in touch</h1>
                 <p className="text-40">
                   reach out with your questions, ideas, or feedback - and let's
                   take a step toward healthier living, together.
                 </p>
-              </div>
-              <div className="flex flex-col py-4 space-y-4">
+              </motion.div>
+              <motion.div
+              initial={{x: "-70px", opacity: 0 }}
+              animate={{x: 0, opacity: 1 }}
+              exit={{ x: "-50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3}} 
+              className="flex flex-col py-4 space-y-4">
                 <p className="flex">
                   <img src={Call} className="h-6 w-6" />
                   +917702068334
@@ -39,14 +60,19 @@ const handleChange =()=>{
                     madhapur, hyderabad, telangana 500081{" "}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           <div className="p-8 w-150 flex-initial text-lg ">
             <form>
-              <div className="flex pt-7">
-                <div className="flex-1 mr-4">
+              <motion.div
+               initial={{x: "70px", opacity: 0 }}
+              animate={{x: 0, opacity: 1 }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3}} 
+              className="flex pt-7">
+                <div  className="flex-1 mr-4">
                   <label className="block mb-2 text-[#00A79B]">your name</label>
                   <input
                     type="text"
@@ -62,15 +88,19 @@ const handleChange =()=>{
                     className="border-2 border-[#00A79B] p-2 rounded w-full mb-4 outline-none"
                   />
                 </div>
-              </div>
-              <select
+              </motion.div>
+              <motion.select
+               initial={{x: "70px", opacity: 0 }}
+              animate={{x: 0, opacity: 1 }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3}}
                 className="bg-[#00A79B] p-4 rounded-lg w-full mb-4 text-white outline-none"
                 onChange={handleChange}
                 name="select support type"
               >
                 <option value="suggestion">suggestion</option>
                 <option value="grievances">grievances</option>
-              </select>
+              </motion.select>
               {/* {visible && ( */}
               <div>
                 <label className={`block mb-2 text-[#00A79B]${
@@ -84,7 +114,12 @@ const handleChange =()=>{
                 ></textarea>
               </div>
               {/* )} */}
-              <div className="flex gap-70">
+              <motion.div
+               initial={{y: "70px", opacity: 0 }}
+              animate={{y: 0, opacity: 1 }}
+              exit={{ y: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 } }
+              className="flex gap-70">
                 <GlowButton title="send us" />
                             <img src={Pills} alt="pill" className='h-20 w-30 flex-initial' />
                 <button
@@ -98,10 +133,10 @@ const handleChange =()=>{
                   alt="pill"
                   className="h-20 w-30 flex-initial"
                 />
-              </div>
+              </motion.div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
 }
