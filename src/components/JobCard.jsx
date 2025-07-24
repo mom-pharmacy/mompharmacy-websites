@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
-
+import { useContext } from 'react';
+import {useCareer} from "../context/career"
 const JobCard = ({role, experience, location, vacancies}) => {
+  const Career =useContext(useCareer);
   return (
     <div className="">
       <div className=" group flex-col w-90 pl-3 border-teal-600 border-2 rounded-lg transition-transform duration-700 ease-in-out hover:transition-300 hover:bg-[#FADB14] hover:rounded-lg hover:text-black hover:border-[#FADB14]">
