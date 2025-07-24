@@ -1,34 +1,57 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
+import { motion, useScroll, useInView, useAnimation } from "framer-motion";
 import share from '../../../assets/jobrole/share.svg'
 import save from '../../../assets/jobrole/save.svg' 
+import GlowButton  from '../../Buttons/GlowButton'
+import BorderButton from '../../Buttons/BorderButton'
 
 export default function Apply() {
+  const containerRef = useRef(null);
+  const inInView = useInView(containerRef, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (inInView) {
+      mainControls.start("visible");
+    }
+  }, [inInView, mainControls]);
   return (
-    <div className='flex gap-80 px-12 py-8'>
-        <div>
-            <h2 className="text-3xl font-bold text-[#00a79b] mb-2">what we offer:</h2>
-            <ul className="list-disc pl-8 text-black-700 text-lg">
+    <div className='flex gap-80 px-20 py-8'>
+        <div ref={containerRef}>
+            <motion.h2 
+            animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x:-80, opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }}
+            className="text-3xl font-bold text-[#00a79b] mb-2">what we offer:</motion.h2>
+            <motion.ul
+            animate={mainControls}
+              initial="hidden"
+              variants={{
+                hidden: { x:-80, opacity: 0 },
+                visible: { x: 0, opacity: 1 },
+              }}
+              exit={{ x: "50%", opacity: 0 }}
+              transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }} 
+            className="list-disc pl-8 text-black-700 text-lg">
                 <li>A career in one of the largest and fastest growing IT services providers worldwide</li>
                 <li>SAP Training and Certifications</li>
                 <li>Competitive Salary in line with market rates and experience</li>
                 <li>Opportunity to work for the large multinationals and other leading companies</li>
                 <li>Personal development in hard and soft skills</li>
-                </ul>
+                </motion.ul>
         </div>
         <div>
-        <div className='flex gap-5 mt-30'>
-            <button className="  border-1 border-[#00a79b] text-[#00a79b] text-lg font-bold px-6 flex rounded-full mt-4 hover:bg-yellow-400 hover:text-black hover:border-none transition duration-300 justify-center items-center text-centerS">
-               <p > share</p> 
-                 <img src={share} alt="share icon" className='inline-block ml-2 h-5 w-5 hover:fill-black-900' />
-            </button>
-            <button className=" border-1 border-[#00a79b] text-[#00a79b] text-lg font-bold  px-6 flex rounded-full mt-4 hover:bg-yellow-400 hover:text-black hover:border-none transition duration-300 justify-center items-center text-centerS">
-                save job
-               <img src={save} alt="save icon" className='inline-block ml-2 h-5 w-5' />
-                
-            </button>
-            <button className=" border-1 border-[#00a79b] bg-[#00a79b] text-lg font-bold  text-white px-6 flex rounded-full mt-4 hover:bg-yellow-400 hover:text-black hover:border-none transition duration-300 justify-center items-center text-centerS">
-                apply now
-            </button>
+        <div
+          
+        className='flex gap-5 mt-30'>
+            <BorderButton title="share" link="#" icon={<img src={share} alt="share icon" className='inline-block h-5 w-5' />} />
+            <BorderButton title="save job" link="#" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
+          <GlowButton title="apply now" link="#"  />    
         </div>
         </div>
 

@@ -18,7 +18,7 @@ function ConcentricCircle() {
 function Mission() {
     return (
         <>
-        <div>
+        <div className='pt-15'>
             <div className='flex justify-between items-center px-20'>
 
                 <div className="flex items-center gap-4">
