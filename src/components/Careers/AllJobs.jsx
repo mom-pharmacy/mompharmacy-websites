@@ -25,7 +25,7 @@ const AllJobs = () => {
   ];
   return (
     <div>
-      <div className="flex justify-between p-15">
+      <div className="flex justify-between p-10">
         <p className="text-3xl">all jobs</p>
         <button className="group text-xl flex rounded-3xl text-teal-600 border-2 px-4 py-2 ml-2 hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black">
           view saved jobs (1)
@@ -35,10 +35,10 @@ const AllJobs = () => {
           />
         </button>
       </div>
-      <div className=" pl-15 bl-1">
+      <div className=" pl-10 bl-1">
         <p className="text-3xl p-2 border-l-3">departments</p>
       </div>
-      <div className="pl-15 pb-10 pt-10">
+      <div className="pl-10 pb-10 pt-10">
         <div className="flex flex-wrap gap-5">
           {jobs.map((job, index) => (
             <JobCard
@@ -53,10 +53,10 @@ const AllJobs = () => {
       </div>
 
       <div>
-        <div className=" pl-15 bl-1">
+        <div className=" pl-10 bl-1">
           <p className="text-3xl border-l-3 p-2">departments</p>
         </div>
-        <div className="pl-15 pb-10 pt-10">
+        <div className="pl-10 pb-10 pt-10">
           <div className="flex flex-wrap gap-5">
             {jobs.map((job, index) => (
               <JobCard
