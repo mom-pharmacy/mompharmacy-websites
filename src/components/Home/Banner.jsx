@@ -4,7 +4,7 @@ import { FaPrescription } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import UploadPrescription from "./UploadPrescription";
 import DownloadApp from "./DownloadApp";
-import EarlyAccess from "./EarlyAccess";
+
 
 const Banner = () => {
 
@@ -15,9 +15,9 @@ const Banner = () => {
     <>
 
     <> 
-      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
+      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
           <UploadPrescription showUploadPrescription={showUploadPrescription} setShowUploadPrescription={setShowUploadPrescription}/>
-          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
+          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 "></div>}
           <DownloadApp downloadapp={downloadapp} setDownloadApp={setDownloadApp}/>
     </>
 

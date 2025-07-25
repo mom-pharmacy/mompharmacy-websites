@@ -6,24 +6,9 @@ import { MdOutlineMyLocation } from "react-icons/md";
 import { ImCancelCircle } from "react-icons/im";
 
 const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}) => {
-  const uploadprescription=(e)=>{
-    <input type="file"/>
-    const selectedfile=e.target.files[0]
-    if(selectedfile){
-      console.log("selectedfile",selectedfile);     
-    }
-    else{
-      console.log("no file selected");
-      
-    }
-  }
   return (
     <AnimatePresence mode='wait'>
-
-    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0, display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center ' >
-        <div className="flex flex-row gap-12 outline-1 w-200  items-center justify-center rounded-xl bg-white fixed p-5 outline-[#00A79B] ">
-          <div className="flex flex-col gap-5">
-    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-30' >
+    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-17' >
         <div className="flex flex-row gap-12 outline-1 w-220   items-center justify-center rounded-xl bg-white fixed p-5 outline-[#00A79B]">
           <div className="flex flex-col gap-5 ">
             <div className="flex flex-col items-center justify-center">
@@ -38,7 +23,7 @@ const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}
               <div className="bg-[#00A79B] text-white rounded-sm p-1">
                 <MdUploadFile />
               </div>
-              <p className="text-[#00A79B]" onChange={uploadprescription}>upload prescription</p>
+              <p className="text-[#00A79B]">upload prescription</p>
             </div>
 
             <div className="outline-1 w-60 rounded-sm flex items-center justify-around text-[#00A79B] p-2">
@@ -66,7 +51,7 @@ const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}
                 <input type="text" placeholder="+91" className="outline-1 w-50 rounded-sm outline-[#00A79B] p-2 "/>
                 <input type="text" placeholder="your age" className="outline-1 w-50 rounded-sm outline-[#00A79B] p-2"/>
               </div>
-              <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-8 -right-7 bg-white rounded-full sm: '  onClick={()=>setShowUploadPrescription(false)}>
+              <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-8 -right-17 bg-white rounded-full sm: '  onClick={()=>setShowUploadPrescription(false)}>
                 <ImCancelCircle className='w-10 h-10 '/>
               </button>
             </div>
