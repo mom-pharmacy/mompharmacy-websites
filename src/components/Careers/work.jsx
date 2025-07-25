@@ -28,7 +28,7 @@ const Workculture = () => {
 
      
       <div className="mt-6 space-y-2 text-center text-lg md:text-xl text-gray-700">
-        <p>To bridge the gap between people and essential healthcare by</p>
+        <p>to bridge the gap between people and essential healthcare by</p>
         <p>delivering affordable, on-demand medication—with the speed of</p>
         <p>innovation ..</p>
       </div>
