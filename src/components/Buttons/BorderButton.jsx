@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 function Button({ title = 'Button', link = '/', icon = null, onClick }) {
-  // If onClick is provided and link is '#' or empty, render only the button
   const isButtonOnly = (onClick && (!link || link === '#'));
   if (isButtonOnly) {
     return (
@@ -29,7 +28,6 @@ function Button({ title = 'Button', link = '/', icon = null, onClick }) {
       </motion.button>
     );
   }
-  // Otherwise, render as a link
   return (
     <Link to={link} onClick={onClick}>
       <motion.button
