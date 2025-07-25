@@ -15,15 +15,15 @@ const Banner = () => {
     <>
 
     <> 
-      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
+      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
           <UploadPrescription showUploadPrescription={showUploadPrescription} setShowUploadPrescription={setShowUploadPrescription}/>
-          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
+          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-20"></div>}
           <DownloadApp downloadapp={downloadapp} setDownloadApp={setDownloadApp}/>
     </>
 
-      <div className="overflow-x-hidden ">   
+      <div className="overflow-x-hidden">   
                
-        <div className="bg-[#00A79B] w-100% h-180 flex flex-col gap-15 items-center justify-center">
+        <div className="bg-[#00A79B] w-100% h-110 flex flex-col gap-15 items-center justify-center"> 
           <div className="flex">
             <div>
              
@@ -66,9 +66,8 @@ const Banner = () => {
               </span>
             </button>
           </div>
-
         </div>
-      {/* <EarlyAccess/> */}
+      
       </div>
 
      

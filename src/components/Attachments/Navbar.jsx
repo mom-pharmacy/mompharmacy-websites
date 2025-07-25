@@ -36,7 +36,7 @@ export const navbarList = [
         id:5 , 
         title:"careers" , 
         imageUrl:null   ,
-        link:"/jobdetails"   
+        link:"/career"
     },
     {
         id:6 , 
@@ -50,12 +50,12 @@ export const navbarList = [
         imageUrl:null   ,
         link:"/contactus"   
     },
-    {
-        id:8 , 
-        title:"animation" , 
-        imageUrl:null   ,
-        link:"/animation"   
-    },
+    // {
+    //     id:8 , 
+    //     title:"animation" , 
+    //     imageUrl:null   ,
+    //     link:"/animation"   
+    // },
     
     
 ]
@@ -129,7 +129,7 @@ function Navbar(){
          handleActiveLanguage()
     }, [activeLanguage])
 
-    return <div className="bg-[#00A79B] px-2 md:px-10 py-6 flex justify-between items-center ">
+    return <div className="bg-[#00A79B] px-2 md:px-10 py-2 z-10 flex justify-between items-center sticky top-0">
 
         {/* modal for mobilel and smaller devices view */}
         <AnimatePresence mode="wait">
