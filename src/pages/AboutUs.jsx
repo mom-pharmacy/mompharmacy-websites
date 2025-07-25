@@ -3,7 +3,7 @@ import Carousel from '../components/AboutUs/carousel'
 import Mission from '../components/AboutUs/Mission'
 import MomsDesk from '../components/AboutUs/momsdesk'
 import WhyChooseUsBanner from '../components/AboutUs/whytochoose'
-// import As from '../components/AboutUs/3As'
+import As from '../components/AboutUs/3As'   
 
 function AboutUs() {
     return (
@@ -11,7 +11,7 @@ function AboutUs() {
             <Carousel />
             <div className='flex pb-10 flex-col gap-y-20'>
                 <Mission />
-                {/* <As /> */}
+                <As />
                 <WhyChooseUsBanner />
                 <MomsDesk />
             </div>
