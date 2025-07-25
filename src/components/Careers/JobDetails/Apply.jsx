@@ -79,6 +79,9 @@ export default function Apply({we_offer}) {
         </motion.ul>
       </div>
       <div>
+        <div
+
+          className='flex gap-4 mt-20'>
 
         <div className='flex gap-2 mt-20 relative'>
           <BorderButton
@@ -131,15 +134,12 @@ export default function Apply({we_offer}) {
               </button>
             </div>
           )}
-          <BorderButton title="save job" link="#" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
-        <div
-
-          className='flex gap-2 mt-20'>
-          <BorderButton title="share" link="#" icon={<img src={share} alt="share icon" className='inline-block h-5 w-5' />} />
+          
           <SavedButton title="save job" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
           <GlowButton title="apply now" link="#" />
         </div>
       </div>
+    </div>
     </div>
   );
 }
