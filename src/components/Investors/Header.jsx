@@ -11,7 +11,7 @@ function Header() {
     const handlePdf = () => setShowPdf(true);
     const handleClosePdf = () => setShowPdf(false);
     return (
-        <div className='bg-[#00A79B] h-[100vh]'>
+        <div className='bg-[#00A79B] h-auto'>
             <div className='flex flex-col items-center justify-center'>
                 <h1 className="text-[clamp(2.5rem,8vw,5.625rem)] text-white font-['Fredoka_One']">
                     become a investor
@@ -25,7 +25,7 @@ function Header() {
                     <h3 className="text-[clamp(2.5rem,8vw,5.625rem)] text-white font-['Fredoka_One']">pharmacy</h3>
                 </motion.div>
                 <div className='flex flex-row gap-5 mt-10'>
-                    <GlowButton title="invest in us" link="/investors" />
+                    <GlowButton title="invest in us" link="#form" />
                     <Button title="view pitch deck" onClick={handlePdf} />
                 </div>
                 {showPdf && (
@@ -33,7 +33,7 @@ function Header() {
                         <div className="relative bg-white rounded-lg w-full max-w-6xl h-[90vh] shadow-xl overflow-hidden">
                             <button
                                 className="absolute top-16 right-6 text-white bg-[#00a79b] hover:bg-[#007f76] rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold transition"
-                                onClick={handleClosePdf}  
+                                onClick={handleClosePdf}
                             >
                                 &times;
                             </button>
@@ -41,7 +41,9 @@ function Header() {
                         </div>
                     </div>
                 )}
+                <div id="form" className='mt-10'>
                 <EnquiryForm />
+                </div>
             </div>
         </div>
     );
