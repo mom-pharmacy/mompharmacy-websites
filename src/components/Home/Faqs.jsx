@@ -31,16 +31,16 @@ function Faqs() {
 
     console.log(activeAnswer)
 
-    return <div className="w-[100%] m-auto bg-white pt-20 ">
-        <div className="flex items-center justify-center mb-[-20px]">
-            <div className="font-bold text-[65px] text-[#00A79B]">
+    return <div className="xl:w-[100%] md:w-[100%]  m-auto bg-white xl:pt-20 md:pt-10 pt-10  ">
+        <div className="flex items-center justify-center xl:mb-[-20px] md:mb-[-20px]  ">
+            <div className="font-bold xl:text-[65px] text-[25px] md:text-[40px] text-[#00A79B]">
                 frequently asked questions?
             </div>
-            <div className="animate-bounce">
+            <div className="animate-bounce xl:w-50 md:w-40 w-15 ">
                 <img src="/Home/pillmanFaqs.jpg" alt="pillman" />
             </div>
         </div>
-        {faqsList.map(item => <div key={item.id} className="cursor-pointer w-[80%] m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] mt-5  rounded-xl">
+        {faqsList.map(item => <div key={item.id} className="cursor-pointer xl:w-[80%] md:w-[90%] w-[90%] m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] xl:mt-5 md:mt-4 mt-4 rounded-xl">
             <div className="flex justify-between items-center">
                 <button onClick={() => {
                     console.log("this is logging")
