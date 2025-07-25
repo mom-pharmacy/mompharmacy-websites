@@ -6,7 +6,7 @@ import Apply from '../../components/Careers/JobDetails/Apply'
 import { useLocation } from 'react-router'
 export default function JobDetails() {
   const location = useLocation();
-  const { state } = location;
+  const { state={} } = location;
   const { job_no, travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect } = state
   console.log("from jobdetails", job_no, travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect)
 

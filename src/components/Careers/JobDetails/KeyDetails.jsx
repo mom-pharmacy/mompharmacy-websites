@@ -72,7 +72,7 @@ export default function KeyDetails({job_no,travel,job_category,date_published,em
             >
               <label className="w-40 text-black-700 font-medium">job no:</label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                {job_no}
+                {job_no||'N/A'}
               </p>
             </motion.div>
             <motion.div

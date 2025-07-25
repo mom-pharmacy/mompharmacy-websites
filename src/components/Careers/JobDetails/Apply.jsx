@@ -8,10 +8,9 @@ import whatsapp from '../../../assets/Careerpage/whatsapp-logo.png'
 import facebook from '../../../assets/Careerpage/facebook.png'
 import linkedin from '../../../assets/Careerpage/linkedin.png'
 import copylink from '../../../assets/Careerpage/copylink.png'
+import SavedButton from   '../../Buttons/SavedButton'
 
-
-
-export default function Apply({ we_offer }) {
+export default function Apply({we_offer}) {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
   const mainControls = useAnimation();
@@ -80,6 +79,7 @@ export default function Apply({ we_offer }) {
         </motion.ul>
       </div>
       <div>
+
         <div className='flex gap-2 mt-20 relative'>
           <BorderButton
             title="Share"
@@ -132,6 +132,11 @@ export default function Apply({ we_offer }) {
             </div>
           )}
           <BorderButton title="save job" link="#" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
+        <div
+
+          className='flex gap-2 mt-20'>
+          <BorderButton title="share" link="#" icon={<img src={share} alt="share icon" className='inline-block h-5 w-5' />} />
+          <SavedButton title="save job" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
           <GlowButton title="apply now" link="#" />
         </div>
       </div>
