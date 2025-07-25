@@ -9,10 +9,10 @@ const Applynow = () => {
         </div>
 
         <div className="text-center lg:text-left">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start">
-            <p className="text-[#FADB14] text-2xl lg:text-4xl font-semibold mb-2 lg:mb-0 lg:pr-4">
+          <div className="flex flex-col font-['Fredoka_One'] lg:flex-row items-center lg:items-start">
+            <p className="text-[#FADB14]  text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 lg:mb-0 lg:pr-4">
               mom is calling mom to
-              <p>get back to work</p>
+              <p className="p-0 lg:p-0 md:p-2 sm:p-2">get back to work</p>
             </p>
 
             <button
@@ -24,7 +24,7 @@ const Applynow = () => {
               apply now
             </button>
           </div>
-          <p className="text-white text-lg lg:text-2xl mt-4">
+          <p className="text-white text-lg md:text-2xl lg:text-2xl mt-4">
             an exclusive program helping women return to the workforce
             <p>after a career break.</p>
           </p>
