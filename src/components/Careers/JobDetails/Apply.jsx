@@ -18,9 +18,9 @@ export default function Apply({we_offer}) {
   const [copied, setCopied] = useState(false);
   const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
   const shareLinks = {
-    linkedin: https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)},
-    facebook: https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)},
-    whatsapp: https://wa.me/?text=${encodeURIComponent(pageUrl)},
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(pageUrl)}`,
   };
 
 

@@ -38,11 +38,11 @@ const Welcome = () => {
         </button>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         <img
           src={Image}
           alt="tablets"
-          className="w-60 md:w-80 lg:w-[450px] h-auto"
+          className="w-60 md:w-80 lg:w-[450px] h-auto animate-bounce"
         />
       </div>
     </div>

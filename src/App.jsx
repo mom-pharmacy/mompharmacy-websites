@@ -35,7 +35,7 @@ function App() {
         <Route path='/jobdetails' Component={JobDetails} />
       </Routes>
       <EarlyAccess />
-      <Footer />
+       <Footer />
     </>
   )
 }

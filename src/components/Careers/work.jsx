@@ -7,16 +7,16 @@ import { motion, useScroll, useInView, useAnimation } from "framer-motion";
 
 const Workculture = () => {
 
-   const containerRef = useRef(null);
-    const inInView = useInView(containerRef, { once: true });
-    const mainControls = useAnimation();
-  
-    useEffect(() => {
-      if (inInView) {
-        mainControls.start("visible");
-      }
-    }, [inInView, mainControls]);
-  
+  const containerRef = useRef(null);
+  const inInView = useInView(containerRef, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (inInView) {
+      mainControls.start("visible");
+    }
+  }, [inInView, mainControls]);
+
   return (
     <div className="bg-white w-full py-10 px-4">
       <div className="text-center">
@@ -41,18 +41,22 @@ const Workculture = () => {
           }}
           exit={{ y: "50%", opacity: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-          className="mt-10 p-15 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-4 justify-items-center"
+          className="mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:px-10 gap-6 justify-items-center
+           overflow-x-auto sm:overflow-visible flex sm:flex-none space-x-4 sm:space-x-0
+           snap-x snap-mandatory scroll-smooth px-2 sm:px-0"
         >
           {[Image1, Image2, Image3, Image4].map((image, index) => (
             <img
               key={index}
               src={image}
               alt={`work${index + 1}`}
-              className="w-full max-w-60 lg:max-w-75 md:max-w-70 sm:max-w-70 h-50 md:h-80 lg:h-90 object-cover rounded-3xl shadow-md transition transform hover:scale-105 duration-300"
+              className="flex-shrink-0 w-60 h-60  object-cover rounded-3xl shadow-md
+              transition transform hover:scale-105 sm:w-full sm:h-100 lg:h-80 lg:w-full duration-300 snap-start "
             />
           ))}
         </motion.div>
       </div>
+
     </div>
   );
 };
