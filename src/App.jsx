@@ -16,11 +16,12 @@ import EarlyAccess from './components/Home/EarlyAccess'
 
 function App() {
  
-
+ 
   return (
     <>
+
     <Navbar/>
-    <Routes>
+    <Routes>    
       <Route path='/' Component={Home} />
       <Route path='/animation' Component={AnimationTrail}/> 
       <Route path='/ourteams' Component={Ourteam}/> 
