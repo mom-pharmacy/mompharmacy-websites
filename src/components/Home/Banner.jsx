@@ -16,10 +16,11 @@ const Banner = () => {
     <>
 
     <> 
-      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0"></div>}
+      {showUploadPrescription && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-200"></div>}
           <UploadPrescription showUploadPrescription={showUploadPrescription} setShowUploadPrescription={setShowUploadPrescription}/>
-          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 "></div>}
+          {downloadapp && <div className="fixed h-screen w-screen bg-black/45 left-0 top-0 z-200"></div>}
           <DownloadApp downloadapp={downloadapp} setDownloadApp={setDownloadApp}/>
+          
     </>
 
       <div className="overflow-x-hidden">   
@@ -49,27 +50,10 @@ const Banner = () => {
             </div>
           </div>
           <div className="flex gap-10 sm:flex flex-wrap items-center justify-center">
-            {/* <button
-              className="bg-white rounded-full hover:bg-[#FADB14] p-3 w-50 flex flex-row justify-around"
-              onClick={()=>{setShowUploadPrescription(true)}}
-            >
-              upload prescription
-              <span className="rounded-full bg-black text-white p-1">
-                <FaPrescription />
-              </span>
-            </button> */}
+      
             <Button onClick={setShowUploadPrescription} title=" upload prescription" icon={<FaPrescription />} ></Button>
             <Button onClick={()=>{setDownloadApp(true)}} title=" download app" icon={<MdDownload />} ></Button>
 
-            
-            {/* <button className="bg-white rounded-full hover:bg-[#FADB14] p-3 w-50 flex flex-row justify-around"
-            onClick={()=>{setDownloadApp(true)}}
-            >
-              download app
-              <span className="rounded-full bg-black text-white p-1">
-                <MdDownload />
-              </span>
-            </button> */}
           </div>
         </div>
       

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const CareerProgram = () => {
 
@@ -7,7 +8,9 @@ const CareerProgram = () => {
 
   return (
     <div>
-      <div className="text-center">
+      
+      <div
+        className="overflow-hidden whitespace-nowrap text-center pt-10 ">
         <p className="text-5xl font-bold text-teal-600 pt-10 pb-3 font-fredoka">
           career programs
         </p>
