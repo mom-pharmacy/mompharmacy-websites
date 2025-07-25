@@ -28,18 +28,19 @@ function Faqs() {
     //state 
     const [activeAnswer, setActiveAnswer] = useState(null)
 
+
     console.log(activeAnswer)
 
-    return <div className="w-[80%] m-auto">
+    return <div className="w-[100%] m-auto bg-white pt-20 ">
         <div className="flex items-center justify-center mb-[-20px]">
-            <div className="font-bold text-[50px] text-[#00A79B]">
+            <div className="font-bold text-[65px] text-[#00A79B]">
                 frequently asked questions?
             </div>
             <div className="animate-bounce">
                 <img src="/Home/pillmanFaqs.jpg" alt="pillman" />
             </div>
         </div>
-        {faqsList.map(item => <div key={item.id} className="cursor-pointer py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] mt-5 mb-5 rounded-xl">
+        {faqsList.map(item => <div key={item.id} className="cursor-pointer w-[80%] m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] mt-5  rounded-xl">
             <div className="flex justify-between items-center">
                 <button onClick={() => {
                     console.log("this is logging")
@@ -47,10 +48,16 @@ function Faqs() {
                 }}
                     className="text-[24px] font-medium  cursor-pointer"
                 >{item.question} </button>
-                <span className="cursor-pointer  " onClick={() => {
-                    console.log("this is logging")
-                    setActiveAnswer(item.id)
-                }}>✚</span>
+                <span
+                    className="cursor-pointer text-[#00A79B]"
+                    onClick={() =>
+                        setActiveAnswer(activeAnswer === item.id ? null : item.id)
+                    }
+                    
+                >
+                    {activeAnswer === item.id ? '━' : '✚'}
+                </span>
+
             </div>
             {activeAnswer === item.id && <div className=" text-[18px] font-normal">
                 <p className="pt-2">{item.answer}</p>

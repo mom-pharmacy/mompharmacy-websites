@@ -1,15 +1,17 @@
+import { div } from 'framer-motion/client'
 import React from 'react'
 
 function AskMom() {
     return ( 
-        <div className=' flex justify-center bg-[#00A79B1A] items-center  border-2 rounded-xl border-[#00A79B] mt-25 mb-25 p-[20px] gap-[50px] w-[60%] m-auto'>
+        <div className='bg-white z-[1] pt-25 pb-25'>
+            <div className=' flex justify-center bg-[#00A79B1A] items-center border-4 rounded-4xl border-[#00A79B] p-[20px] gap-[50px] w-[60%] m-auto '>
             <div className='w-40 animate-pulse'>
                 <img src="/Home/askmom.jpg" alt="askmom pillman" />
             </div>
             <div>
                 <h2 className='font-bold text-[42px] text-[#00A79B]'>got a question?</h2>
                 <h4 className='text-[24px] font-medium '>mom is just one message away!</h4>
-                <p className='text-[18px]] font-normal  w-[450px] '>whether it’s a health query or a concern, mom ai chat bot is here to help with clarity and a touch of mom like warmth-just start asking questions.</p>
+                <p className='text-[18px] font-normal  w-[450px] '>whether it’s a health query or a concern, mom ai chat bot is here to help with clarity and a touch of mom like warmth-just start asking questions.</p>
             </div>
             {/* <button className='py-2 px-3  bg-[#00A79B] rounded-xl text-white hover:bg-[#FADB14] font-bold'>
                 ask mom
@@ -20,9 +22,8 @@ function AskMom() {
                 <span class="relative">ask mom</span>
             </button>
         </div>
+        </div>
     )
 }
 
 export default AskMom
-
-
