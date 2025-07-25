@@ -9,20 +9,20 @@ import NavModal from "../Navbar/NavModal";
 export const navbarList = [
     {
         id:1 , 
-        title:"home" , 
+        title:"welcome" , 
         imageUrl:null ,
         link:"/"
     },
     {
         id:2 , 
-        title:"about us" , 
+        title:"who we are" , 
         imageUrl:null , 
         link:"/about"
 
     },
     {
         id:3 , 
-        title:"our team" , 
+        title:"meet the team" , 
         imageUrl:null  ,
         link:"/ourteams"  
     },
@@ -40,13 +40,13 @@ export const navbarList = [
     },
     {
         id:6 , 
-        title:"investors" , 
+        title:"for investors" , 
         imageUrl:null   ,
         link:"/investors"   
     },
     {
         id:7 , 
-        title:"contact us" , 
+        title:"connect" , 
         imageUrl:null   ,
         link:"/contactus"   
     },
