@@ -4,7 +4,7 @@ import share from '../../../assets/jobrole/share.svg'
 import save from '../../../assets/jobrole/save.svg'
 import GlowButton from '../../Buttons/GlowButton'
 import BorderButton from '../../Buttons/BorderButton'
-
+import SavedButton from   '../../Buttons/SavedButton'
 export default function Apply({we_offer}) {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
@@ -51,7 +51,7 @@ export default function Apply({we_offer}) {
 
           className='flex gap-2 mt-20'>
           <BorderButton title="share" link="#" icon={<img src={share} alt="share icon" className='inline-block h-5 w-5' />} />
-          <BorderButton title="save job" link="#" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
+          <SavedButton title="save job" icon={<img src={save} alt="save icon" className='inline-block h-5 w-5' />} />
           <GlowButton title="apply now" link="#" />
         </div>
       </div>
