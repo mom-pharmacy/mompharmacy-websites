@@ -13,6 +13,8 @@ import Ourteam from './pages/Ourteam'
 import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
+import Founders from './pages/Founders'
+import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
  
@@ -29,6 +31,11 @@ function App() {
       <Route path='/contactus' Component={ContactUs} />
       <Route path='/jobdetails' Component={JobDetails} />
       <Route path='/career' Component={Career}/>
+      <Route path='/founderbio' Component={Founders}/>
+      {/* <Route path='/opneCard' Component={OpenCardComp}/> */}
+
+
+      
     </Routes>
     <EarlyAccess/>
     <Footer/>
