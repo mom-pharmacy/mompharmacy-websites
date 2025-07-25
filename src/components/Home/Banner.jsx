@@ -4,6 +4,7 @@ import { FaPrescription } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import UploadPrescription from "./UploadPrescription";
 import DownloadApp from "./DownloadApp";
+import Button from "../Button";
 
 
 const Banner = () => {
@@ -49,23 +50,10 @@ const Banner = () => {
             </div>
           </div>
           <div className="flex gap-10 sm:flex flex-wrap items-center justify-center">
-            <button
-              className="bg-white rounded-full hover:bg-[#FADB14] p-3 w-50 flex flex-row justify-around cursor-pointer"
-              onClick={()=>{setShowUploadPrescription(true)}}
-            >
-              upload prescription
-              <span className="rounded-full bg-black text-white p-1">
-                <FaPrescription />
-              </span>
-            </button>
-            <button className="bg-white rounded-full hover:bg-[#FADB14] p-3 w-50 flex flex-row justify-around cursor-pointer"
-            onClick={()=>{setDownloadApp(true)}}
-            >
-              download app
-              <span className="rounded-full bg-black text-white p-1">
-                <MdDownload />
-              </span>
-            </button>
+      
+            <Button onClick={setShowUploadPrescription} title=" upload prescription" icon={<FaPrescription />} ></Button>
+            <Button onClick={()=>{setDownloadApp(true)}} title=" download app" icon={<MdDownload />} ></Button>
+
           </div>
         </div>
       
