@@ -25,7 +25,7 @@ const Applynow = () => {
             </button>
           </div>
           <p className="text-white text-lg lg:text-2xl mt-4">
-            An exclusive program helping women return to the workforce
+            an exclusive program helping women return to the workforce
             <p>after a career break.</p>
           </p>
         </div>
