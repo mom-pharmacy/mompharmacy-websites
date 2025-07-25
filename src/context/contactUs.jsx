@@ -1,50 +1,47 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ContactContext = createContext();
 
 export const ContactUsProvider = ({ children }) => {
-    const [loading, setLoading] = useState(true)
-    const[contact, setContact]=useState([])
+  const [loading, setLoading] = useState(false);
+  const [contact, setContact] = useState(null);
 
-    const postContact = async (data) => {
-        setLoading(true)
-        try {
-            const options = {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            };
-            const res = await fetch("http://localhost:3000/contactus/contact",options);
-             if(res){
-                setLoading(false)
-                const response = await res.json()
-                setContact(response);
+  const postContact = async (data) => {
+    setLoading(true);
+    try {
+      const res = await fetch("http://localhost:3000/contactus/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-             }
-             else{
-                console.log("something is", res);
-             }
-        }catch(e){
-            console.log("Error in Fetching data",e);
-        }
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status}`);
+      }
+
+      const responseData = await res.json();
+      setContact(responseData);
+      console.log("Posted data successfully", responseData);
+    } catch (error) {
+      console.error("Error posting contact data:", error);
+    } finally {
+      setLoading(false);
     }
+  };
 
-   
+  return (
+    <ContactContext.Provider value={{ contact, postContact, loading }}>
+      {children}
+    </ContactContext.Provider>
+  );
+};
 
-    return(
-        <ContactContext.Provider value={{contact, postContact}}>
-            {children}
-        </ContactContext.Provider>
-    )
-
-}
-export const useContact =()=>{
-    const context = useContext(ContactContext);
-    if(!context){
-        throw new Error("contactus context not found")
-    }
-    return context;
-}
-
+export const useContact = () => {
+  const context = useContext(ContactContext);
+  if (!context) {
+    throw new Error("useContact must be used within a ContactUsProvider");
+  }
+  return context;
+};

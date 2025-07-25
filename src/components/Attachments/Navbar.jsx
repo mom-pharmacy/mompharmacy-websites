@@ -36,7 +36,7 @@ export const navbarList = [
         id:5 , 
         title:"careers" , 
         imageUrl:null   ,
-        link:"/jobdetails"   
+        link:"/career"
     },
     {
         id:6 , 
