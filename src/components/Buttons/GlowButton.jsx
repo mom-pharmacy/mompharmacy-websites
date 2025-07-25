@@ -42,7 +42,7 @@ function GlowButton({ title = 'submit', link = null, onClick=null, icon = null }
 
   return (
     <motion.button
-      onClick={onClick}
+      onClick={handleClick}
       className="relative flex flex-row items-center justify-center min-w-[120px] max-w-[280px] h-[48px] px-4 bg-teal-400 text-white rounded-2xl
                  overflow-hidden text-lg font-semibold cursor-pointer"
       initial="initial"
