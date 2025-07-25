@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-function Button({ title = 'Button', link = '/', icon = null }) {
+function Button({ title = 'Button', link = null, onClick= null, icon = null }) {
   return (
-    <Link to={link}>
+    <Link to={link} onClick={onClick}>
       <motion.button
         className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-white rounded-[104px]
                    whitespace-nowrap overflow-hidden text-ellipsis text-sm font-semibold transition-all duration-300 
