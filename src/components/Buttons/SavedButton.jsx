@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 function Button({ title = 'Button', link = null, icon = null }) {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(() => {
+    const saved = localStorage.getItem('savedButtonState');
+    return saved === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('savedButtonState', isClicked);
+  }, [isClicked]);
 
   const handleClick = () => {
   
-      setIsClicked(true);
+      setIsClicked((prev) => !prev);
       console.log(`${isClicked?"true":"false"}`)
     
 
@@ -19,7 +25,7 @@ function Button({ title = 'Button', link = null, icon = null }) {
       <motion.button
       onClick={handleClick}
         className={`min-w-[120px] max-w-[280px] h-[48px] px-4 border-2 border-[#00a79b] hover:border-none rounded-[104px]
-                    ${isClicked ? 'bg-yellow-500' : 'bg-[#00a79b]-300 '} `}
+                    ${isClicked ? 'bg-[#fadb14]-500' : 'bg-[#00a79b]-300 '} `}
                   
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
