@@ -1,5 +1,6 @@
-import { div } from 'framer-motion/client'
+
 import React from 'react'
+    import { Link } from "react-router-dom";
 
 function AskMom() {
     return ( 
@@ -16,11 +17,11 @@ function AskMom() {
             {/* <button className='py-2 px-3  bg-[#00A79B] rounded-xl text-white hover:bg-[#FADB14] font-bold'>
                 ask mom
             </button> */}
-            <button class="relative inline-flex shadow-xs shadow-[#00A79B] items-center justify-center px-2 py-4 overflow-hidden  font-bold tracking-tighter text-white bg-[#00A79B] rounded-2xl group">
+            <Link to='/contactus'><button class="relative inline-flex shadow-xs shadow-[#00A79B] items-center justify-center px-2 py-4 overflow-hidden  font-bold tracking-tighter text-white bg-[#00A79B] rounded-2xl group">
                 <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#FADB14] rounded-full group-hover:w-56 group-hover:h-56"></span>
                 <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-[#FADB14] from-transparent via-transparent to-[#00A79B]"></span>
                 <span class="relative">ask mom</span>
-            </button>
+            </button></Link>
         </div>
         </div>
     )

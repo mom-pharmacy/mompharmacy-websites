@@ -17,9 +17,9 @@ function TalentedTeam() {
         <div >
           <div className='flex relative  '>
             <div className='z-0 absolute xl:ml-20 md:ml-20 ml-0 xl:w-100 w-30'><img src="/Home/teamPerson1.jpg" alt="person1"  /></div>
-            <div className='z-10 absolute xl:ml-40 md:ml-40 ml-10  xl:w-100 w-30'><img src="/Home/teamPerson2.jpg" alt="person2"  /></div>
-            <div className='z-20 absolute xl:ml-60 md:ml-60 ml-20  xl:w-100 w-30'><img src="/Home/teamPerson3.jpg" alt="person3" /></div>
-            <div className='z-30 absolute xl:ml-80 md:ml-80 ml-30  xl:w-100 w-30 cursor-pointer'><img src="/Home/plus.jpg" alt="plus symbol" /></div> 
+            <div className='z-2 absolute xl:ml-40 md:ml-40 ml-10  xl:w-100 w-30'><img src="/Home/teamPerson2.jpg" alt="person2"  /></div>
+            <div className='z-3 absolute xl:ml-60 md:ml-60 ml-20  xl:w-100 w-30'><img src="/Home/teamPerson3.jpg" alt="person3" /></div>
+            <div className='z-4 absolute xl:ml-80 md:ml-80 ml-30  xl:w-100 w-30 cursor-pointer'><img src="/Home/plus.jpg" alt="plus symbol" /></div> 
         </div>
           <div>
             <h2 className="text-[50px] font-bold text-[#00A79B]">
