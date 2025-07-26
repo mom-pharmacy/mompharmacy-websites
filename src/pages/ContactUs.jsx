@@ -6,7 +6,8 @@ export default function ContactUs() {
   return (
     <div>
       <TopComponent />
-        <Contact />
+        
+       
     </div>
   )
 }

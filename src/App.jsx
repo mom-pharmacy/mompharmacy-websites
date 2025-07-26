@@ -32,7 +32,7 @@ function App() {
         <Route path='/founderbio' Component={Founders}/>
        </Routes>
       <EarlyAccess />
-      <Footer />
+       <Footer />
     </>
   )
 }
