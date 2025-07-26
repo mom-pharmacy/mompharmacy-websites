@@ -16,7 +16,7 @@ export default function Departments() {
     }  return (
     <div>
     
-      <div className="flex flex-col items-center bg-local md:bg-fixed ...">
+      <div className="flex flex-col items-center ">
         <h2 className="text-[#00A79B] text-5xl font-bold"> Departments </h2>
         <p className="text-2xl">departments across</p>
       </div>

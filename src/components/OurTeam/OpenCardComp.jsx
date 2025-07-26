@@ -7,7 +7,6 @@ const TeamPopup = ({state , setState}) => {
 
         console.log("....................uvjadbdsjsda.........lnkcfnkndsl;clicke",state)
 
-
   const sectionRef = useRef(null);
   const handleOpen = () => {
     setOpen(true);

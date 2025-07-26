@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import CardComp from './CardComp';
 import Departments from './Departments';
@@ -28,7 +29,6 @@ const Founders = () => {
     
   );
 };
-
 export default Founders;
 
 
