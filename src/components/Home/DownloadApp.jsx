@@ -42,7 +42,7 @@ const DownloadApp = ({setDownloadApp,downloadapp}) => {
         <img src="/Home/twomobiles.png" alt="two mobiles" className="h-72" />
       </div>
       <div>
-          <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-80 -right-93 bg-white rounded-full'  onClick={()=>setDownloadApp(false)}>
+          <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-80 -right-93 bg-white rounded-full hover:bg-[#FADB14] hover:text-black '  onClick={()=>setDownloadApp(false)}>
                         <ImCancelCircle className='w-10 h-10'/>
                       </button>
       </div>

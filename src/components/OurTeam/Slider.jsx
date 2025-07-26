@@ -1,9 +1,10 @@
+
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import "@fontsource/fredoka-one";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { motion } from "framer-motion";
 import Teamwork from "./Teamwork";
 
 const MomsDesk = () => {
@@ -50,11 +51,7 @@ const MomsDesk = () => {
     afterChange: (index) => setActiveIndex(index),
   };
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6 gap-
-      <h1 className="text-5xl text-[#00A79B] font-bold text-center">
-        teamwork
-      </h1>
-      <div className="w-full max-w-3xl border-4 border-[#00A79B] rounded-4xl pt-9 pb-10 ">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6 gap-8">
       <motion.h1
         className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center animate-bounce"
         whileHover={{ scale: 1.1, rotate: -1 }}
@@ -72,11 +69,9 @@ const MomsDesk = () => {
             <Teamwork key={index} quote={item.quote} role={item.role} />
           ))}
         </Slider>
-      </div>
-      <div className="flex justify-center mt-2">
       </motion.div>
 
-      <div className="flex justify-center mt-2 "
+      <div className="flex justify-center mt-2 ">
         {quotes.map((_quote, i) => (
           <button
             key={i}
@@ -90,9 +85,5 @@ const MomsDesk = () => {
             aria-label={`go to slide ${i + 1}`}
           ></button>
         ))}
-      </div>
-    </div>
-  );
-};
 
 export default MomsDesk;

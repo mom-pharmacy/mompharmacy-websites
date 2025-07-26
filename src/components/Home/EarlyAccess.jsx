@@ -13,7 +13,7 @@ const EarlyAccess = () => {
   return (
     <>
     <>
-    {earlyaccess && <div className='fixed bg-black/45 top-0 left-0'></div>}
+    {earlyaccess && <div className='fixed  top-0 left-0'></div>}
     <EarlyAccessForm earlyaccess={earlyaccess} setEarlyAccess={setEarlyAccess}/>
     </>
     <div className='flex items-center justify-between fixed bottom-0 w-full p-6'>
