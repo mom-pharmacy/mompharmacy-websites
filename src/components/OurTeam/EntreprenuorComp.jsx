@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from './FoundersPageComp'
+// import Main from './FoundersPageComp'
 import TextComp from './textComp'
 import ImageComp from './ImageComp'
 
