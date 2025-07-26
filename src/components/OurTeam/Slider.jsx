@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import "@fontsource/fredoka-one";
@@ -84,9 +85,5 @@ const MomsDesk = () => {
             aria-label={`go to slide ${i + 1}`}
           ></button>
         ))}
-      </div>
-    </div>
-  );
-};
 
 export default MomsDesk;

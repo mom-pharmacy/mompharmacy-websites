@@ -8,7 +8,7 @@ import { ImCancelCircle } from "react-icons/im";
 const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}) => {
   return (
     <AnimatePresence mode='wait'>
-    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-17' >
+    {showUploadPrescription &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-1700' >
         <div className="flex flex-row gap-12 outline-1 w-220   items-center justify-center rounded-xl bg-white fixed p-5 outline-[#00A79B]">
           <div className="flex flex-col gap-5 ">
             <div className="flex flex-col items-center justify-center">
@@ -51,7 +51,7 @@ const UploadPrescription = ({setShowUploadPrescription , showUploadPrescription}
                 <input type="text" placeholder="+91" className="outline-1 w-50 rounded-sm outline-[#00A79B] p-2 "/>
                 <input type="text" placeholder="your age" className="outline-1 w-50 rounded-sm outline-[#00A79B] p-2"/>
               </div>
-              <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-8 -right-17 bg-white rounded-full sm: '  onClick={()=>setShowUploadPrescription(false)}>
+              <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-8 -right-17 bg-white rounded-full '  onClick={()=>setShowUploadPrescription(false)}>
                 <ImCancelCircle className='w-10 h-10 '/>
               </button>
             </div>

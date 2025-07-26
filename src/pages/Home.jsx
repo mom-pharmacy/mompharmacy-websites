@@ -17,8 +17,9 @@ const Home = () => {
           <AskMom />
           {/* <Footer /> */}
           </div>
+          </div>
 
   )
 }
 
-export default Home
+export default Home;

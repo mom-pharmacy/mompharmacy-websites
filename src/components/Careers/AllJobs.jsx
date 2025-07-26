@@ -1,28 +1,12 @@
-import React from 'react'
-import JobCard from '../JobCard';
+import React from "react";
+import JobCard from "../JobCard";
+import { useCareer } from "../../context/career";
+import { Link, useNavigate } from "react-router";
 
 const AllJobs = () => {
-  const jobs = [
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
+  const { career } = useCareer();
+  const navigate = useNavigate();
 
-  ];
   return (
     <div>
       <div className="flex justify-between p-15">
@@ -35,43 +19,31 @@ const AllJobs = () => {
           />
         </button>
       </div>
-      <div className=" pl-15 bl-1">
+      <div className=" pl-15 pl-1">
         <p className="text-3xl p-2 border-l-3">departments</p>
       </div>
       <div className="pl-15 pb-10 pt-10">
         <div className="flex flex-wrap gap-5">
-          {jobs.map((job, index) => (
-            <JobCard
-              key={index}
-              role={job.role}
-              experience={job.experience}
-              location={job.location}
-              vacancies={job.vacancies}
-            />
-          ))}
-        </div>
-      </div>
 
-      <div>
-        <div className=" pl-15 bl-1">
-          <p className="text-3xl border-l-3 p-2">departments</p>
-        </div>
-        <div className="pl-15 pb-10 pt-10">
-          <div className="flex flex-wrap gap-5">
-            {jobs.map((job, index) => (
+          {career.map(({role,experience,location,vacancy,job_no,travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect}, index) => (
+            
+            <button onClick={() => navigate("/jobdetails",{state:{job_no,travel,job_category,date_published,employment_type,work_model,role_description,eligibility,about_employee,we_offer,employee_expect}})} key={index}>
+
               <JobCard
-                key={index}
-                role={job.role}
-                experience={job.experience}
-                location={job.location}
-                vacancies={job.vacancies}
+
+                role={role}
+                experience={experience}
+                location={location}
+                vacancies={vacancy}
               />
-            ))}
-          </div>
+
+            </button>
+          ))}
+
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default AllJobs
+export default AllJobs;
