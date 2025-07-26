@@ -16,6 +16,10 @@ import EarlyAccess from './components/Home/EarlyAccess'
 
 function App() {
 
+ 
+ 
+ 
+
 
   return (
     <>
@@ -29,10 +33,9 @@ function App() {
         <Route path='/contactus' Component={ContactUs} />
         <Route path='/career' Component={Career} />
         <Route path='/jobdetails' Component={JobDetails} />
-
       </Routes>
       <EarlyAccess />
-      <Footer />
+       <Footer />
     </>
   )
 }
