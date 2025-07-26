@@ -44,7 +44,7 @@ function OurStory() {
             duration: 200,
             once: true,
             debounceDelay: 10,
-            // throttleDelay: 99,
+            throttleDelay: 99,
             offset:50,
             delay: 10,
             duration: 50, 
