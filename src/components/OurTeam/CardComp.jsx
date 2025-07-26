@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 
 
 export default function CardComp(props) {
 
-   let navigate = useNavigate();
+  //  let navigate = useNavigate();
 
-   function handleClick()
-   {
-   console.log("clicked")
-    navigate('/founderbio')
+  //  function handleClick()
+  //  {
+  //  console.log("clicked")
+  //   navigate('/founderbio')
 
-   }
+  //  }
 
   const [isHovered, setIsHovered] = useState(false);
   console.log(isHovered);
@@ -36,7 +36,8 @@ export default function CardComp(props) {
           })
         }
 
-        onClick={()=>handleClick()}
+        // onClick={()=>handleClick()}
+        
       >
         <img
           src="/dev1.png"

@@ -1,16 +1,18 @@
-import React from 'react'
-import Founder from '../components/OurTeam/founder'
-import Departments from '../components/OurTeam/Departments'
-import MomsDesk from '../components/AboutUs/momsdesk'
-import Maincard from '../components/OurTeam/Maincard'
+import React from "react";
+import Maincard from "../components/Ourteam/Maincard";
+// import Teamwork from "../components/Ourteam/Teamwork";
+// import Slider from "react-slick/lib/slider";
+import MomsDesk from "../components/Ourteam/slider";
+import Founder from "../components/OurTeam/founder";
+import Departments from "../components/OurTeam/Departments";
 
-export default function OurTeam() {
+function Ourteam() {
   return (
-    <div>
-      <Maincard/>
-        <Founder/>
-        <Departments/>
-      <MomsDesk/>
+    <div className="">
+      <Maincard />
+      <Founder></Founder>
+      <Departments></Departments>
+      <MomsDesk></MomsDesk>
     </div>
   )
 }
