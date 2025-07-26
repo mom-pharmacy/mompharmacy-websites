@@ -13,7 +13,7 @@ export const Career = () => {
         <Applynow />
         <CareerProgram />
         <OpenPositions />
-        <AllJobs />
+        {/* <AllJobs /> */}
     </div>
   )
 }

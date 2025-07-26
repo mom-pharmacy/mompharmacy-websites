@@ -3,9 +3,10 @@ import JobCard from "../JobCard";
 import { useCareer } from "../../context/career";
 import { Link, useNavigate } from "react-router";
 
-const AllJobs = () => {
+const AllJobs = ({Result}) => {
   const { career } = useCareer();
   const navigate = useNavigate();
+   const jobs = Result === null ? career : Result;
 
   return (
     <div className="px-4 sm:px-5 md:px-10 lg:px-15">
@@ -32,8 +33,11 @@ const AllJobs = () => {
 
    
       <div className="mt-8 sm:mt-10 sm:mx-2">
+        {Array.isArray(Result) && Result.length === 0 ? (
+          <p className="text-x1 text-center text-black-500">No jobs available</p>
+        ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {career.map(
+          {jobs.map(
             (
               {
                 role,
@@ -86,6 +90,7 @@ const AllJobs = () => {
             )
           )}
         </div>
+        )}
       </div>
     </div>
   );
