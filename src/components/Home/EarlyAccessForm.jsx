@@ -3,12 +3,12 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { ImCancelCircle } from "react-icons/im";
 
-const EarlyAccessForm = ({setEarlyAccess}) => {
+const EarlyAccessForm = ({earlyaccess,setEarlyAccess}) => {
   return (
  
     
     <AnimatePresence mode='wait'>
-      <motion.div initial={{y:1000,display:'none'}} animate={{y:-2000,display:'flex'}} transition={{duration:0.2}} exit={{y:-1000}} className='flex  h-screen w-screen fixed '>
+      {earlyaccess &&<motion.div initial={{y:1000,display:'none'}} animate={{y:0,display:'flex'}} transition={{duration:0.4}} exit={{y:1000}} className='flex  h-screen w-screen fixed left-0 top-55'>
         <div className='flex flex-row'>
         <div className='w-100 h-60 bg-white ouline-1  flex flex-col gap-2 p-5 rounded-xl '>
           <p className='text-xl text-[#00A79B]'>Get Early Access To Wellness</p>
@@ -20,11 +20,11 @@ const EarlyAccessForm = ({setEarlyAccess}) => {
           </div>
           </div>   
           <div className='relative  right-6 -top-2' onClick={()=>{setEarlyAccess(false)}}>
-             <ImCancelCircle className='text-[#00A79B] w-10 h-10 bg-white rounded-full outline-1 outline-[#00A79B] cursor-pointer ' />
+             <ImCancelCircle className='text-[#00A79B] w-10 h-10 bg-white rounded-full outline-1 outline-[#00A79B] cursor-pointer hover:bg-[#FADB14] hover:text-black  ' />
             </div>     
             </div>
           
-      </motion.div>
+      </motion.div>}
     </AnimatePresence>
   )
 }

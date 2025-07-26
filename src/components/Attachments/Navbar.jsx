@@ -5,6 +5,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import NavButton from "./NavButton";
 import { RiMenuFold2Line } from "react-icons/ri";
 import NavModal from "../Navbar/NavModal";
+import Button from "../Button";
 
 export const navbarList = [
     {
@@ -91,9 +92,10 @@ function RenderLanguage({language , setActiveLanguage , setShowLanguages}){
     }
 
     return <li className="flex flex-col justify-stretch">
-        <button className="border-2 p-1 rounded-2xl text-center" onClick={handleChangeLanguage}>
+        {/* <button className="border-2 p-1 rounded-2xl text-center" onClick={handleChangeLanguage}>
         {language.title}
-        </button>
+        </button> */}
+        <Button title={language.title} onClick={handleChangeLanguage} ></Button>
     </li>
 }
 
