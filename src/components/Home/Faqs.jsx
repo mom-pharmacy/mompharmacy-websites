@@ -41,9 +41,9 @@ function Faqs() {
 
     console.log(activeAnswer)
 
-    return <div className=" xl:w-[80%] md:w-[90%] w-[90%] m-auto bg-white xl:pt-20 md:pt-10 pt-10  ">
-        <div className="flex items-center justify-center xl:mb-[-20px] md:mb-[-20px]  ">
-            <div className="font-bold xl:text-[65px] text-[35px] md:text-[40px] text-[#00A79B] text-center ">
+    return <div className=" xl:w-[80%] md:w-[90%] w-[90%] m-auto bg-white xl:pt-20 md:pt-10 pt-15 ">
+        <div className="flex items-center justify-center xl:mb-[-20px] md:mb-[-20px] mb-0">
+            <div className="font-bold xl:text-[65px] text-[25px] md:text-[40px] text-[#00A79B] text-center ">
                 frequently asked questions?
             </div>
             <div className="animate-bounce ">
