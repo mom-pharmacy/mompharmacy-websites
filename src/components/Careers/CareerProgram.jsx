@@ -19,14 +19,14 @@ const CareerProgram = () => {
         </p>
       </div>
 
-      <div className="p-10 font-['Fredoka_One'] flex flex-wrap justify-center gap-4">
+      <div className="p-6 lg:p-12 font-['Fredoka_One'] grid grid-cols-2 md:flex md:flex-row justify-center lg:gap-4 gap-3">
         {programs.map((program, index) => (
           <button
             key={index}
             className="group border-2 border-teal-600 text-teal-600
-              py-3 px-6 rounded-md w-full sm:w-full lg:w-auto
+              py-3 px-3 rounded-md w-full lg:w-65 md:px-2
               hover:bg-[#FADB14] hover:border-[#FADB14] hover:text-black
-              text-2xl flex items-center justify-between w-60 transition duration-300"
+              text-lg flex items-center justify-between transition duration-300"
           >
             <span>{program}</span>
             <FaArrowRightLong className="ml-3 text-2xl transition-transform duration-300 group-hover:-rotate-45" />

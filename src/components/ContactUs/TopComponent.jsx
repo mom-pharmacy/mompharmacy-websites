@@ -5,9 +5,20 @@ import Button from "../Buttons/Button";
 import Contact from "./Contact";
 import GlowButton from "../Buttons/GlowButton";
 export default function TopComponent() {
+    const handleClick = () => {
+    if (link.startsWith('#')) {
+      const id = link.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = link;
+    }
+  };
   return (
     <>
-    <div className="bg-[#00A79B] text-white w-full text-center flex flex-col items-center">
+    <div className="bg-[#00A79B] p-2 sm:p-5 md:p-7 lg:p-8 text-white w-full text-center flex flex-col items-center">
       <motion.h1
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
@@ -36,8 +47,8 @@ export default function TopComponent() {
         or grievances
       </motion.h1>
 
-      <div className="flex gap-5 sm:flex-col-1 md:flex-row lg:flex-row mt-10">
-        <Button title="get in touch" link="#form"/>
+      <div className="flex flex-col gap-5 sm:flex-col md:flex-row lg:flex-row item-center justify-center mt-10">
+        <Button title="get in touch" link="#form" onClick={handleClick}/>
         <Button title="give feedback" />
       </div>
       <img
