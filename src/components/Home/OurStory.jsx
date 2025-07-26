@@ -33,34 +33,52 @@
 // export default OurStory
 
 
-import React from 'react'
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+// import { motion } from 'framer-motion';
 
 function OurStory() {
+    useEffect(() => {
+        AOS.init({
+            duration: 100,
+            once: true,
+            debounceDelay: 10,
+            // throttleDelay: 99,
+            offset:50,
+            delay: 50,
+            duration: 1000, 
+            easing: 'ease', 
+            once: false, 
+            mirror: true, 
+            anchorPlacement: 'top-bottom',
+        });
+    }, []);
     return (
-        <motion.div
-      initial={{ scale: 0, opacity: 0 }} 
-      animate={{ scale: 1, opacity: 1 }}   
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      animation-time 
-    >
-        <div class="relative xl:w-screen xl:h-screen md:h-80 h-60 mx-auto xl:mt-35 md:mt-10 ">
-            <img class="xl:w-screen xl:h-screen h-60 md:h-80 md:w-screen object-cover rounded-md" src="/Home/ourStory.jpg" alt="team image" />
-            <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
-            <div class="absolute inset-0 flex items-center justify-center xl:px-20 md:px-20 px-6 ">
-                <h2 class="text-white xl:text-[45px] md:text-[25px] text-xl text-center font-bold">mom pharmacy is where speed meets soul delivering essential medicines under 10 minutess </h2>
-            </div>
-            <div className='z-[10] xl:mt-[-20px] md:mt-[-20px] mt-[-30px] flex items:center justify-center'>
-                <button class="relative inline-flex xl:px-15 px-10 py-3 xl:py-3 md:py-3 md:px-15 xl:text-2xl shadow-xs shadow-[#00A79B] items-center justify-center  overflow-hidden  font-bold tracking-tighter text-white bg-[#00A79B] rounded-2xl group ">
-                <span class=" absolute w-0 h-0 transition-all duration-500 ease-out bg-[#FADB14] rounded-full group-hover:w-56 group-hover:h-56"></span>
-                <span class=" absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-[#FADB14] from-transparent via-transparent to-[#00A79B]"></span>
-                <span class="relative ">our story</span>
-            </button>
+
+        <div data-aos="zoom-in-up" data-aos-offset="-50"
+    data-aos-delay="100"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-quad"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
+            <div class="relative xl:w-screen xl:h-screen md:h-80 h-60 mx-auto xl:mt-35 md:mt-10 " >
+                <img class="xl:w-screen xl:h-screen h-60 md:h-80 md:w-screen object-cover rounded-md" src="/Home/ourStory.jpg" alt="team image" />
+                <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
+                <div class="absolute inset-0 flex items-center justify-center xl:px-20 md:px-20 px-6 ">
+                    <h2 class="text-white xl:text-[45px] md:text-[25px] text-xl text-center font-bold">mom pharmacy is where speed meets soul delivering essential medicines under 10 minutess </h2>
+                </div>
+                <div className='z-[10] xl:mt-[-20px] md:mt-[-20px] mt-[-30px] flex items:center justify-center'>
+                    <button class="relative inline-flex xl:px-15 px-10 py-3 xl:py-3 md:py-3 md:px-15 xl:text-2xl shadow-xs shadow-[#00A79B] items-center justify-center  overflow-hidden  font-bold tracking-tighter text-white bg-[#00A79B] rounded-2xl group ">
+                        <span class=" absolute w-0 h-0 transition-all duration-500 ease-out bg-[#FADB14] rounded-full group-hover:w-56 group-hover:h-56"></span>
+                        <span class=" absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-[#FADB14] from-transparent via-transparent to-[#00A79B]"></span>
+                        <span class="relative ">our story</span>
+                    </button>
+                </div>
             </div>
         </div>
-        </motion.div>
     )
 }
 
 export default OurStory
-
