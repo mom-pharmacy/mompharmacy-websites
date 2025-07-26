@@ -1,77 +1,94 @@
-import React from 'react'
-import JobCard from '../JobCard';
+import React from "react";
+import JobCard from "../JobCard";
+import { useCareer } from "../../context/career";
+import { Link, useNavigate } from "react-router";
 
 const AllJobs = () => {
-  const jobs = [
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
-    {
-      role: "job role name",
-      experience: "1-2 year",
-      location: "location name",
-      vacancies: "02",
-    },
+  const { career } = useCareer();
+  const navigate = useNavigate();
 
-  ];
   return (
-    <div>
-      <div className="flex justify-between p-15">
-        <p className="text-3xl">all jobs</p>
-        <button className="group text-xl flex rounded-3xl text-teal-600 border-2 px-4 py-2 ml-2 hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black">
+    <div className="px-4 sm:px-5 md:px-10 lg:px-15">
+   
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+        <p className="text-2xl sm:text-3xl font-['Fredoka_One']">all jobs</p>
+
+        <button className="group font-['Fredoka_One'] text-xl sm:text-2xl flex items-center rounded-3xl text-teal-600 border-2 px-4 py-2 hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black transition">
           view saved jobs (1)
           <img
             src="./src/assets/savedicon.svg"
-            className="w-5 h-5 mt-1 pl-1 pt-1 hover:fill-current hover:text-black"
+            alt="Saved Icon"
+            className="w-5 h-5 ml-2"
           />
         </button>
       </div>
-      <div className=" pl-15 bl-1">
-        <p className="text-3xl p-2 border-l-3">departments</p>
-      </div>
-      <div className="pl-15 pb-10 pt-10">
-        <div className="flex flex-wrap gap-5">
-          {jobs.map((job, index) => (
-            <JobCard
-              key={index}
-              role={job.role}
-              experience={job.experience}
-              location={job.location}
-              vacancies={job.vacancies}
-            />
-          ))}
-        </div>
+
+   
+      <div>
+        <p className="text-xl sm:text-2xl p-2 border-l-4 border-black font-['Fredoka_One']">
+          departments
+        </p>
       </div>
 
-      <div>
-        <div className=" pl-15 bl-1">
-          <p className="text-3xl border-l-3 p-2">departments</p>
-        </div>
-        <div className="pl-15 pb-10 pt-10">
-          <div className="flex flex-wrap gap-5">
-            {jobs.map((job, index) => (
-              <JobCard
+   
+      <div className="mt-8 sm:mt-10 sm:mx-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {career.map(
+            (
+              {
+                role,
+                experience,
+                location,
+                vacancy,
+                job_no,
+                travel,
+                job_category,
+                date_published,
+                employment_type,
+                work_model,
+                role_description,
+                eligibility,
+                about_employee,
+                we_offer,
+                employee_expect,
+              },
+              index
+            ) => (
+              <button
+                onClick={() =>
+                  navigate("/jobdetails", {
+                    state: {
+                      role,
+                      job_no,
+                      travel,
+                      job_category,
+                      date_published,
+                      employment_type,
+                      work_model,
+                      role_description,
+                      eligibility,
+                      about_employee,
+                      we_offer,
+                      employee_expect,
+                    },
+                  })
+                }
                 key={index}
-                role={job.role}
-                experience={job.experience}
-                location={job.location}
-                vacancies={job.vacancies}
-              />
-            ))}
-          </div>
+                className="text-left" 
+              >
+                <JobCard
+                  role={role}
+                  experience={experience}
+                  location={location}
+                  vacancies={vacancy}
+                />
+              </button>
+            )
+          )}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default AllJobs
+export default AllJobs;

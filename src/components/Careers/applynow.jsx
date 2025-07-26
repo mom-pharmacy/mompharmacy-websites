@@ -1,19 +1,37 @@
-import React from 'react'
-
+import React from "react";
+import Image from "../../assets/tabletwithslate.png";
 const Applynow = () => {
-    return (
-        <div className='bg-[#F96E83] h-60 width-20px flex flex-col justify-center rounded-4xl mt-35 mr-47 ml-38'>
-            <div className='text-center'>
-                <p className='text-yellow-300 text-5xl font-semi bold mr-60'>mom is calling mom to</p>
-                <p className='text-yellow-300 text-5xl font-semi bold mr-90 p-2'>get back to work</p>
-                <p className='text-white text-2xl mr-15'>An exclusive program helping women return to the workforce</p>
-                <p className='text-white text-2xl mr-127'>after a career break</p>
-            </div>
-            <div className='flex-1 mb-40'>
-                <button className='text-black bg-white hover:bg-yellow-300 text-3xl font-semibold  h-15 w-50 rounded-full ml-220 '><p className='text-center'>apply now</p></button>
-            </div>
-
+  return (
+    <div className="flex justify-center pt-5 px-4">
+      <div className="bg-[#F96E83] rounded-3xl flex flex-col lg:flex-row items-center lg:items-start w-full max-w-5xl p-6">
+        <div className="mb-4 lg:mb-0 lg:mr-6">
+          <img src={Image} alt="tablet" className="w-40 h-40 object-contain" />
         </div>
-    )
-}
-export default Applynow
+
+        <div className="text-center lg:text-left">
+          <div className="flex flex-col font-['Fredoka_One'] lg:flex-row items-center lg:items-start">
+            <p className="text-[#FADB14]  text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 lg:mb-0 lg:pr-4">
+              mom is calling mom to
+              <p className="p-0 lg:p-0 md:p-2 sm:p-2">get back to work</p>
+            </p>
+
+            <button
+              className="bg-white text-xl text-black px-5 py-2 rounded-3xl 
+  hover:bg-[#FADB14] hover:text-black transition 
+  w-fit mx-auto 
+  lg:ml-60 lg:mt-10 lg:mx-0"
+            >
+              apply now
+            </button>
+          </div>
+          <p className="text-white text-lg md:text-2xl lg:text-2xl mt-4">
+            an exclusive program helping women return to the workforce
+            <p>after a career break.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Applynow;

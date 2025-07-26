@@ -14,31 +14,25 @@ import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
-import OpenCardComp from './components/OurTeam/OpenCardComp'
+// import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
- 
-
   return (
     <>
-    <Navbar/>
-    <Routes>
-      <Route path='/' Component={Home} />
-      <Route path='/animation' Component={AnimationTrail}/> 
-      <Route path='/ourteams' Component={Ourteam}/> 
-      <Route path='/about' Component={AboutUs} />
-      <Route path='/investors' Component={Investors} />
-      <Route path='/contactus' Component={ContactUs} />
-      <Route path='/jobdetails' Component={JobDetails} />
-      <Route path='/career' Component={Career}/>
-      <Route path='/founderbio' Component={Founders}/>
-      {/* <Route path='/opneCard' Component={OpenCardComp}/> */}
-
-
-      
-    </Routes>
-    <EarlyAccess/>
-    <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path='/' Component={Home} />
+        <Route path='/animation' Component={AnimationTrail} />
+        <Route path='/ourteams' Component={Ourteam} />
+        <Route path='/about' Component={AboutUs} />
+        <Route path='/investors' Component={Investors} />
+        <Route path='/contactus' Component={ContactUs} />
+        <Route path='/career' Component={Career} />
+        <Route path='/jobdetails' Component={JobDetails} />
+        <Route path='/founderbio' Component={Founders}/>
+       </Routes>
+      <EarlyAccess />
+       <Footer />
     </>
   )
 }

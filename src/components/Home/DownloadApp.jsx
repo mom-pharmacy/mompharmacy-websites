@@ -6,7 +6,7 @@ import { ImCancelCircle } from "react-icons/im";
 const DownloadApp = ({setDownloadApp,downloadapp}) => {
   return (
     <AnimatePresence mode="wait">
-     { downloadapp &&<motion.div initial={{x:1500,display:"none"}} animate={{x:0,display:"flex"}} transition={{duration:0.2}} exit={{x:1500}} className="flex fixed h-screen w-screen justify-center z-16">     
+     { downloadapp &&<motion.div initial={{x:1500,display:"none"}} animate={{x:0,display:"flex"}} transition={{duration:0.2}} exit={{x:1500}} className="flex fixed h-screen w-screen justify-center z-1700">     
     <div className="flex outline-1 w-200 items-center justify-center gap-10 p-3 fixed bg-white rounded-2xl outline-[#00A79B]  ">
         <div className="flex flex-col gap-15 w-90">
       <div className="flex flex-col items-center justify-center ">
@@ -42,7 +42,7 @@ const DownloadApp = ({setDownloadApp,downloadapp}) => {
         <img src="/Home/twomobiles.png" alt="two mobiles" className="h-72" />
       </div>
       <div>
-          <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-80 -right-93 bg-white rounded-full'  onClick={()=>setDownloadApp(false)}>
+          <button className='text-[#00A79B] cursor-pointer w-10 h-10 relative -top-80 -right-93 bg-white rounded-full hover:bg-[#FADB14] hover:text-black '  onClick={()=>setDownloadApp(false)}>
                         <ImCancelCircle className='w-10 h-10'/>
                       </button>
       </div>

@@ -27,7 +27,7 @@ const buttonVariants = {
   },
 };
 
-function GlowButton({ title = 'submit', link = '/', icon = null }) {
+function GlowButton({ title = 'submit', link = null, onClick=null, icon = null }) {
   const handleClick = () => {
     if (link.startsWith('#')) {
       const id = link.replace('#', '');
