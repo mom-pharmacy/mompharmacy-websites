@@ -3,19 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 function Button({ title = 'Button', link = null, onClick= null, icon = null }) {
-   const handleClick = () => {
-    if (link.startsWith('#')) {
-      const id = link.replace('#', '');
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      window.location.href = link;
-    }
-  };
   return (
-    <Link to={link} onClick={handleClick}>
+    <Link to={link} onClick={onClick}>
       <motion.button
         className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-white rounded-[104px]
                    whitespace-nowrap overflow-hidden text-ellipsis text-lg transition-all duration-300 
