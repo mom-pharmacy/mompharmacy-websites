@@ -5,12 +5,15 @@ import { MdDownload } from "react-icons/md";
 import UploadPrescription from "./UploadPrescription";
 import DownloadApp from "./DownloadApp";
 import Button from "../Button";
+import Welcome from "./Welcome";
 
 
 const Banner = () => {
 
   const [showUploadPrescription , setShowUploadPrescription] = useState(false)
   const[downloadapp,setDownloadApp]=useState(false)
+  const [welcome,setWelcome]=useState(true)
+  
 
   return (
     <>
@@ -56,7 +59,7 @@ const Banner = () => {
 
           </div>
         </div>
-      
+          <Welcome welcome={welcome} setWelcome={setWelcome}/>
       </div>
 
      

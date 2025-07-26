@@ -14,7 +14,7 @@ import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
-import OpenCardComp from './components/OurTeam/OpenCardComp'
+// import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path='/founderbio' Component={Founders}/>
        </Routes>
       <EarlyAccess />
-      <Footer />
+       <Footer />
     </>
   )
 }

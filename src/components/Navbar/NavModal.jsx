@@ -17,7 +17,7 @@ function NavModal({showLink , setShowLink , setShowModal}){
         </div>
         <div className="flex flex-col gap-4 items-center" >
          <ul className="flex flex-col gap-5 w-fit justify-center items-center text-3xl">
-                    {navbarList.map(item=>item.imageUrl==null && <NavbarItem image={item.imageUrl} title={item.title} key={item.id} link={item.link} />)}
+                    {navbarList.map(item=>item.imageUrl==null && <NavbarItem setShowModal={setShowModal} image={item.imageUrl} title={item.title} key={item.id} link={item.link} />)}
                 </ul>
         </div>
     </motion.div>
