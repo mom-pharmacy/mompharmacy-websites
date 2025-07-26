@@ -1,7 +1,7 @@
 import React from "react";
 import JobCard from "../JobCard";
 import { useCareer } from "../../context/career";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const AllJobs = ({Result}) => {
   const { career } = useCareer();
@@ -10,7 +10,7 @@ const AllJobs = ({Result}) => {
 
   return (
     <div className="px-4 sm:px-5 md:px-10 lg:px-15">
-   
+
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
         <p className="text-2xl sm:text-3xl font-['Fredoka_One']">all jobs</p>
 
@@ -24,7 +24,7 @@ const AllJobs = ({Result}) => {
         </button>
       </div>
 
-   
+
       <div>
         <p className="text-xl sm:text-2xl p-2 border-l-4 border-black font-['Fredoka_One']">
           departments
@@ -32,11 +32,11 @@ const AllJobs = ({Result}) => {
       </div>
 
    
-      <div className="mt-8 sm:mt-10 sm:mx-2">
+      <div className="mt-8 sm:mt-10 sm:mx-2 mb-10">
         {Array.isArray(Result) && Result.length === 0 ? (
           <p className="text-x1 text-center text-black-500">No jobs available</p>
         ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="flex flex-row snap-x snap-mandatory scroll-smooth overflow-x-auto gap-5 custom-scroll">
           {jobs.map(
             (
               {
@@ -78,7 +78,7 @@ const AllJobs = ({Result}) => {
                   })
                 }
                 key={index}
-                className="text-left" 
+                className="text-left"
               >
                 <JobCard
                   role={role}

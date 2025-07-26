@@ -7,7 +7,7 @@ import OpenPositions from '../../components/Careers/OpenPositions'
 import AllJobs from '../../components/Careers/AllJobs'
 export const Career = () => {
   return (
-    <div>
+    <div className='overflow-x-clip'>
         <Welcome/>
         <Work />
         <Applynow />
