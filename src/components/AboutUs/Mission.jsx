@@ -32,14 +32,11 @@ const SectionHeader = ({ label }) => (
     <motion.div
       className="w-9 h-9 rounded-full border-4 border-teal-500 flex items-center justify-center"
       animate={{
-        scale: [1, 1.2, 1],
+        y:[0,3,0],
+        x:[0,3,0],
+        transition:{repeat: Infinity, duration: 2},
       }}
-      transition={{
-        repeat: Infinity,
-        duration: 2,
-        ease: 'easeInOut',
-      }}
-    >
+      >
       <div className="w-5 h-5 bg-teal-500 rounded-full" />
     </motion.div>
     <motion.h2
@@ -54,7 +51,7 @@ const SectionHeader = ({ label }) => (
 // Main Component
 function Mission() {
   return (
-    <div className="bg-gradient-to-b from-white to-[#f0fffd] py-24 px-6 md:px-20 overflow-hidden">
+    <div className="bg-gradient-to-b py-24 px-6 md:px-20 overflow-hidden">
       <motion.div
         className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-20"
         initial="hidden"
@@ -62,7 +59,9 @@ function Mission() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="w-full md:w-1/2 relative">
+        <motion.div
+          whileHover={{ scale: 1.05, rotate: 2 }}
+          className="w-full md:w-1/2 relative">
           <SectionHeader label="our mission" />
           <motion.div
             className="relative bg-white p-8 rounded-3xl border-2 border-dashed border-teal-400 shadow-lg backdrop-blur-lg"
@@ -84,8 +83,11 @@ function Mission() {
               animate="animate"
             />
           </motion.div>
-        </div>
-        <div className="w-full md:w-1/2 relative">
+        </motion.div>
+
+        <motion.div
+          whileHover={{ scale: 1.05, rotate: -2 }}
+          className="w-full md:w-1/2 relative">
           <SectionHeader label="our vision" />
           <motion.div
             className="relative bg-white p-8 rounded-3xl border-2 border-dashed border-teal-400 shadow-lg backdrop-blur-lg"
@@ -107,7 +109,7 @@ function Mission() {
               animate="animate"
             />
           </motion.div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
