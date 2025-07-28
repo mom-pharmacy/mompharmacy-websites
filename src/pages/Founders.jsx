@@ -7,7 +7,7 @@ import Innovator from '../components/OurTeam/Innovator'
 export default function Founders() {
   return (
     <div>
-         <Innovator/>
+        <Innovator/>
         <EntreprenuorComp/>
         <LeaderShip/>
         <Journeyofhealthcare/>

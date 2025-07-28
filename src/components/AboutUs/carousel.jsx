@@ -110,7 +110,7 @@ const CarouselComponent = () => {
                 {slides[currentSlide].heading1}
               </h1>
               <div className="flex items-center justify-center gap-x-2 md:gap-x-4 flex-wrap">
-                <h1 className="text-yellow-400 text-5xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-yellow-400 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   {slides[currentSlide].heading2}
                 </h1>
                 <img

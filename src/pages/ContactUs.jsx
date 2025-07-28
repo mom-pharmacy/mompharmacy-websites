@@ -4,9 +4,10 @@ import TopComponent from '../components/ContactUs/TopComponent'
 
 export default function ContactUs() {
   return (
-    <div>
+    <div className='overflow-x-clip'>
       <TopComponent />
-        <Contact />
+        
+       
     </div>
   )
 }

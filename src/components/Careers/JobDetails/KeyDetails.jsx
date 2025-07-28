@@ -14,8 +14,9 @@ export default function KeyDetails({job_no,travel,job_category,date_published,em
   }, [inInView, mainControls]);
 
   return (
-    <div className=" items-center py-10 px-20 gap-10 justify-center flex flex-col md:flex-row sm:flex-row">
-      <div ref={containerRef} className="flex flex-col md:flex-col sm:flex-row">
+ <div className="flex flex-col-reverse sm:flex-col-reverse lg:flex-row md:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-10">
+
+      <div ref={containerRef} className="flex flex-col md:flex-col">
         <motion.p
           whileHover={{ scale: 1.05, rotate: 2 }}
           transition={{ duration: 1, ease: "easeOut" ,delay:0.1 }}
@@ -33,21 +34,13 @@ export default function KeyDetails({job_no,travel,job_category,date_published,em
           transition={{ duration: 0.5, ease: "easeInOut", delay:0.2 }}
           className="text-xl text-black-700 text-left font-400"
         >
-          {/* As a Principal Functional Architect you will leverage your extensive
-          experience in S/4 HANA integrations and financial modules to drive
-          impactful solutions in the Corporate and Finance and Utilities
-          domains. You will work in a hybrid model collaborating with
-          cross-functional teams to optimize business processes and enhance
-          system efficiencies. Your expertise in Generative AI and S/4 HANA will
-          be pivotal in transforming financial operations and achieving
-          strategic objectives. */}
           {role_description}
         </motion.p>
       </div>
 
-      <div className="flex-initial items-center justify-center ">
+      <div className="flex-initial items-center justify-center p-1 sm:p-50 md:p-2">
         <motion.div
-          // whileHover={{ scale: 1.05, rotate: -2 , boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.6)"}}
+
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ mainControls, opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
@@ -72,7 +65,7 @@ export default function KeyDetails({job_no,travel,job_category,date_published,em
             >
               <label className="w-40 text-black-700 font-medium">job no:</label>
               <p className="text-[#00a79b] font-semibold ml-2 border-1 p-1 w-50 rounded bg-[#00A79B1A]">
-                {job_no}
+                {job_no||'N/A'}
               </p>
             </motion.div>
             <motion.div

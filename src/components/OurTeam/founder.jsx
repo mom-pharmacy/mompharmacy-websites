@@ -1,9 +1,14 @@
 
+
 import React from 'react';
 import CardComp from './CardComp';
 import Departments from './Departments';
 
+
+
 const Founders = () => {
+
+
   return (
     <>
     <div className="h-screen flex items-center justify-center flex-col">
@@ -11,8 +16,13 @@ const Founders = () => {
       <p className='text-2xl'>meet the people behind the promise</p>
 
       <div className="flex p-8 gap-10">
-       <CardComp name="adarsh" designation="developer"></CardComp>
-       <CardComp name="abhinai" designation="developer"></CardComp>
+        <button></button>
+        
+      
+       
+       <CardComp name="Pardhu" designation="developer" ></CardComp>
+       <CardComp name="Pardhu" designation="developer" ></CardComp>
+
        
       </div>
     </div>
@@ -21,7 +31,6 @@ const Founders = () => {
     
   );
 };
-
 export default Founders;
 
 
