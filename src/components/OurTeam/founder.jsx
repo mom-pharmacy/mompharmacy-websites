@@ -26,6 +26,7 @@ const Founders = () => {
           <CardComp name="Pardhu" ></CardComp>
           <CardComp name="Pardhu" ></CardComp>
         </div>
+
       </div>
     </>
   );

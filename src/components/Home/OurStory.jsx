@@ -36,7 +36,6 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import { motion } from 'framer-motion';
 
 function OurStory() {
     useEffect(() => {
@@ -63,7 +62,7 @@ function OurStory() {
     data-aos-mirror="true"
     data-aos-once="false"
     data-aos-anchor-placement="top-center">
-            <div class="relative xl:w-[90%] xl:sm-auto  xl:h-screen md:h-80 h-60 mx-auto xl:mt-35 md:mt-10 " >
+            <div class="relative xl:w-[90%] xl:sm-auto  xl:h-screen md:h-80 h-60 mx-auto  md:mt-10 " >
                 <img class="xl:w-screen xl:h-screen h-60 md:h-80 md:w-screen object-cover rounded-md" src="/Home/ourStory.jpg" alt="team image" />
                 <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
                 <div class="absolute inset-0 flex items-center justify-center xl:px-20 md:px-20 px-6 ">
