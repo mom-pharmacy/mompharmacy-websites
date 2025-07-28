@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Button({ title = 'Button', link = null, onClick= null, icon = null }) {
   return (
+    
     <Link to={link} onClick={onClick}>
       <motion.button
         className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-white rounded-[104px]

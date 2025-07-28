@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default function JobLanding({ role }) {
   return (
-    <div className="bg-[#00a79b] h-screen w-full flex items-center justify-center px-4">
+    <div className="bg-[#00a79b] w-full h-70 flex items-center justify-center lg:h-screen">
       <motion.div
-        initial={{ y: 500 }}
+        initial={{ y: 400 }}
         animate={{ y: 0 }}
-        exit={{ y: -500 }}
+        exit={{ y: -400 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="text-center"
       >
