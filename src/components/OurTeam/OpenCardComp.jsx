@@ -1,81 +1,90 @@
-import React, { useRef, useState } from 'react';
-import CardComp from './CardComp';
-import { motion } from 'framer-motion';
+import React, { useRef, useEffect } from "react";
+import CardComp from "./CardComp";
+import { motion, AnimatePresence } from "framer-motion";
 
-const TeamPopup = ({state , setState}) => {
-  
-
-        console.log("....................uvjadbdsjsda.........lnkcfnkndsl;clicke",state)
-
+const TeamPopup = ({ state, setState }) => {
   const sectionRef = useRef(null);
-  const handleOpen = () => {
-    setOpen(true);
-
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-    document.body.style.overflow = 'hidden';
-  };
 
   const handleClose = () => {
-    console.log("button clciked .. on opencard comp ", state)
-    setState(false)
-    document.body.style.overflow = 'auto';
+    setState(false);
+    document.body.style.overflow = "auto";
   };
 
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "A") handleClose();
+    };
+
+    if (state) {
+      window.addEventListener("keydown", handleEsc);
+    }
+
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [state]);
+
+  if (state) {
+    document.body.style.overflow = "hidden";
+  }
+
   return (
-
-    <div className="relative min-h-screen bg-gray-100">
-      {/* Trigger Button */}
-      {/* <div className="p-6 h-1000 w-1000 bg-amber-200">
-        <button
-          onClick={handleOpen}
-          className="px-6 py-3 bg-teal-600 text-white rounded-xl shadow hover:bg-teal-700 transition"
-        >
-          Meet the Team
-        </button>
-      </div> */}
-
-      {/* Team Section */}
-    {state && (
-        <motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}}
+    <AnimatePresence>
+      {state && (
+        <motion.div
+          key="team-popup"
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "-100%" }}
+          transition={{ duration: 0.3 }}
           ref={sectionRef}
-          className="fixed inset-0 z-50 h-200 m-0   bg-opacity-5 flex justify-center items-start overflow-y-auto"
+          className="fixed inset-0 z-50  bg-opacity-30 flex justify-center items-center"
+          onClick={handleClose} 
         >
-          <div className="w-screen  max-w-5xl mx-auto p-6 bg-white rounded-2xl mb-10">
-            <div className="flex justify-between items-center mb-4">
-              <div className=' ml-90'>
-              <h2 className="text-3xl font-bold text-teal-700 m-3">departments</h2>
-               <p className="text-center text-gray-600 mb-3">meet the team</p>
+          <div
+            className="w-full max-w-6xl h-screen bg-white rounded-xl shadow-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()} 
+          >
+            <div className="relative h-full flex flex-col">
+
+              <div className="sticky top-0 bg-white z-20 border-b border-gray-200 px-6 py-4">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h2 className="text-3xl font-bold text-teal-700">Departments</h2>
+                    <p className="text-gray-600 text-sm">Meet the Team</p>
+                  </div>
+                  <button
+                    onClick={handleClose}
+                    className="text-gray-600 hover:text-red-500 text-2xl font-bold"
+                  >
+                    ✕
+                  </button>
+                </div>
               </div>
 
-              <button
-                onClick={handleClose}
-                className="text-gray-600 hover:text-red-500 text-xl"
-              >
-                ✕
-              </button>
-            </div>
+              <div className="flex-1 overflow-y-auto px-6 py-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  
+                  <CardComp name="Uday" designation="Developer"  />
+                  <CardComp name="Adarsh" designation="Developer"  />
+                  <CardComp name="Poojitha" designation="Developer"  />
+                  <CardComp name="Pushpa" designation="Developer" />
+                  <CardComp name="Chandu" designation="Developer" />
+                  <CardComp name="Akhila" designation="Developer" />
+                  <CardComp name="Supriya" designation="Developer" />
+                  <CardComp name="Rohith" designation="Developer" />
+                  <CardComp name="Navya" designation="Developer" />
+                  <CardComp name="Shiva" designation="Developer" />
+                  <CardComp name="Gnaneshwar" designation="Developer" />
+                  <CardComp name="Charan" designation="Developer" />
+                  <CardComp name="Tejaswini" designation="Developer" />
+                  <CardComp name="RaviTeja" designation="Developer" />
 
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-
-              <CardComp  name="Uday" designation="Developer" />
-              <CardComp  name="Adarsh" designation="Developer" />
-              <CardComp  name="Poojitha" designation="Developer" />
-              <CardComp  name="Pushpa" designation="Developer" />
-              <CardComp  name="Chandu" designation="Developer" />
-              <CardComp  name="Sai" designation="Tester" />
-               <CardComp  name="name" designation="designation" />
-                <CardComp  name="name" designation="designation" />
-
-              
-              
-             
-              
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 };
 

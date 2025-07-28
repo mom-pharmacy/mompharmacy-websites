@@ -36,11 +36,11 @@ export default function CardComp(props) {
           })
         }
 
-        // onClick={()=>handleClick()}
+        // onClick={onClick()}
         
       >
         <img
-          src="/dev1.png"
+          src={props.img ? props.img : "/dev1.png"}
           className= "w-full h-full object-cover pad rounded-xl" 
         ></img>
         
