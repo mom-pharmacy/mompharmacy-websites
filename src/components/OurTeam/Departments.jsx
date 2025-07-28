@@ -31,15 +31,16 @@ export default function Departments() {
        
     <div className=" items-center grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4" onClick={()=>OpneCard()}>
 
-      
-                 <CardComp name="Developers" designation="" />
-                                  <CardComp name="Developers" designation="" />
+                       <CardComp name="Designers" designation=""  img="/OurTeam/UIUX.png"/>
 
-                 <CardComp name="Testers" designation="" />
+                 <CardComp name="Developers" designation="" img="/OurTeam/SDE.png" />
+                                  <CardComp name="Testers" designation="" img="/OurTeam/Tester.png" />
 
-                 <CardComp name="Designers" designation="" />
 
-                 <CardComp name="Hr" designation="" />
+                 <CardComp name="Testers" designation="" img="/OurTeam/CloudEng.png"/>
+
+
+                 <CardComp name="Data Engineers" designation=""  img="/OurTeam/DataEng.png"/>
 
                  <CardComp name="Designers" designation="" />
                  
