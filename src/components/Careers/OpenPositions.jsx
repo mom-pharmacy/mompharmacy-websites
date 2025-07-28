@@ -1,7 +1,7 @@
 
 import React from "react";
 import { CiSearch } from "react-icons/ci";
-
+import Filter from "./filter";
 const OpenPositions = () => {
   return (
     <div className="px-4 py-10 bg-white">
@@ -16,18 +16,24 @@ const OpenPositions = () => {
           if you are ready to join the mom team, apply today only!
         </p>
 
-         <div className="flex items-center gap-2 bg-[#BFE9E6] rounded-3xl px-3 py-2 w-full max-w-lg mx-auto">
-          <div className="bg-white rounded-full p-1.5">
-            <CiSearch className="text-xl text-teal-700" />
+        <div className="flex gap-2 items-center justify-center">
+          <div className="flex items-center justify-center gap-2 bg-[#BFE9E6] rounded-3xl px-3 py-2 w-full max-w-lg">
+            <div className="bg-white rounded-full p-1.5">
+              <CiSearch className="text-xl text-teal-700" />
+            </div>
+
+            <input
+              type="search"
+              placeholder="Search job role or designation"
+              className="flex-grow border-none outline-none bg-transparent text-sm md:text-base text-black placeholder-gray-600"
+            />
+            <button className="text-sm font-medium rounded-3xl bg-teal-600 text-white px-3 py-1.5 hover:bg-[#FADB14] hover:text-black transition">
+              search
+            </button>
           </div>
-          <input
-            type="search"
-            placeholder="Search job role or designation"
-            className="flex-grow border-none outline-none bg-transparent text-sm md:text-base text-black placeholder-gray-600"
-          />
-          <button className="text-sm font-medium rounded-3xl bg-teal-600 text-white px-3 py-1.5 hover:bg-[#FADB14] hover:text-black transition">
-            search
-          </button>
+          <div className="mt-1">
+            <Filter />
+          </div>
         </div>
       </div>
     </div>
