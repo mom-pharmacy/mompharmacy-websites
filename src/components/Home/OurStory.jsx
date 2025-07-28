@@ -46,9 +46,7 @@ function OurStory() {
             throttleDelay: 99,
             offset:50,
             delay: 10,
-            duration: 50, 
             easing: 'ease', 
-            once: false, 
             mirror: true, 
             anchorPlacement: 'top-bottom',
         });

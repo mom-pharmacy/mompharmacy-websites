@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 import { useNavigate } from 'react-router-dom';
-import { div } from 'framer-motion/client';
 const AVATARS = [
   {
     src: '/Home/teamPerson1.jpg',
@@ -41,8 +40,34 @@ const avatarAnimation = {
 function TalentedTeam() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const countUpRef = useRef(null);
-  const countUpStart = useRef(() => { });
+  const [inView, setInView] = useState(false);
+  // const countUpStart = useRef(() => { });
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the element is visible
+      }
+    );
+
+    if (countUpRef.current) {
+      observer.observe(countUpRef.current);
+    }
+
+    return () => {
+      if (countUpRef.current) {
+        observer.unobserve(countUpRef.current);
+      }
+    };
+  }, []);
+
 
   return (
    <div className=' xl:pt-20 md:pt-10 pt-10  m-auto xl:w-[50%] md:w-[70%] w-[80%]'>
@@ -93,25 +118,22 @@ function TalentedTeam() {
           </motion.div>
         ))}
       </div>
+       
       <div
         className="xl:text-5xl md:text-5xl text-3xl text-[#00A79B] font-bold cursor-pointer"
         onMouseEnter={() => countUpStart.current()}
       >
-        <CountUp
-          start={2}
-          end={20}
-          duration={2.75}
-          decimals={0}
-          suffix="+"
-          ref={countUpRef}
-        >
-          {({ countUpRef, start }) => {
-            countUpStart.current = start;
-            return <span ref={countUpRef} />;
-          }}
-        </CountUp>
+       <div ref={countUpRef}> 
+      <h1>
+        {inView && ( 
+          <CountUp start={2} end={20} duration={2} delay={0} suffix='+'/>
+        )}
+      </h1>
+    </div>
         <h2 className='xl:text-5xl md:text-5xl text-3xl text-[#00A79B]'>team</h2>
       </div>
+
+      
 
     </div>
    </div>
