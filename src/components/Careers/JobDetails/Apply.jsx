@@ -53,7 +53,7 @@ export default function Apply({we_offer}) {
   }, [inInView, mainControls]);
 
   return (
-    <div className='items-center py-8 px-20 gap-1justify-center flex flex-col md:flex-row sm:flex-row'>
+ <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-10">
       <div ref={containerRef}>
         <motion.h2
           animate={mainControls}
@@ -64,7 +64,7 @@ export default function Apply({we_offer}) {
           }}
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }}
-          className="text-3xl font-bold text-[#00a79b] mb-2">what we offer:</motion.h2>
+          className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#00a79b]">what we offer:</motion.h2>
         <motion.ul
           animate={mainControls}
           initial="hidden"
@@ -74,16 +74,16 @@ export default function Apply({we_offer}) {
           }}
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.1 }}
-          className="list-disc pl-8 text-black-700 text-lg">
+          className="list-disc text-black-700 text-lg">
           {we_offer}
         </motion.ul>
       </div>
       <div>
         <div
 
-          className='flex gap-4 mt-20'>
+          className='flex gap-4 mt-5 lg:mt-20'>
 
-        <div className='flex gap-2 mt-20 relative'>
+        <div className='flex gap-2 mt-0 lg:mt-20 relative'>
           <BorderButton
             title="Share"
             link="#"

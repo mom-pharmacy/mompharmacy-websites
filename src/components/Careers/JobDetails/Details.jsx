@@ -34,7 +34,7 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }}
-          className="list-disc pl-8 text-black-700 text-lg">
+          className="list-disc text-black-700 text-lg">
           {eligibility}
         </motion.ul>
         <motion.h2
@@ -56,7 +56,7 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.5 }}
-          className="list-disc pl-8 text-black-700 text-lg">
+          className="list-disc text-black-700 text-lg">
           {about_employee}
         </motion.ul>
       </div>
@@ -80,7 +80,7 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           exit={{ x: "50%", opacity: 0 }}
           transition={{ duration: 0.78, ease: "easeInOut", delay: 0.7 }}
-          className="list-disc pl-8 text-black-700 text-lg ">
+          className="list-disc text-black-700 text-lg ">
           {employee_expect}
         </motion.ul>
       </div>

@@ -30,20 +30,20 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-[#00A79B] min-h-screen w-full flex items-center justify-center px-4 py-4">
+    <div className="bg-[#00A79B] max-w-auto flex items-center justify-center p-4 ">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-3xl shadow-lg border-4 border-[#00A79B] p-5 gap-10" 
+        className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-3xl shadow-lg border-4 border-[#00A79B] p-5 gap-6" 
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="bg-[#00A79B] text-white p-5 rounded-xl md:w-1/2 w-full mb-6 md:mb-0"
+          className="bg-[#00A79B] text-white p-5 rounded-xl md:w-1/2  w-full mb-6 md:mb-0"
         >
           <motion.div
             initial={{ x: "-70px", opacity: 0 }}
@@ -86,14 +86,14 @@ export default function Contact() {
           </motion.div>
         </motion.div>
 
-        <div className="md:w-1/2 w-full px-2">
+        <div className="md:w-1/2 lg:w-2/3 w-full px-2">
           <form onSubmit={handleSubmit}>
             <motion.div
               initial={{ x: "70px", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "50%", opacity: 0 }}
               transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }}
-              className="flex flex-col md:flex-row gap-4"
+              className="flex md:flex-row gap-4"
             >
               <div className="flex-1">
                 <label className="block mb-1 text-[#00A79B]">your name</label>
@@ -141,12 +141,6 @@ export default function Contact() {
               transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }}
               className="flex items-center justify-between mt-2"
             >
-            {/* <button
-              type="submit"
-              className="bg-[#00A79B] text-white px-6 py-2 rounded-xl hover:bg-[#02988b] transition"
-            >
-              send us
-            </button> */}
               <GlowButton title="send us" />
               <img
                 src={Pills}
