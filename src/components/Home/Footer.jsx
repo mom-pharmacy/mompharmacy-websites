@@ -67,12 +67,9 @@ function Footer() {
                     <div><h2 className='text-[25px] font-medium text-[#FADB14] text-start mb-3'>follow us on</h2>
 
                     <div className='flex gap-4 '>
-                        <FaFacebook className="transform  size-8  hover:bg-[#FADB14] transition duration-500 hover:scale-125 flex justify-center items-center rounded-full" />
-                        <FaLinkedin className="transform size-8 hover:bg-[#FADB14] transition duration-500 hover:scale-125 flex justify-center items-center rounded-full"  />
-                        <FaInstagram className="transform size-8 hover:bg-[#FADB14] border-5  transition duration-500 hover:scale-125 flex justify-center items-center " />
-                            {/* <img src="/Home/faceBook.jpg" alt="facebook logo" className="transform  hover:bg-[#FADB14] transition duration-500 hover:scale-125 flex justify-center items-center" />
-                       <a href="https://www.linkedin.com/company/mompharmacy/" target='blank'> <img src="/Home/linkedin.jpg" alt="facebook logo" className="hover:animate-pulse" /></a>
-                        <img src="/Home/instagram.jpg" alt="facebook logo" className="hover:animate-pulse" /> */}
+                        <FaFacebook className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
+                        <a href="https://www.linkedin.com/company/mompharmacy/" target='blank'><FaLinkedin className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125"  /></a>
+                        <FaInstagram className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
                     </div>
                 </div>
                
@@ -100,3 +97,5 @@ function Footer() {
 }
 
 export default Footer
+
+

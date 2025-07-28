@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import CardComp from './CardComp';
 import Departments from './Departments';
@@ -16,6 +17,8 @@ const Founders = () => {
 
       <div className="flex p-8 gap-10">
         <button></button>
+        
+      
        
        <CardComp name="Pardhu" designation="developer" ></CardComp>
        <CardComp name="Pardhu" designation="developer" ></CardComp>
@@ -28,7 +31,6 @@ const Founders = () => {
     
   );
 };
-
 export default Founders;
 
 
