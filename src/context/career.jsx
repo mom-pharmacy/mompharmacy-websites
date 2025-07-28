@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState, createContext } from "react";
 
 export const CareerContext = createContext("");
@@ -7,16 +6,17 @@ export const CareerProvider = ({ children }) => {
   const [career, setCareer] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [jobFilter, setJobFilter] = useState(null);
 
   const getCareer = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/job/alljobs");
+      const response = await fetch("http://localhost:3000/job/departments");
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`error status: ${response.status}`);
       }
 
       const res = await response.json();
@@ -34,8 +34,30 @@ export const CareerProvider = ({ children }) => {
     getCareer();
   }, []);
 
+  const FilterJobs = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/job/search?role=${encodeURIComponent(
+          query
+        )}&location=${encodeURIComponent(
+          location
+        )}&experience=${encodeURIComponent(experience)}`
+      );
+      if (!response.ok) {
+        console.log(`error ${response.status}`);
+      }
+      const res = await response.json();
+      setJobFilter(res);
+      console.log("job filter", res);
+    } catch (error) {
+      console.log("error in fetching jobs");
+    }
+  };
+
   return (
-    <CareerContext.Provider value={{ career, getCareer, loading, error }}>
+    <CareerContext.Provider
+      value={{ career, getCareer, loading, error, jobFilter, FilterJobs }}
+    >
       {children}
     </CareerContext.Provider>
   );

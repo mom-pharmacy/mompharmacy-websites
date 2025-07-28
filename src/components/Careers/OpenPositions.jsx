@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+
+import Filter from "./filter";
 import AllJobs from './AllJobs'
 
 const OpenPositions = () => {
@@ -18,8 +20,9 @@ const OpenPositions = () => {
     try {
       const res = await fetch(`http://localhost:3000/job/search?role=${encodeURIComponent(query)}`);
       const data = await res.json();
+      console.log("search",data)
       if (data.status) {
-        setResults(data.roles);
+        setResults(data.role);
       } else {
         setResults([]);
         setError(data.message || "No results found.");
@@ -44,7 +47,8 @@ const OpenPositions = () => {
         <p className="text-lg md:text-2xl text-teal-600 mb-8">
           if you are ready to join the mom team, apply today only!
         </p>
-        <div className="flex gap-2">
+
+        <div className="flex gap-2 lg:px-32">
           <div className="flex items-center gap-2 bg-[#BFE9E6] rounded-3xl px-3 py-2 w-full max-w-lg mx-auto">
             <div className="bg-white rounded-full p-1.5">
               <CiSearch className="text-xl text-teal-700" />
@@ -64,14 +68,13 @@ const OpenPositions = () => {
             </button>
           </div>
           <div>
-            <button className="text-sm font-medium text-xl sm:text-1xl flex items-center rounded-3xl text-teal-600 border-2 px-4 py-1">
-              filter
-            </button>
+             <Filter />
           </div>
         </div>
 
        
       </div>
+      
     </div>
      <AllJobs Result={results} />
     </div>
