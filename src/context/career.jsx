@@ -13,7 +13,7 @@ export const CareerProvider = ({ children }) => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/job/alljobs");
+      const response = await fetch("http://localhost:3000/job/departments");
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

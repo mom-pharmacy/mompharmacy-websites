@@ -37,8 +37,10 @@ const AllJobs = ({Result}) => {
           <p className="text-x1 text-center text-black-500">No jobs available</p>
         ) : (
             <div className="flex flex-row snap-x snap-mandatory scroll-smooth overflow-x-auto gap-5 custom-scroll">
-          {jobs.map(
-            (
+          {jobs.map((department,index)=>(
+            <div key={index}>
+              <h2>{department.department_name}</h2>
+              {department.jobUpload.map((
               {
                 role,
                 experience,
@@ -89,6 +91,9 @@ const AllJobs = ({Result}) => {
               </button>
             )
           )}
+        
+        </div>
+          ))}
         </div>
         )}
       </div>
