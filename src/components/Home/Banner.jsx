@@ -28,7 +28,7 @@ const Banner = () => {
 
       <div className="overflow-x-hidden">   
                
-        <div className="bg-[#00A79B] w-100% h-110 flex flex-col gap-15 items-center justify-center"> 
+        <div className="bg-[#00A79B] w-100% xl:h-110 md:h-110 h-auto flex flex-col gap-15 items-center justify-center"> 
           <div className="flex">
             <div>
              
