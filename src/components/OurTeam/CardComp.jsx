@@ -21,7 +21,7 @@ export default function CardComp(props) {
 
   return (
     <div className="">
-      <motion.div  className="h-60 w-60     rounded-xl relative cursor-pointer"
+      <motion.div  className="h-60 w-60    rounded-xl relative cursor-pointer"
        
         onHoverStart={() =>
           setIsHovered({
