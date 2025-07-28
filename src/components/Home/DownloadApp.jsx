@@ -35,7 +35,6 @@ const DownloadApp = ({setDownloadApp,downloadapp}) => {
         </div>
       </div>
  </div>
-
       <div className="w-100">
 
       <div>
