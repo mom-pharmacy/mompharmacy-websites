@@ -1,16 +1,79 @@
 import React, { useState } from "react";
 import Image from "../../assets/Careerpage/filter.svg";
-import { AnimatePresence, motion } from "framer-motion";
+import { useCareer } from "../../context/career";
 
 const Filter = () => {
   const [showFilterOptions, setShowFilterOptions] = useState(false);
+  const { career} = useCareer();
+  const[jobFilter,setJobFilter]=useState([])
 
-  const toggleFilter = () => {
+  const [location, setLocation] = useState("");
+  const [department_name, setDepartment] = useState("");
+  const [experience, setExperience] = useState("");
+
+  const toggleFilter = () => {  
     setShowFilterOptions(!showFilterOptions);
   };
 
   const closeModal = () => {
     setShowFilterOptions(false);
+  };
+
+  const getDropdownData = () => {
+    const departments = new Set();
+    const cities = new Set();
+    const experiences = new Set();
+
+    career?.forEach((dept) => {
+      if (dept.department_name) departments.add(dept.department_name);
+      dept.jobUpload?.forEach((job) => {
+        if (job.location) cities.add(job.location);
+        if (job.experience) experiences.add(job.experience);
+      });
+    });
+
+    return {
+      departmentOptions: Array.from(departments),
+      cityOptions: Array.from(cities),
+      experienceOptions: Array.from(experiences),
+    };
+  };
+
+  const { departmentOptions, cityOptions, experienceOptions } =
+    getDropdownData();
+
+
+  const applyFilter = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/job/search?location=${encodeURIComponent(
+          location
+        )}&experience=${encodeURIComponent(
+          experience
+        )}&department=${encodeURIComponent(department_name)}`
+      );
+
+      if (!response.ok) {
+        console.log(`error ${response.status}`);
+        return;
+      }
+
+      const res = await response.json();
+      setJobFilter(res);
+      console.log("model,",res)
+      // closeModal(); 
+    } catch (error) {
+      console.log("error in fetching filtered jobs", error);
+    }
+  };
+
+
+  const resetFilters = () => {
+    setLocation("");
+    setDepartment("");
+    setExperience("");
+    setJobFilter([]);
+    closeModal();
   };
 
   return (
@@ -23,63 +86,83 @@ const Filter = () => {
         <img src={Image} alt="Filter icon" className="w-6 h-6" />
       </div>
 
-      <AnimatePresence mode="wait">
-        {showFilterOptions &&<motion.div initial={{x:-1000 , display:"none"}} animate={{x:0 , display:"flex"}} transition={{duration:0.2}}  exit={{x:-1000}} className='flex fixed h-screen w-screen justify-center z-1700' > (
-          <div className="fixed inset-0 bg-opacity-40 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg w-11/12 max-w-md shadow-xl relative">
-              <button
-                onClick={closeModal}
-                className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+      {showFilterOptions && (
+        <div className="fixed inset-0 bg-opacity-40 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg w-11/12 max-w-md shadow-xl relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+            >
+              x
+            </button>
+
+            <h2 className="text-lg font-semibold text-teal-600 mb-4">
+              Filter Jobs
+            </h2>
+
+            <div className="space-y-4">
+              <select
+                className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
+                name="department"
+                value={department_name}
+                onChange={(e) => setDepartment(e.target.value)}
               >
-                X
-              </button>
+                <option value="">Select Department</option>
+                {departmentOptions.map((department, index) => (
+                  <option key={index}>{department}</option>
+                ))}
+              </select>
 
-              <h2 className="text-lg font-semibold text-teal-600 mb-4">
-                filter jobs
-              </h2>
+              <div className="flex gap-2">
+                <select
+                  className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
+                  name="experience"
+                  value={experience}
+                  onChange={(e) => setExperience(e.target.value)}
+                >
+                  <option value="">Years of Experience</option>
+                  {experienceOptions.map((exp, index) => (
+                    <option key={index}>{exp}</option>
+                  ))}
+                </select>
 
-              <div className="space-y-4">
-                <div>
-                  <select
-                    className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white hover:bg:teal-300"
-                    name="select-department"
-                  >
-                    <option value="" className="">
-                      Select Department{" "}
-                    </option>
-                    <option value="frontend">Front End Developer</option>
-                    <option value="tester">Tester</option>
-                    <option value="design">Design</option>
-                  </select>
-                </div>
+                <select
+                  className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
+                  name="location"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                >
+                  <option value="">Select City</option>
+                  {cityOptions.map((city, index) => (
+                    <option key={index}>{city}</option>
+                  ))}
+                </select>
+              </div>
 
-                <div className="flex gap-2">
-                  <select
-                    className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
-                    name="experience"
-                  >
-                    <option value="">Years of Experience</option>
-                    <option value="0-2">0-2</option>
-                    <option value="3-5">3-5</option>
-                    <option value="4-6">4-6</option>
-                  </select>
-
-                  <select
-                    className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
-                    name="city"
-                  >
-                    <option value="">Select City</option>
-                    <option value="hyderabad">Hyderabad</option>
-                    <option value="chennai">Chennai</option>
-                    <option value="bangalore">Bangalore</option>
-                  </select>
-                </div>
+              <div className="flex justify-between">
+                <button
+                  className="border border-teal-300 text-teal-600 px-3 text-lg rounded-xl"
+                  onClick={resetFilters}
+                >
+                  Reset
+                </button>
+                <button
+                  className="bg-teal-600 px-3 text-lg rounded-xl text-white"
+                  onClick={applyFilter}
+                >
+                  Apply Filter
+                </button>
               </div>
             </div>
+
+            {jobFilter.map((job,index)=>(
+              <div key={index}>
+                {job}
+                </div>
+            ))}
           </div>
-        )
-        </motion.div>}
-      </AnimatePresence>
+        </div>
+      )}
     </div>
   );
 };
