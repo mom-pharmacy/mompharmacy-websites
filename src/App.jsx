@@ -8,12 +8,13 @@ import AboutUs from './pages/AboutUs'
 import Investors from './pages/Investors'
 import ContactUs from './pages/ContactUs'
 import JobDetails from './pages/Careers/JobDetails'
-import Ourteam from './pages/Ourteam'
+import Ourteam from './pages/teamour'
 
 import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
+import teamour from './pages/teamour'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path='/' Component={Home} />
         <Route path='/animation' Component={AnimationTrail} />
-        <Route path='/ourteams' Component={Ourteam} />
+        <Route path='/ourteams' Component={teamour} />
         <Route path='/about' Component={AboutUs} />
         <Route path='/investors' Component={Investors} />
         <Route path='/contactus' Component={ContactUs} />

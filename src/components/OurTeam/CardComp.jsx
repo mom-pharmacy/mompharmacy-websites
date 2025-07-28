@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 
 
 export default function CardComp(props) {
 
-   let navigate = useNavigate();
+  //  let navigate = useNavigate();
 
-   function handleClick()
-   {
-   console.log("clicked")
-    navigate('/founderbio')
+  //  function handleClick()
+  //  {
+  //  console.log("clicked")
+  //   navigate('/founderbio')
 
-   }
+  //  }
 
   const [isHovered, setIsHovered] = useState(false);
   console.log(isHovered);
 
   return (
     <div className="">
-      <motion.div  className="h-60 w-60     rounded-xl relative cursor-pointer"
+      <motion.div  className="h-60 w-60    rounded-xl relative cursor-pointer"
        
         onHoverStart={() =>
           setIsHovered({
@@ -36,10 +36,11 @@ export default function CardComp(props) {
           })
         }
 
-        onClick={()=>handleClick()}
+        // onClick={onClick()}
+        
       >
         <img
-          src="/dev1.png"
+          src={props.img ? props.img : "/dev1.png"}
           className= "w-full h-full object-cover pad rounded-xl" 
         ></img>
         

@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 
 export default function Innovator() {
   return (
-    <div className=" flex h-screen items-center flex-col bg-[#00A79B]">
-      <div className="m-2">
-        <div className="mx-auto h-110 w-280 rounded-2xl border-2 border-[#00A79B] flex items-center justify-between">
-          <div className="m-5">
-            <ImageComp img="/dev1.png"></ImageComp>
-          </div>
+    <div className="mx-auto w-screen  xl:py-10 xl:px-5 md:py-10 md:px-5  bg-[#00A79B]   items-center justify-between">
+          <div className="xl:flex gap-10 md:flex ">
+            <div className="md:h-full m-auto mx-auto w-full  ">  
+                < img src="/dev1.png" className="rounded-3xl border-10 border-[#E6F6F5]"/>
+              </div>
 
-          <div className="m-10">
+          <div className="m-auto ml-5">
             <div className="flex justify-between">
               <div>
                 <motion.h1
@@ -89,8 +88,12 @@ export default function Innovator() {
               away from well-being."
             </p>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
+    // <div className="  h-auto items-center  ">
+    //   <div className="m-2">
+        
+    //   </div>
+    // </div>
   );
 }
