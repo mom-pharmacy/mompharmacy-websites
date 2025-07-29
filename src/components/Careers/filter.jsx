@@ -4,14 +4,14 @@ import { useCareer } from "../../context/career";
 
 const Filter = () => {
   const [showFilterOptions, setShowFilterOptions] = useState(false);
-  const { career} = useCareer();
-  const[jobFilter,setJobFilter]=useState([])
+  const { career } = useCareer();
+  const [jobFilter, setJobFilter] = useState([])
 
   const [location, setLocation] = useState("");
   const [department_name, setDepartment] = useState("");
   const [experience, setExperience] = useState("");
 
-  const toggleFilter = () => {  
+  const toggleFilter = () => {
     setShowFilterOptions(!showFilterOptions);
   };
 
@@ -59,8 +59,8 @@ const Filter = () => {
       }
 
       const res = await response.json();
-      setJobFilter(res);
-      console.log("model,",res)
+      setJobFilter(res.role);
+      console.log("model,", res)
       // closeModal(); 
     } catch (error) {
       console.log("error in fetching filtered jobs", error);
@@ -152,14 +152,16 @@ const Filter = () => {
                 >
                   Apply Filter
                 </button>
+                {Array.isArray(jobFilter) && jobFilter.map((job, index) => (
+                  <div key={index}>
+                   <h1> {job.role}</h1>
+
+                  </div>
+                ))}
               </div>
             </div>
 
-            {jobFilter.map((job,index)=>(
-              <div key={index}>
-                {job}
-                </div>
-            ))}
+
           </div>
         </div>
       )}
