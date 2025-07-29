@@ -2,22 +2,16 @@ import React, { useState } from "react";
 import Image from "../../assets/Careerpage/filter.svg";
 import { useCareer } from "../../context/career";
 
-const Filter = () => {
+const Filter = ({ onApply }) => {
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const { career } = useCareer();
-  const [jobFilter, setJobFilter] = useState([])
 
   const [location, setLocation] = useState("");
-  const [department_name, setDepartment] = useState("");
+  const [department, setDepartment] = useState("");
   const [experience, setExperience] = useState("");
 
-  const toggleFilter = () => {
-    setShowFilterOptions(!showFilterOptions);
-  };
-
-  const closeModal = () => {
-    setShowFilterOptions(false);
-  };
+  const toggleFilter = () => setShowFilterOptions(!showFilterOptions);
+  const closeModal = () => setShowFilterOptions(false);
 
   const getDropdownData = () => {
     const departments = new Set();
@@ -42,37 +36,21 @@ const Filter = () => {
   const { departmentOptions, cityOptions, experienceOptions } =
     getDropdownData();
 
-
-  const applyFilter = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/job/search?location=${encodeURIComponent(
-          location
-        )}&experience=${encodeURIComponent(
-          experience
-        )}&department=${encodeURIComponent(department_name)}`
-      );
-
-      if (!response.ok) {
-        console.log(`error ${response.status}`);
-        return;
-      }
-
-      const res = await response.json();
-      setJobFilter(res.role);
-      console.log("model,", res)
-      // closeModal(); 
-    } catch (error) {
-      console.log("error in fetching filtered jobs", error);
+  const applyFilter = () => {
+    if (!location && !department && !experience) {
+      alert("Please select at least one filter.");
+      return;
     }
-  };
 
+    onApply({ location, department, experience });
+    closeModal();
+  };
 
   const resetFilters = () => {
     setLocation("");
     setDepartment("");
     setExperience("");
-    setJobFilter([]);
+    // onApply({}); 
     closeModal();
   };
 
@@ -93,7 +71,7 @@ const Filter = () => {
               onClick={closeModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
             >
-              x
+              ×
             </button>
 
             <h2 className="text-lg font-semibold text-teal-600 mb-4">
@@ -102,21 +80,19 @@ const Filter = () => {
 
             <div className="space-y-4">
               <select
-                className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
-                name="department"
-                value={department_name}
+                className="outline outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
+                value={department}
                 onChange={(e) => setDepartment(e.target.value)}
               >
                 <option value="">Select Department</option>
-                {departmentOptions.map((department, index) => (
-                  <option key={index}>{department}</option>
+                {departmentOptions.map((dept, index) => (
+                  <option key={index}>{dept}</option>
                 ))}
               </select>
 
               <div className="flex gap-2">
                 <select
-                  className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
-                  name="experience"
+                  className="outline outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
                   value={experience}
                   onChange={(e) => setExperience(e.target.value)}
                 >
@@ -127,8 +103,7 @@ const Filter = () => {
                 </select>
 
                 <select
-                  className="outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
-                  name="location"
+                  className="outline outline-1 outline-[#00A79B] p-2 rounded-sm w-full bg-teal-600 text-white"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                 >
@@ -152,16 +127,8 @@ const Filter = () => {
                 >
                   Apply Filter
                 </button>
-                {Array.isArray(jobFilter) && jobFilter.map((job, index) => (
-                  <div key={index}>
-                   <h1> {job.role}</h1>
-
-                  </div>
-                ))}
               </div>
             </div>
-
-
           </div>
         </div>
       )}
