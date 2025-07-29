@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 import { useNavigate } from 'react-router-dom';
 const AVATARS = [
   {
