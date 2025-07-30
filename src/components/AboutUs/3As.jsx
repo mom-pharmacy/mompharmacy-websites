@@ -104,21 +104,23 @@ const As = () => {
       </div>
 
       {/* RIGHT - Main Circle */}
+      <div className="bg-white rounded-full flex-col justify-center items-center text-center text-[#00A79B] px-6 py-10">
       <div
-        className="z-10 relative border-8 border-[#00A79B] rounded-full shadow-2xl flex flex-col justify-center items-center text-center text-[#00A79B] px-6 py-10"
+        className="z-10 relative border-8 border-[#00A79B] rounded-full  shadow-2xl flex flex-col justify-center items-center text-center text-[#00A79B] px-6 py-10"
         style={{
-          width: "300px",
-          height: "300px",
+          width: "400px",
+          height: "400px",
         }}
       >
         <h2
-          className="text-4xl sm:text-5xl font-bold"
+          className="text-8xl sm:text-7xl font-bold"
           style={{ fontFamily: "Fredoka One" }}
         >
           3a’s
         </h2>
         <p className="sm:text-xl mt-2 font-semibold">triple pillars of care</p>
       </div>
+    </div>
     </div>
   );
 };
