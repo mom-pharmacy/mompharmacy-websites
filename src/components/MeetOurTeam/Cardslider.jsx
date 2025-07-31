@@ -7,7 +7,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import CardComp from "./Cardcomp";
 
 const team = [
-    { name: "Gnaneswar ", designation: "Full Stack Developer", img: "/public/developer.png", About:"uikasyjtedfghjyugtfvghbjclkdhedhbjhn" },
+    { name: "Gnaneswar ", designation: "Full Stack Developer", img: "/public/developer.png", About:"=" },
     { name: "Charan ", designation: "Full Stack Developer ", img: "/public/developer.png" },
     { name: " Priya", designation: "Data Analaysts", img: "/public/developer.png" },
     { name: "Sai", designation: "Tester", img: "/public/developer.png" },
