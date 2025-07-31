@@ -46,3 +46,4 @@ function SlideBarAnimation(){
 }
 
 export default SlideBarAnimation
+
