@@ -52,7 +52,7 @@ const As = () => {
       </div>
 
       {/* MIDDLE - Arc and Circles */}
-      <div className="relative w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+      <div className="relative w-[300px] sm:w-[300px] md:w-[400px] lg:w-[500px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px]">
         <svg
           className="absolute top-0 left-0"
           width="100%"

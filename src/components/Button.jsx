@@ -8,13 +8,13 @@ function Button({ title = 'hii', link = null, onClick= null, icon = null }) {
   return (
     <Link to={link} onClick={onClick}>
       <motion.button
-        className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-white rounded-[104px]
-                   whitespace-nowrap overflow-hidden text-ellipsis text-sm font-semibold transition-all duration-300 
-                   cursor-pointer flex flex-row items-center justify-center gap-2"
+        className="min-w-[120px] max-w-[280px] h-[48px] p-7 py-7 bg-white text-[#444444] border-2 border-white rounded-full
+                   whitespace-nowrap overflow-hidden text-ellipsis text-xl transition-all duration-300 
+                   cursor-pointer flex flex-row items-center justify-center gap-2 font-['fredoka_one']"
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
         whileHover={{
-          scale: 1.1,
+          
           cursor: 'pointer',
           backgroundColor: '#fadb14',
     

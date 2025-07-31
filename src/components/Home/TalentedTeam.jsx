@@ -75,7 +75,7 @@ function TalentedTeam() {
             <h2 className="font-bold xl:text-[65px] md:text-[55px] text-[35px] text-[#00A79B]">talented team</h2>
             <h5 className="xl:text-[30px]  md:text-[25px] font-normal  ">real people with a passion for healing here to make your health journey easier</h5>
         </div>
-     <div className="xl:pt-10 md:pt-10 pt-6  xl:pb-20 md:pb-10 pb-10 flex justify-evenly items-center">
+     <div className="xl:pt-10 md:pt-10 pt-6  xl:pb-20 md:pb-10 pb-10 flex justify-center xl:gap-20 md:gap-10 gap-5 items-center">
       <div className="flex items-center xl:-space-x-15 md:-space-x-15 -space-x-8">
         {AVATARS.map((avatar, index) => (
           <motion.div
