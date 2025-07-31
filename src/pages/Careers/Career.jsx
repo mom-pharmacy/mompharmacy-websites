@@ -4,7 +4,8 @@ import Work from '../../components/Careers/work'
 import Applynow from '../../components/Careers/applynow'
 import CareerProgram from '../../components/Careers/CareerProgram'
 import OpenPositions from '../../components/Careers/OpenPositions'
-import AllJobs from '../../components/Careers/AllJobs'
+import Animation from "../../components/Careers/animation"
+import Review from "../../components/Careers/Review"
 export const Career = () => {
   return (
     <div className='overflow-x-clip'>
@@ -12,7 +13,11 @@ export const Career = () => {
         <Work />
         <Applynow />
         <CareerProgram />
+        <Review/>
+        
         <OpenPositions />
+
+        {/* <Animation /> */}
         {/* <AllJobs /> */}
     </div>
   )

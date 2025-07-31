@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router'
+import{useEffect, useState} from 'react'
 import './App.css'
 import Home from './pages/Home'
-
 import Navbar from './components/Attachments/Navbar'
 import AnimationTrail from './pages/AnimationTrail'
 import AboutUs from './pages/AboutUs'
@@ -15,11 +15,27 @@ import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
 import teamour from './pages/teamour'
+import LoadingPage from './components/LoadingPage'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setLoading(false);
+    
+    },3000);
+    return ()=>clearInterval(timer)
+  },[])
+
   return (
     <>
+    {loading?(
+      <LoadingPage />
+    ):(
+
+<>
       <Navbar />
       <Routes>
         <Route path='/' Component={Home} />
@@ -34,6 +50,8 @@ function App() {
        </Routes>
       <EarlyAccess />
        <Footer />
+       </>
+    )}
     </>
   )
 }

@@ -8,7 +8,7 @@ import {FaInstagram } from "react-icons/fa6";
 function Footer() {
     return (
      <div >
-          <div className='bg-[#00A79B] grid grid-cols-1 gap-6  md:grid-cols-2 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 pt-6  px-6 text-[20px] text-white text-start '>
+          <div className='bg-linear-to-r/hsl from-[#01a69b] to-[gray] grid grid-cols-1 gap-4 md:grid-cols-4 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 pt-6  px-6 text-[16px] text-white text-start '>
             <div>
                 <Link to='/'><img src="/Home/logo.jpg" alt="mompharmacy logo" /></Link>
                 <h2 className='text-white font-bold text-[30px ] lg:text-center sm:text-start xl:ml-auto lg:ml-auto md:ml-13 ml-13 '>pharmacy</h2>
@@ -28,13 +28,13 @@ function Footer() {
             <div className='xl:col-span-2'>
                 <ul className=' xl:col-span-2'>
                     <li><button className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] mb-3 '><h2>contact info</h2></button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/phone.jpg" alt="call icon" className='size-10' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/email.jpg" alt="mail icon" className='size-10' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-10 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/phone.jpg" alt="call icon" className='size-8' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/email.jpg" alt="mail icon" className='size-8' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-8 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li>
                 </ul>
             </div>
             <div className='xl:col-span-2'>
-                 <div className="text-black text-[20px] justify-end ">
+                 <div className="text-black text-[15px] justify-end ">
                     <motion.div
                         className="w-full h-auto border-4 border-[#00A79B] bg-white rounded-3xl px-4 py-4 gap-2 flex flex-col justify-center"
                         whileHover={{
@@ -43,7 +43,7 @@ function Footer() {
                         }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
                     >
-                        <h1 className="text-[#00A79B] text-2xl font-bold"> stay in the loop!</h1>
+                        <h1 className="text-[#00A79B] text-xl font-bold"> stay in the loop!</h1>
                         <h1 className='text-sm'>
                             {" "}
                             Subscribe to our newsletter and never miss updates, special
@@ -64,22 +64,22 @@ function Footer() {
                     </motion.div>
                 </div>
                 <div className='flex justify-between'>
-                    <div><h2 className='text-[25px] font-medium text-[#FADB14] text-start mb-3'>follow us on</h2>
+                    <div><h2 className='text-[20px] font-medium text-[#FADB14] text-start mb-3'>follow us on</h2>
 
                     <div className='flex gap-4 '>
-                        <FaFacebook className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
-                        <a href="https://www.linkedin.com/company/mompharmacy/" target='blank'><FaLinkedin className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125"  /></a>
-                        <FaInstagram className="size-10 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
+                        <FaFacebook className="size-8 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
+                        <a href="https://www.linkedin.com/company/mompharmacy/" target='blank'><FaLinkedin className="size-8 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125"  /></a>
+                        <FaInstagram className="size-8 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
                     </div>
                 </div>
                
-                <div>
-                <img src="/Home/footerPillman.jpg" alt="footerpillman " className='xl:w-40 md:w-40 sm:w-30' />
+                <div className='flex justify-end mt-5'>
+                <img src="/Home/footerPillman.jpg" alt="footerpillman " className='xl:w-30 md:w-25 sm:w-20' />
             </div>
                 </div>
             </div>
         </div>
-        <div className='flex flex-wrap justify-between py-2 xl:px-6 md:px-6 justify-center xl:gap-40 md:gap-5'>
+        <div className='flex flex-wrap justify-between py-1 xl:px-1 md:px-1 justify-center xl:gap-40 md:gap-5'>
            <div> 
             <h2 className='text-base text-[#00A79B]   '>© 2025 mom pharmacy||all rights reserved</h2>
             </div>
@@ -97,5 +97,3 @@ function Footer() {
 }
 
 export default Footer
-
-

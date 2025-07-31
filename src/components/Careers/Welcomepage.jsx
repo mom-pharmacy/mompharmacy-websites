@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "../../assets/Careerpage/tablets.png";
 import BlurText from "./BlurText";
-import Medicinetalkcard from "./medicinetalkcard";
+// import Medicinetalkcard from "./medicinetalkcard";
 import { CiSearch } from "react-icons/ci"; 
-import Filter from "./Filter"; 
+import Filter from "./filter"; 
 
 
 const Welcome = () => {

@@ -1,5 +1,7 @@
 import { q } from "framer-motion/client"
 import { useState } from "react"
+import { AiOutlineClose } from "react-icons/ai"
+import { MdAdd } from "react-icons/md"
 
 const faqsList = [
     {
@@ -65,7 +67,7 @@ function Faqs() {
                     }
 
                 >
-                    {activeAnswer === item.id ? '━' : '✚'}
+                    {activeAnswer === item.id ? <AiOutlineClose size={24} color="#00a99d" /> :  <MdAdd size={25} color="#00a99d" />}
                 </span>
 
             </div>
