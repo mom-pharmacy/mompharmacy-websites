@@ -53,7 +53,7 @@ export default function Apply({we_offer}) {
   }, [inInView, mainControls]);
 
   return (
- <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-10">
+ <div className="items-center justify-center gap-6  sm:gap-10 px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-10">
       <div ref={containerRef}>
         <motion.h2
           animate={mainControls}
@@ -78,7 +78,7 @@ export default function Apply({we_offer}) {
           {we_offer}
         </motion.ul>
       </div>
-      <div>
+      {/* <div>
         <div
 
           className='flex gap-4 mt-5 lg:mt-20'>
@@ -139,7 +139,7 @@ export default function Apply({we_offer}) {
           <GlowButton title="apply now" link="#" />
         </div>
       </div>
-    </div>
+    </div> */}
     </div>
   );
 }
