@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router'
+import { Route, Routes, useLocation } from 'react-router'
 import{useEffect, useState} from 'react'
 import './App.css'
 import Home from './pages/Home'
@@ -16,11 +16,14 @@ import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
 import teamour from './pages/teamour'
 import LoadingPage from './components/LoadingPage'
+import Momp from './pages/momp'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 
 function App() {
   const [loading, setLoading] = useState(true);
-
+  const location = useLocation();
+  const hideNavBar = ['/momp']
+  const showNavbar = !hideNavBar.includes(location.pathname);
   useEffect(()=>{
     const timer = setTimeout(()=>{
       setLoading(false);
@@ -31,29 +34,29 @@ function App() {
 
   return (
     <>
-    {loading?(
-      <LoadingPage />
-    ):(
-
-<>
-      <Navbar />
-      <Routes>
-        <Route path='/' Component={Home} />
-        <Route path='/animation' Component={AnimationTrail} />
-        <Route path='/ourteams' Component={teamour} />
-        <Route path='/about' Component={AboutUs} />
-        <Route path='/investors' Component={Investors} />
-        <Route path='/contactus' Component={ContactUs} />
-        <Route path='/career' Component={Career} />
-        <Route path='/jobdetails' Component={JobDetails} />
-        <Route path='/founderbio' Component={Founders}/>
-       </Routes>
-      <EarlyAccess />
-       <Footer />
-       </>
-    )}
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <>
+          {showNavbar && <Navbar />}
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/animation" Component={AnimationTrail} />
+            <Route path="/ourteams" Component={teamour} />
+            <Route path="/about" Component={AboutUs} />
+            <Route path="/investors" Component={Investors} />
+            <Route path="/contactus" Component={ContactUs} />
+            <Route path="/career" Component={Career} />
+            <Route path="/jobdetails" Component={JobDetails} />
+            <Route path="/founderbio" Component={Founders} />
+            <Route path="/momp" Component={Momp} />
+          </Routes>
+          <EarlyAccess />
+          <Footer />
+        </>
+      )}
     </>
-  )
+  );
 }
 
 export default App
