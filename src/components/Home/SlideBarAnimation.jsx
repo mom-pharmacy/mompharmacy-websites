@@ -32,11 +32,17 @@ const sliderAnimationQuotes = [
 
 function SlideBarAnimation(){
 
-    const {scrollYProgress} = useScroll()
+    // const {scrollYProgress} = useScroll()
 
-    const x = useTransform(scrollYProgress , [0 ,1] , ["0%" , "-100%"])
+    // const x = useTransform(scrollYProgress , [0 ,1] , ["0%" , "-100%"])
 
-    return <motion.div style={{x}} className="flex bg-[#dcfffb] px-2 py-5 w-fit overflow-hidden gap-6 whitespace-nowrap font-semibold text-3xl ">
+    return <motion.div   
+    animate={{ x: ["0%", "-40%"] }}
+        transition={{
+          repeat: Infinity,
+          duration: 10,
+          ease: "linear",
+        }}  className="flex bg-[#dcfffb] px-2 py-5 w-fit overflow-hidden gap-6 whitespace-nowrap font-semibold text-3xl ">
         {sliderAnimationQuotes.map(item=><div key={item.id} className='flex gap-5 items-center justify-center'>
         
             <img src={BannerHeart} alt="img" className='h-5 w-7 ml-5 '/>

@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export default function Details({ eligibility, about_employee, employee_expect }) {
+export default function Details({
+  eligibility,
+  about_employee,
+  employee_expect,
+}) {
   const containerRef = useRef(null);
   const inInView = useInView(containerRef, { once: true });
   const mainControls = useAnimation();
@@ -13,9 +17,8 @@ export default function Details({ eligibility, about_employee, employee_expect }
   }, [inInView, mainControls]);
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-24 py-8 ml-30, flex mb-30 ">
-      <div ref={containerRef} className="space-y-8">
-      
+    <div className="ml-20 ">
+      <div ref={containerRef} className="space-y-1">
         <motion.div
           animate={mainControls}
           initial="hidden"
@@ -25,13 +28,12 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
         >
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">Secondary responsibilities :</h3>
-          <ul className="list-disc pl-5 text-gray-700 space-y-2 text-base">
-            {eligibility}
-          </ul>
+          <h3 className="text-2xl  font-bold text-[#00A79B] mb-3">
+            What can you expect in this role :
+          </h3>
+          {employee_expect}
         </motion.div>
 
-        
         <motion.div
           animate={mainControls}
           initial="hidden"
@@ -41,13 +43,13 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.4 }}
         >
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">Required Skills</h3>
-          <div className="flex flex-wrap gap-3">
-            {about_employee}
-          </div>
+          <h3 className="text-2xl  font-bold text-[#00A79B] mb-3">
+            the successful candidate will demostrate the following skills and
+            competencies:
+          </h3>
+          <div className="flex flex-wrap gap-3">{eligibility}</div>
         </motion.div>
 
-        
         <motion.div
           animate={mainControls}
           initial="hidden"
@@ -57,8 +59,10 @@ export default function Details({ eligibility, about_employee, employee_expect }
           }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.6 }}
         >
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">Job Type</h3>
-          <p className="text-gray-700 text-base">{employee_expect}</p>
+          <h3 className="text-2xl  font-bold text-[#00A79B] mb-3">
+            you are someone who is:
+          </h3>
+          <p className="text-gray-700 text-base">{about_employee}</p>
         </motion.div>
       </div>
     </div>
