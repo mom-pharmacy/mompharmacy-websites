@@ -27,7 +27,7 @@ const Banner = () => {
       setShowImage(false);
       setShowButtons(true);
       setExpand(true);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -101,7 +101,7 @@ const Banner = () => {
               height: expand ? "85px" : "60px",
               backgroundColor:expand? "#ffffff4d":"#FADB14",
               borderRadius: expand ? "50px" : "50%",
-              transition: { duration: 0.8, ease: "easeInOut" },
+              transition: { duration: 0.5, ease: "easeInOut" },
             }}
             className="flex justify-center items-center mt-5 shadow-md"
           >

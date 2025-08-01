@@ -12,7 +12,7 @@ const JobCard = ({ role, experience, location, vacancies }) => {
         <p className="font-['Fredoka_One'] text-teal-600 text-2xl group-hover:text-black">
           {role}
         </p>
-        <span className="transition-transform duration-700 ease-in-out group-hover:-rotate-390">
+        <span className="transition-transform duration-300 ease-in-out group-hover:-rotate-45">
           <FaArrowRightLong className="ml-3 text-2xl text-teal-600 group-hover:text-black" />
         </span>
       </div>

@@ -17,17 +17,10 @@ const Welcome = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center mt-1">
         <div className="w-full lg:w-1/2 flex flex-col items-center">
           <div className="space-y-4 mb-8 justify-center">
-            <p className="text-white text-4xl md:text-5xl font-['Fredoka_One'] lg:text-5xl sm:text:3xl flex justify-center">
+           
+            <p className="text-white text-2xl md:text-5xl lg:text-5xl font-['Fredoka_One'] flex justify-center">
               <BlurText
-                text="create a career what you love"
-                delay={50}
-                animateBy="words"
-                direction="top"
-              />
-            </p>
-            <p className="text-white text-2xl md:text-3xl lg:text-5xl font-['Fredoka_One'] flex justify-center">
-              <BlurText
-                text="we are building what we love"
+                text="welcome to careers"
                 delay={150}
                 animateBy="words"
                 direction="top"
@@ -69,27 +62,7 @@ const Welcome = () => {
           </div>
         </div> */}
       </div>
-      <div className="flex gap-2 lg:px-32 w-full">
-          <div className="flex items-center gap-2 bg-[#BFE9E6] rounded-3xl px-2 py-2 w-full max-w-lg mx-auto">
-            <div className="bg-white rounded-full p-1.5">
-              <CiSearch className="text-xl text-teal-700" />
-            </div>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search job role or designation"
-              className="flex-grow border-none outline-none bg-transparent text-sm md:text-base text-black placeholder-gray-600"
-            />
-            <button
-              onClick={handleSearch}
-              className="text-sm font-medium rounded-3xl bg-teal-600 text-white px-3 py-1.5 hover:bg-[#FADB14] hover:text-black transition"
-            >
-              search
-            </button>
-          </div>
-        </div>
-    </div>
+   </div>
   );
 };
 

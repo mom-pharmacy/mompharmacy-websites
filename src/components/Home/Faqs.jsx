@@ -2,6 +2,7 @@ import { q } from "framer-motion/client"
 import { useState } from "react"
 import { AiOutlineClose } from "react-icons/ai"
 import { MdAdd } from "react-icons/md"
+import { motion, AnimatePresence } from "framer-motion"
 
 const faqsList = [
     {
@@ -60,21 +61,36 @@ function Faqs() {
                 }}
                     className="xl:text-[24px] md:text-[24px] text-[20px] text-start font-medium  cursor-pointer"
                 >{item.question} </button>
-                <span
-                    className="cursor-pointer text-[#00A79B]"
-                    onClick={() =>
-                        setActiveAnswer(activeAnswer === item.id ? null : item.id)
-                    }
-
-                >
-                    {activeAnswer === item.id ? <AiOutlineClose size={24} color="#00a99d" /> :  <MdAdd size={25} color="#00a99d" />}
-                </span>
+       <span
+    className="cursor-pointer text-[#00A79B]"
+    onClick={() =>
+        setActiveAnswer(activeAnswer === item.id ? null : item.id)
+    }
+>
+    <motion.div
+        animate={{ rotate: activeAnswer === item.id ? 90 : 0 }}
+        transition={{ duration: 0.5 }}
+    >
+        {activeAnswer === item.id ? <AiOutlineClose size={24} color="#00a99d" /> : <MdAdd size={25} color="#00a99d" />}
+    </motion.div>
+</span>
 
             </div>
-            {activeAnswer === item.id && <div className=" text-[18px] font-normal">
-                <p className="pt-2">{item.answer}</p>
-            </div>}
+            <AnimatePresence>
+                {activeAnswer === item.id && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }} 
+                        className="overflow-hidden text-[18px] font-normal"
+                    >
+                        <p className="pt-2">{item.answer}</p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>)}
+
     </div>
 }
 
