@@ -4,7 +4,7 @@ import Work from '../../components/Careers/work'
 import Applynow from '../../components/Careers/applynow'
 import CareerProgram from '../../components/Careers/CareerProgram'
 import OpenPositions from '../../components/Careers/OpenPositions'
-import Animation from "../../components/Careers/animation"
+// import Animation from "../../components/Careers/animation"
 import Review from "../../components/Careers/Review"
 export const Career = () => {
   return (
@@ -13,7 +13,7 @@ export const Career = () => {
         <Work />
         <Applynow />
         <CareerProgram />
-        <Review/>
+        {/* <Review/> */}
         
         <OpenPositions />
 

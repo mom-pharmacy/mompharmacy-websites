@@ -39,7 +39,9 @@ function App() {
       ) : (
         <>
           {showNavbar && <Navbar />}
+           <div className='mt-20'>
           <Routes>
+           
             <Route path="/" Component={Home} />
             <Route path="/animation" Component={AnimationTrail} />
             <Route path="/ourteams" Component={teamour} />
@@ -50,7 +52,9 @@ function App() {
             <Route path="/jobdetails" Component={JobDetails} />
             <Route path="/founderbio" Component={Founders} />
             <Route path="/momp" Component={Momp} />
+          
           </Routes>
+            </div>
           <EarlyAccess />
           <Footer />
         </>

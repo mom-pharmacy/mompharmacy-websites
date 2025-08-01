@@ -8,8 +8,6 @@ const OpenPositions = () => {
   const [results, setResults] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
-  // 👇 Central fetch function used by both search & filter
   const fetchJobs = async (params = {}) => {
     try {
       setLoading(true);
@@ -88,8 +86,9 @@ const OpenPositions = () => {
                 search
               </button>
             </div>
-            <Filter onApply={fetchJobs} />
+            
           </div>
+          <Filter onApply={fetchJobs}/>
         </div>
       </div>
 

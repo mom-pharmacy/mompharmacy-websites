@@ -4,7 +4,7 @@ import Carousel from '../components/AboutUs/carousel'
 import MisionVision from '../components/AboutUs/MisionVision'
 import MomsDesk from '../components/AboutUs/momsdesk'
 import WhyChooseUsBanner from '../components/AboutUs/whytochoose'
-import As from '../components/AboutUs/3As'   
+import As from '../components/AboutUs/filpCard'   
 
 function AboutUs() {
     return (
