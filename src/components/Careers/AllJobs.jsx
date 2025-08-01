@@ -47,50 +47,35 @@ const AllJobs = ({ Result, loading, error }) => {
         {!jobs || (Array.isArray(jobs) && jobs.length === 0) ? (
           <p className="text-xl text-center text-gray-500">No jobs available</p>
         ) : (
-          <div className="flex flex-col snap-x snap-mandatory scroll-smooth overflow-x-auto gap-5 custom-scroll">
-            {isFlatList
-              ? Object.entries(groupedJobs).map(([deptName, deptJobs], i) => (
-                  <div key={i}>
-                    <p className="text-xl sm:text-2xl flex flex-col px-2 m-3 py-2 border-l-4 border-black font-['Fredoka_One']">
-                      {deptName}
-                    </p>
-                    {deptJobs.map((job, index) => (
-                      <button
-                        onClick={() => navigate("/jobdetails", { state: job })}
-                        key={index}
-                        className="text-left"
-                      >
-                        <JobCard
-                          role={job.role}
-                          experience={job.experience}
-                          location={job.location}
-                          vacancies={job.vacancy}
-                        />
-                      </button>
-                    ))}
-                  </div>
-                ))
-              : jobs?.map((department, index) => (
-                  <div key={index}>
-                    <p className="text-xl sm:text-2xl flex flex-col px-2 m-3 py-2 border-l-4 border-black font-['Fredoka_One']">
-                      {department.department_name}
-                    </p>
-                    {department.jobUpload?.map((job, idx) => (
-                      <button
-                        onClick={() => navigate("/jobdetails", { state: job })}
-                        key={idx}
-                        className="text-left"
-                      >
-                        <JobCard
-                          role={job.role}
-                          experience={job.experience}
-                          location={job.location}
-                          vacancies={job.vacancy}
-                        />
-                      </button>
-                    ))}
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-8">
+            {(() => {
+              // Flatten jobs for grid
+              let flatJobs = [];
+              if (isFlatList) {
+                flatJobs = jobs;
+              } else if (Array.isArray(jobs)) {
+                // jobs is array of departments with jobUpload arrays
+                jobs.forEach(dept => {
+                  if (Array.isArray(dept.jobUpload)) {
+                    flatJobs = flatJobs.concat(dept.jobUpload);
+                  }
+                });
+              }
+              return flatJobs.slice(0, 8).map((job, idx) => (
+                <button
+                  onClick={() => navigate("/jobdetails", { state: job })}
+                  key={idx}
+                  className="text-left"
+                >
+                  <JobCard
+                    role={job.role}
+                    experience={job.experience}
+                    location={job.location}
+                    vacancies={job.vacancy}
+                  />
+                </button>
+              ));
+            })()}
           </div>
         )}
       </div>

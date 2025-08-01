@@ -82,10 +82,10 @@ function Navbar() {
   }, [activeLanguage]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 pt-5">
+    <div className="fixed top-0 left-0 w-full z-50">
       {/* Desktop/Large screens */}
       <div className="hidden md:block">
-        <div className="bg-[#00A79B]/80 backdrop-blur-md border border-white/30 shadow-md px-2 md:px-10 py-2 z-10 flex justify-between items-center sticky top-10 rounded-2xl w-[95%] mx-auto h-[60px]">
+        <div className="bg-[#00A79B] px-2 md:px-10 py-2 z-10 flex justify-between items-center sticky top-10 w-full h-[80px]">
           {/* Left: Home link */}
           <RenderLink setShowLink={setShowLink} showLink={showLink} />
           {/* Center: Navbar links */}

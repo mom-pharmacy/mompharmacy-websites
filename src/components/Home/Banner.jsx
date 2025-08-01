@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import bluePill from "../../assets/AboutUs/bluepill.png"
 import bluePillBottom from "../../assets/AboutUs/bluepillbottom.png"
-import Heart from "../../assets/AboutUs/heart.png"
+import Heart from "../../assets/AboutUs/heartbutton.png"
 
 const Banner = () => {
 
@@ -20,11 +20,13 @@ const Banner = () => {
   const [index, setIndex] = useState(0);
   const [showImage, setShowImage] = useState(true);
   const [showButtons, setShowButtons] = useState(false);
+  const [expand, setExpand] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowImage(false);
       setShowButtons(true);
+      setExpand(true);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -67,11 +69,12 @@ const Banner = () => {
               <img src={bluePill} alt="pill image" className="h-30 w-30 animate-bounce" />
               <img src={bluePillBottom} alt="pill image" className="w-25" />
             </div>
-            <div className="text-white font-['Fredoka_One'] text-[50px]">
+            <div className="text-white font-['Fredoka_One'] text-[50px] text-center items-center justify-center">
               <h1 className="">
-                We don't just deliver medicine.<br></br> We deliver the kind of
-                care only<br></br>
+                We don't just deliver medicine.
+
               </h1>
+              <h1> We deliver the kind of care only</h1>
               <h1>
                 a
                 <span className="text-[#FADB14] inline-block text-center font-bold w-[150px]">
@@ -92,29 +95,35 @@ const Banner = () => {
               </h1>
             </div>
           </div>
-          {showImage && (<motion.div initial={{ scale: 0.7 }} animate={{ scale: 1 }} transition={{ duration: 0.6 }}>
-            <img src={Heart} alt="pill image" className="w-15" />
-          </motion.div>)}
-
-          {showButtons && (
-            <div className="relative w-full flex justify-center items-center mt-5">
-
-              <motion.div
-                initial={{ scaleX: 0, opacity: 0, originX: 0.5 }}
-                animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="absolute bg-white/30 rounded-full
-                 shadow-lg h-20 w-[46%] z-0"
+          <motion.div
+            animate={{
+              width: expand ? "47%" : "60px",
+              height: expand ? "85px" : "60px",
+              backgroundColor:expand? "#ffffff4d":"#FADB14",
+              borderRadius: expand ? "50px" : "50%",
+              transition: { duration: 0.8, ease: "easeInOut" },
+            }}
+            className="flex justify-center items-center mt-5 shadow-md"
+          >
+            {!showButtons && (
+              <motion.img
+                src={Heart}
+                alt="heart"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className="w-[30px] h-[30px]"
               />
+            )}
 
-              <div className="relative z-1 flex gap-3 flex-wrap items-center justify-center">
+            {showButtons && (
+              <div className="flex gap-4 px-4">
                 <Button
                   onClick={() => setShowUploadPrescription(true)}
                   title="order via prescription"
                   icon={<FaPrescription />}
                   className="bg-white text-[#00A79B] hover:bg-[#FADB14] hover:text-black rounded-md shadow"
                 />
-
                 <Button
                   onClick={() => setDownloadApp(true)}
                   title="download our app"
@@ -122,8 +131,8 @@ const Banner = () => {
                   className="bg-white text-[#00A79B] hover:bg-[#FADB14] hover:text-black rounded-md shadow"
                 />
               </div>
-            </div>
-          )}
+            )}
+          </motion.div>
 
         </div>
         {/* <Welcome welcome={welcome} setWelcome={setWelcome} /> */}

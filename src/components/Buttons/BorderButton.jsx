@@ -31,7 +31,7 @@ function Button({ title = 'Button', link = '/', icon = null, onClick }) {
   return (
     <Link to={link} onClick={onClick}>
       <motion.button
-        className="min-w-[120px] max-w-[280px] h-[48px] px-4 bg-white text-black border-2 border-[#00a79b] hover:border-none rounded-[104px]
+        className="min-w-[100px] max-w-[280px] h-10 px-4 bg-white text-black border-2 border-[#00a79b] hover:border-none rounded-[104px]
                    whitespace-nowrap overflow-hidden text-ellipsis text-sm font-semibold transition-all 
                    duration-300 cursor-pointer flex flex-row items-center justify-center gap-2"
         initial={{ opacity: 0}}
