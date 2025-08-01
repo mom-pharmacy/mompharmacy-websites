@@ -14,7 +14,7 @@ export default function EntreprenuorComp(propes) {
       <div className=" lg:h-full w-full rounded-2xl border-2 border-[#00A79B] md:grid grid-cols-3 items-center ">
          <div className="m-auto">
           <img
-            src="/dev1.png"
+            src="/pardhu.png"
             className="rounded-3xl border-10 border-[#E6F6F5] "
           ></img>
         </div>
