@@ -20,7 +20,7 @@ const Founders = () => {
           <div onClick={handleNavigate} className="cursor-pointer">
             <CardComp
               name="Pardha Saradhi"
-              img="/developer.png"
+              img="/pardhu.png"
               isActive={true}
               highlight={false}
             />
@@ -29,7 +29,7 @@ const Founders = () => {
           <div onClick={handleNavigate} className="cursor-pointer">
             <CardComp
               name="Pardha Saradhi"
-              img="/developer.png"
+              img="/pardhu.png"
               isActive={true}
            
             />

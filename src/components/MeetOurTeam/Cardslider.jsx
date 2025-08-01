@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import CardComp from "./Cardcomp";
+import Profilecard from "./profilecard";
 
 const team = [
-    { name: "Gnaneswar ", designation: "Full Stack Developer", img: "/public/developer.png", About:"=" },
+    { name: "Gnaneswar ", designation: "Full Stack Developer", img: "/public/developer.png"},
     { name: "Charan ", designation: "Full Stack Developer ", img: "/public/developer.png" },
     { name: " Priya", designation: "Data Analaysts", img: "/public/developer.png" },
     { name: "Sai", designation: "Tester", img: "/public/developer.png" },
@@ -17,12 +18,51 @@ const team = [
 
 export default function CardSlider() {
     const [activeIndex, setActiveIndex] = useState(2);
+    const [showModal, setShowModal] = useState(false);
+    const [activeProfile , setActiveProfile] = useState(null)
+
+    const [employeeDetails , setEmployeeDetails] = useState(null)
+    const [loading , setLoading] = useState(false)
+    const [error , setError] = useState(false)
+ 
+    
+    useEffect(()=>{
+        async function getEmployeeDetails(){
+            try{
+                setLoading(true)
+                const res = await fetch('http://localhost:3000/employee/allemployees')
+                setLoading(false)
+                if(!res.ok){
+                    setError(true)
+                    return 
+                }
+                const data =  await res.json()
+                console.log("this is response from employee details" , data)
+                const formatedArray = data.data.map(item=>({
+                    name:item.employeeName , 
+                    designation:item.employeedesignation , 
+                    img:item.employeeUrl , 
+                    id:item._id
+                }))
+                setEmployeeDetails(formatedArray)
+            }
+            catch(e){
+                console.log("this is error" , e)
+                setError(true)
+            }
+        }
+
+        getEmployeeDetails()     
+    } , [])
+
+
 
     return (
-        <div className="w-full"> 
+        <div className="w-full">
+           {activeProfile && <Profilecard setActiveProfile={setActiveProfile} activeProfile={activeProfile}/>}
             <p className="text-center mt-20 text-[#00A79B] text-5xl font-bold">Meet Our Team</p>
             <div className="relative max-w-3xl mx-auto py-16 px-2">
-                <Swiper
+                {employeeDetails && <Swiper
                     spaceBetween={40}
                     slidesPerView={3}
                     centeredSlides={true}
@@ -34,19 +74,21 @@ export default function CardSlider() {
                     modules={[Navigation]}
                     loop={true}
                     className="overflow-visible h-80">
-                    {team.map((person, index) => (
+                    {employeeDetails.map((person, index) => (
                         <SwiperSlide key={index}>
                             <CardComp
-    name={person.name}
-    designation={person.designation}
-    img={person.img}
-    about={person.About}
-    isActive={index === activeIndex}
-/>
+                                name={person.name}
+                                designation={person.designation}
+                                img={person.img}
+                                about={person.About}
+                                isActive={index === activeIndex}
+                                id={person.id}
+                                setActiveProfile = {setActiveProfile}
+                            />
                         </SwiperSlide>
                     ))}
-                </Swiper>
-                
+                </Swiper>}
+
 
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-6">
                     <button className="prev-arrow h-12 w-12 rounded-full border border-black flex items-center justify-center hover:scale-110 transition">
