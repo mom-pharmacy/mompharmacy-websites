@@ -1,23 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCapsules, FaHeartbeat } from "react-icons/fa";
-import deliveryBoy from "../../assets/deliveryboy.png";
+import deliveryBoy from "../../assets/AboutUs/scooty.png";
 
 const MissionVision = () => {
   return (
     <div className="bg-white py-3 px-6 md:px-20 overflow-hidden">
       <motion.div
-        className="flex items-center gap-6 h-44 mb-16"
+        className="flex items-center gap-6 h-44"
         initial={{ x: "-100%" }}
         animate={{ x: "20%" }}
         transition={{ duration: 5, ease: "easeInOut" }}
       >
         <p className="text-2xl md:text-4xl font-bold text-[#00A79B] whitespace-nowrap">
-          delivering <span className="text-[#FADB14]">care,</span> one reminder
-          at a <span className="text-[#FADB14]">time.</span>
+          delivering care, one reminder at a time.
         </p>
 
-        <img src={deliveryBoy} alt="Delivery Boy" className="h-36 md:h-40" />
+        <img src={deliveryBoy} alt="Delivery Boy" className="h-20 md:h-20" />
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12">

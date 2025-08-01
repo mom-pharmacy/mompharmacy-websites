@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router'
 import{useEffect, useState} from 'react'
+import 'react-tooltip/dist/react-tooltip.css'
 import './App.css'
 import Home from './pages/Home'
 import Navbar from './components/Attachments/Navbar'

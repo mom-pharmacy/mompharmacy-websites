@@ -68,9 +68,9 @@ const OpenPositions = () => {
           </p>
 
           <div className="flex gap-2 lg:px-32">
-            <div className="flex items-center gap-2 bg-[#BFE9E6] rounded-3xl px-3 py-2 w-full max-w-lg mx-auto">
-              <div className="bg-white rounded-full p-1.5">
-                <CiSearch className="text-xl text-teal-700" />
+            <div className="flex items-center gap-2 bg-[#BFE9E6] rounded-full p-2 w-full max-w-lg mx-auto">
+              <div className="bg-white rounded-full items-center justify-center p-1">
+                <CiSearch className="text-xl text-teal-700 "size={30} />
               </div>
               <input
                 type="search"
@@ -81,7 +81,7 @@ const OpenPositions = () => {
               />
               <button
                 onClick={handleSearch}
-                className="text-sm font-medium rounded-3xl bg-teal-600 text-white px-3 py-1.5 hover:bg-[#FADB14] hover:text-black transition"
+                className="text-sm font-medium rounded-3xl bg-teal-600 text-white px-4 py-2 hover:bg-[#FADB14] hover:text-black transition"
               >
                 search
               </button>

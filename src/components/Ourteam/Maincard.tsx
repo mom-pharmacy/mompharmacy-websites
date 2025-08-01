@@ -2,7 +2,7 @@ import React from "react";
 
 function Maincard() {
   return (
-    <div className="flex flex-col items-center h-screen w-full bg-[#00A79B] p-30 ">
+    <div className="flex flex-col items-center h-screen w-full bg-[#00A79B] ">
       <div className=" flex flex-col items-center">
         <img
           className="flex h-50 w-120 p-3 items-center animate-bounce"
@@ -10,12 +10,12 @@ function Maincard() {
           >
 
           </img>
-        <div className="text-gray-100  font-bold text-5xl ">
-          <h1 className="ml-20">a passionate team delivering</h1>
-          <h1 className="text-amber-400 font-bold ml-40">
+        <div className="text-gray-100  text-5xl  items-center justity-center">
+          <p className="font-['Fredoka_One']">a passionate team delivering</p>
+          <h1 className="text-amber-400  font-['fredoka_one']">
             care, speed, and trust
           </h1>
-          <h1 className="font-bold align">
+          <h1 className="font-['fredoka_one']">
             every minute,with every medicine.
           </h1>
         </div>

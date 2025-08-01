@@ -49,12 +49,12 @@ const AllJobs = ({ Result, loading, error }) => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-8">
             {(() => {
-              // Flatten jobs for grid
+           
               let flatJobs = [];
               if (isFlatList) {
                 flatJobs = jobs;
               } else if (Array.isArray(jobs)) {
-                // jobs is array of departments with jobUpload arrays
+         
                 jobs.forEach(dept => {
                   if (Array.isArray(dept.jobUpload)) {
                     flatJobs = flatJobs.concat(dept.jobUpload);

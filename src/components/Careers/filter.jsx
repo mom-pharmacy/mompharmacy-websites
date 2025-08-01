@@ -42,27 +42,20 @@ const Filter = ({ onApply }) => {
     closeModal();
   };
 
-  const resetFilters = () => {
-    setLocation("");
-    setDepartment("");
-    setExperience("")
-    setShowFilterOptions(false);
-  };
-
   return (
-    <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 py-2 px-2 bg-white rounded-xl z-10 mt-15">
+    <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 py-2 px-2 bg-white rounded-xl z-10 mt-4">
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 rounded-md bg-teal-600 text-white min-w-[150px] "
+        className="outline outline-1 outline-[#00A79B] p-3 rounded-md bg-teal-600 text-white min-w-[200px] "
         value={department}
         onChange={(e) => setDepartment(e.target.value)}
       >
-        <option value="">Department</option>
+        <option value="bg-white">Department</option>
         {departmentOptions.map((dept, index) => (
           <option key={index}>{dept}</option>
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline outline-1 outline-[#00A79B] p-3 rounded-md bg-teal-600 text-white min-w-[200px]"
         value={experience}
         onChange={(e) => setExperience(e.target.value)}
       >
@@ -72,7 +65,7 @@ const Filter = ({ onApply }) => {
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline outline-1 outline-[#00A79B] p-3 rounded-md bg-teal-600 text-white min-w-[200px]"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       >

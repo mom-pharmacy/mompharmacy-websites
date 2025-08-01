@@ -6,15 +6,16 @@ import NavButton from "./NavButton";
 import { RiMenuFold2Line } from "react-icons/ri";
 import NavModal from "../Navbar/NavModal";
 import Button from "../Button";
+import { Tooltip } from 'react-tooltip'
 
 export const navbarList = [
-  { id: 1, title: "welcome", imageUrl: null, link: "/" },
-  { id: 2, title: "who we are", imageUrl: null, link: "/about" },
-  { id: 3, title: "meet the team", imageUrl: null, link: "/ourteams" },
-  { id: 4, title: "", imageUrl: "/Navbar/logo.png", link: "/ourteams" },
-  { id: 5, title: "careers", imageUrl: null, link: "/career" },
-  { id: 6, title: "for investors", imageUrl: null, link: "/investors" },
-  { id: 7, title: "connect", imageUrl: null, link: "/contactus" },
+  { id: 1, title: "welcome", imageUrl: null, link: "/" , tooltip:"welcome"},
+  { id: 2, title: "who we are", imageUrl: null, link: "/about", tooltip:"who we are" },
+  { id: 3, title: "meet the team", imageUrl: null, link: "/ourteams" , tooltip:"meet the team"},
+  { id: 4, title: "", imageUrl: "/Navbar/logo.png", link: "/ourteams" , tooltip:"mom"},
+  { id: 5, title: "careers", imageUrl: null, link: "/career" , tooltip:"careers"},
+  { id: 6, title: "for investors", imageUrl: null, link: "/investors", tooltip:"for investors" },
+  { id: 7, title: "connect", imageUrl: null, link: "/contactus" , tooltip:"connect"},
 ];
 
 const languageList = [
@@ -91,15 +92,19 @@ function Navbar() {
           {/* Center: Navbar links */}
           <div className="items-center flex">
             <ul className="flex items-center gap-6 font-[32px]">
-              {navbarList.map((item) => (
+              {navbarList?.map((item) => (
+               
                 <NavbarItem
                   key={item.id}
                   title={item.title}
                   image={item.imageUrl}
                   link={item.link}
+                  tooltip={item.tooltip}
                 />
+              
               ))}
             </ul>
+             <Tooltip id="react-tooltip" />
           </div>
           {/* Right: Language selection */}
           <div className="flex flex-col items-center">
