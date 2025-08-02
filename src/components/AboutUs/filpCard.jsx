@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import Love from "../../assets/AboutUs/Carousel/love.png";
 
 function Filpcard() {
   const [isFlipped1, setIsFlipped1] = useState(false);
@@ -24,11 +25,14 @@ function Filpcard() {
    
       <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
         <div
-          className="bg-[#00a79b] text-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
+          className="bg-[#00a79b] text-white  rounded-2xl shadow-lg flex flex-col  cursor-pointer w-[350px] h-[300px]"
           onMouseEnter={() => setIsFlipped1(true)}
           onMouseLeave={() => setIsFlipped1(false)}
         >
-          <h2 className="text-5xl font-bold mb-4">accessibility</h2>
+          <div>
+          <img src={Love} alt="love" className="w-20 h-20 mb--54"/>
+          <h2 className="text-5xl font-bold p-6 mb-4">accessibility</h2>
+          </div>
         </div>
         <div
           className="bg-white  p-6 rounded-3xl border-2 border-[#00a79b]  shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
@@ -47,11 +51,14 @@ function Filpcard() {
     
       <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
         <div
-          className="bg-[#00a79b] text-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
+          className="bg-[#00a79b] text-white  rounded-2xl shadow-lg flex flex-col  cursor-pointer w-[350px] h-[300px]"
           onMouseEnter={() => setIsFlipped2(true)}
           onMouseLeave={() => setIsFlipped2(false)}
         >
-          <h2 className="text-5xl font-bold mb-4">affordability</h2>
+          <div>
+            <img src={Love} alt="love" className="w-20 h-20 mb--54 mr-5"/>
+          <h2 className="text-5xl font-bold p-6  text-center mb-4">affordability</h2>
+          </div>
         </div>
         <div
           className="bg-white p-6 rounded-3xl border-2 border-[#00a79b] shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
@@ -70,11 +77,15 @@ function Filpcard() {
     
       <ReactCardFlip isFlipped={isFlipped3} flipDirection="horizontal">
         <div
-          className="bg-[#00a79b] text-white p-6 rounded-3xl shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
+          className="bg-[#00a79b] text-white  rounded-3xl shadow-lg flex flex-col items-left justify-left  cursor-pointer w-[350px] h-[300px]"
           onMouseEnter={() => setIsFlipped3(true)}
           onMouseLeave={() => setIsFlipped3(false)}
         >
-          <h2 className="text-5xl font-bold mb-4">availability</h2>
+          <div className="flex flex-col mb-20">
+            <img src ={Love} alt="love" className="w-20 h-20 mb--70"/>
+        
+          <h2 className="text-5xl font-bold  p-6 text-center mb-4">availability</h2>
+          </div>
         </div>
         <div
           className="bg-white p-6 rounded-3xl border-2 border-[#00a79b] shadow-lg flex flex-col items-center justify-center cursor-pointer w-[350px] h-[300px]"
