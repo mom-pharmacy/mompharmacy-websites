@@ -36,7 +36,7 @@ export default function EntreprenuorComp(propes) {
         </div>
         <div className="m-auto">
           <img
-            src="/dev1.png"
+            src="/pardhu.png"
             className="rounded-3xl border-10 border-[#E6F6F5] "
           ></img>
         </div>

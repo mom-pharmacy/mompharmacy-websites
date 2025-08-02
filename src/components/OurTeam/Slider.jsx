@@ -59,8 +59,8 @@ const MomsDesk = () => {
         teamwork
       </motion.h1>
       <motion.div
-        className="w-full max-w-3xl border-4 border-[#00A79B] rounded-3xl pt-6 pb-10 px-6"
-        whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.6)" }}
+        className="w-full max-w-3xl border-1 border-[#00A79B] bg-[#00A79B1A] rounded-3xl pt-6 pb-10 px-6"
+        whileHover={{ scale: 1.05, backgroundColor:"#FADB141A",border: '1px solid',borderColor:"#FADB14"}}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <Slider {...sliderSettings} ref={slider}>

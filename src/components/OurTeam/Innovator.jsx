@@ -7,7 +7,7 @@ export default function Innovator() {
     <div className="mx-auto w-screen  xl:py-10 xl:px-5 md:py-10 md:px-5  bg-[#00A79B]   items-center justify-between">
           <div className="xl:flex gap-10 md:flex ">
             <div className="md:h-full m-auto mx-auto w-full  ">  
-                < img src="/dev1.png" className="rounded-3xl border-10 border-[#E6F6F5]"/>
+                < img src="/pardhu.png" className="rounded-3xl border-10 border-[#E6F6F5]"/>
               </div>
 
           <div className="m-auto ml-5">
