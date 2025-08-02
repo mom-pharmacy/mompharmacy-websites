@@ -52,10 +52,8 @@ const MomsDesk = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6 gap-8">
       <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center animate-bounce"
-        whileHover={{ scale: 1.1, rotate: -1 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-      >
+        className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center"
+          >
         teamwork
       </motion.h1>
       <motion.div

@@ -4,7 +4,8 @@ import Carousel from '../components/AboutUs/carousel'
 import MisionVision from '../components/AboutUs/MisionVision'
 import MomsDesk from '../components/AboutUs/momsdesk'
 import WhyChooseUsBanner from '../components/AboutUs/whytochoose'
-import As from '../components/AboutUs/filpCard'   
+import As from '../components/AboutUs/filpCard'
+import MomLogo from "../components/Home/momLogo";   
 
 function AboutUs() {
     return (
@@ -15,6 +16,7 @@ function AboutUs() {
                 <As />
                 <WhyChooseUsBanner />
                 <MomsDesk />
+                <MomLogo />
             </div>
         </>
     )
