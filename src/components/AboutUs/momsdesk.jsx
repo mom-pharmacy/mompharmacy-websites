@@ -49,9 +49,7 @@ const MomsDesk = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-8 p-4 sm:p-6 md:p-8 bg-white">
       <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center"
-        whileHover={{ scale: 1.1, rotate: -1 }}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
+        className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center"  
         style={{ fontFamily: '"Fredoka One", sans-serif' }}
       >
         from mom’s desk

@@ -46,7 +46,7 @@ const Welcome = () => {
             <img
               src={Image}
               alt="tablets"
-              className="w-40 md:w-60 lg:w-[400px] h-auto animate-bounce"
+              className="w-40 md:w-60 lg:w-[400px] h-auto"
             />
           </div>
         </div>
