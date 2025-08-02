@@ -7,6 +7,7 @@ import { RiMenuFold2Line } from "react-icons/ri";
 import NavModal from "../Navbar/NavModal";
 import Button from "../Button";
 import { Tooltip } from 'react-tooltip'
+import { Link } from "react-router";
 
 export const navbarList = [
   { id: 1, title: "welcome", imageUrl: null, link: "/" , tooltip:"welcome"},
@@ -41,7 +42,7 @@ function RenderLanguage({ language, setActiveLanguage, setShowLanguages }) {
 
 export function RenderLink({ showLink, setShowLink }) {
   return (
-    <div
+  <Link to="/momp">  <div
       className="bg-white text-black py-2 px-3 rounded-full font-semibold flex flex-col items-center cursor-pointer"
       onMouseEnter={() => setShowLink(true)}
       onMouseLeave={() => setShowLink(false)}
@@ -61,6 +62,7 @@ export function RenderLink({ showLink, setShowLink }) {
         )}
       </AnimatePresence>
     </div>
+    </Link>
   );
 }
 
