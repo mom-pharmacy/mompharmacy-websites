@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 import { FaQuoteLeft } from 'react-icons/fa';
+import Quatation from "../../assets/AboutUs/quatation.png"
 
 const MomsDesk = () => {
   const [current, setCurrent] = useState(0);
@@ -57,8 +58,8 @@ const MomsDesk = () => {
       </motion.h1>
 
       <motion.div
-        className="w-full max-w-3xl border-4 border-[#00A79B] rounded-3xl pt-6 pb-10 px-6"
-        whileHover={{ scale: 1.05, boxShadow: '0px 10px 20px rgba(0,0,0,0.6)' }}
+        className="w-full max-w-3xl border-1 border-[#00A79B] bg-[#00A79B1A] rounded-3xl pt-6 pb-10 px-6"
+        whileHover={{ scale: 1.05, backgroundColor:"#FADB141A",border: '1px solid',borderColor:"#FADB14"}}
         transition={{ duration: 0.3, ease: 'easeOut' }}
       >
         <Slider ref={sliderRef} {...settings}>
@@ -70,7 +71,8 @@ const MomsDesk = () => {
             >
 
               <div className="flex justify-center">
-                <FaQuoteLeft size={50} color="#00a99d" />
+                {/* <FaQuoteLeft size={50} color="#00a99d" /> */}
+                <img src={Quatation} className='h-10 w-10'/>
               </div>
 
               <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 lowercase">
