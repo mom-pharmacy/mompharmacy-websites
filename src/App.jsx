@@ -11,13 +11,14 @@ import ContactUs from "./pages/ContactUs";
 import JobDetails from "./pages/Careers/JobDetails";
 import Ourteam from "./pages/teamour";
 
-import { Career } from "./pages/Careers/Career";
-import Footer from "./components/Home/Footer";
-import EarlyAccess from "./components/Home/EarlyAccess";
-import Founders from "./pages/Founders";
-import teamour from "./pages/teamour";
-import LoadingPage from "./components/LoadingPage";
-import Momp from "./pages/momp";
+import { Career } from './pages/Careers/Career'
+import Footer from './components/Home/Footer'
+import EarlyAccess from './components/Home/EarlyAccess'
+import Founders from './pages/Founders'
+import teamour from './pages/teamour'
+import LoadingPage from './components/LoadingPage'
+import Momp from './pages/momp'
+import Lan from './components/multilanguage'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 // import BacktoBottom from "./components/Home/backtobotton";
 
@@ -33,6 +34,16 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
+    
+  
+  useEffect(()=>{
+    const script=document.createElement("script");
+    script.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.body.appendChild(script);
+    window.googleTranslateElementInit=()=>{
+    new google.translate.TranslateElement({pageLanguage: 'te',includeLanguages:"en,ta,te,hi",layout:window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); 
+        };
+  },[])
   return (
     <>
       {loading ? (
@@ -40,22 +51,27 @@ function App() {
       ) : (
         <>
           {showNavbar && <Navbar />}
+           <Lan/>
+           <div className='mt-20'>
+             
+          <Routes>
+           
+            <Route path="/" Component={Home} />
+            <Route path="/animation" Component={AnimationTrail} />
+            <Route path="/ourteams" Component={teamour} />
+            <Route path="/about" Component={AboutUs} />
+            <Route path="/investors" Component={Investors} />
+            <Route path="/contactus" Component={ContactUs} />
+            <Route path="/career" Component={Career} />
+            <Route path="/jobdetails" Component={JobDetails} />
+            <Route path="/founderbio" Component={Founders} />
+            <Route path="/momp" Component={Momp} />
          
-          <div className="mt-20">
-            <Routes>
-              <Route path="/" Component={Home} />
-              <Route path="/animation" Component={AnimationTrail} />
-              <Route path="/ourteams" Component={teamour} />
-              <Route path="/about" Component={AboutUs} />
-              <Route path="/investors" Component={Investors} />
-              <Route path="/contactus" Component={ContactUs} />
-              <Route path="/career" Component={Career} />
-              <Route path="/jobdetails" Component={JobDetails} />
-              <Route path="/founderbio" Component={Founders} />
-              <Route path="/momp" Component={Momp} />
-            </Routes>
-          </div>
-          <EarlyAccess />
+          
+          </Routes>
+            </div>
+          {/* <EarlyAccess /> */}
+        
           <Footer />
         </>
       )}

@@ -16,16 +16,15 @@ import Footer from "./Home/Footer";
 export default function JobLanding() {
 const[isHover, setHover]=useState(false)
 
-
   return (
-    <div className="bg-[#00a79b] h-full w-full inline-block pb-20">
+    <div className="bg-[#00a79b] h-full w-full inline-block pb-20 ">
       <motion.div className="px-2 ,py-2 flex justify-between">
         <div className="py-5 px-10">
           <Button title="back" link="#" />
         </div>
 
         <motion.div initial={{y:"-20%"}} animate={{y:0}} transition={{duration:1}} className="flex" >
-          <p className="font-family:Fredoka text-xl rounded-bl-2xl rounded-br-2xl px-10 mb-6 py-3 bg-white inline">
+          <p className="notranslate font-family:Fredoka text-xl rounded-bl-2xl rounded-br-2xl px-10 mb-6 py-3 bg-white inline">
             be among first few users to try our app and gives us your valuable
             feedback &nbsp;
             <span className="text-[#00a79b] text-xl inline">try now!</span>

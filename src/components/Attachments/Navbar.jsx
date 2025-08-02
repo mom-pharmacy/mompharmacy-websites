@@ -92,7 +92,7 @@ function Navbar() {
           {/* Left: Home link */}
           <RenderLink setShowLink={setShowLink} showLink={showLink} />
           {/* Center: Navbar links */}
-          <div className="items-center flex">
+          <div className="notranslate items-center flex">
             <ul className="flex items-center gap-6 font-[32px]">
               {navbarList?.map((item) => (
                

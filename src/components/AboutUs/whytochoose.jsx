@@ -188,17 +188,17 @@ export default function WhyChooseUsBanner() {
               ))
             : tabs.map((tab) => (
                 <div key={tab.key}>
-                  <div className="flex flex-col md:flex-row items-center h-120 justify-center gap-6 bg-white rounded-lg  mx-4 sm:mx-6 md:mx-10 lg:mx-16 py-6 px-4 sm:py-8 sm:px-6">
+                  <div className="flex md:flex-row items-center h-120 justify-center gap-6 bg-white rounded-lg  mx-4 sm:mx-6 md:mx-10 lg:mx-16 py-6 px-4 sm:py-8 sm:px-6">
                     <img src={tab.image1} alt={tab.label} className="w-full sm:w-64 md:w-72 lg:w-80 rounded-lg shadow-md h-110" />
                     <div className="inline mb-20">
                       <div className="text-200 font-['DM_Sans'] text-base">{tab.text1}</div>
-                      <img src={tab.image3} alt={tab.label} className="h-20 w-20 mr-10 rounded-lg " />
+                      <img src={tab.image3} alt={tab.label} className="h-10 w-10 mr-5 rounded-lg " />
                     </div>
                     <div className="inline mt-30">
-                      <img src={tab.image4} alt={tab.label} className="h-20 w-20 ml-50 rounded-lg " />
+                      <img src={tab.image4} alt={tab.label} className="h-10 w-10 ml-25 rounded-lg " />
                       <div className="text-200 font-['DM_Sans'] text-base">{tab.text2}</div>
                     </div>
-                    <img src={tab.image2} alt={tab.label} className="w-full sm:w-64 md:w-72 lg:w-80 h-110 rounded-lg shadow-md" />
+                    <img src={tab.image2} alt={tab.label} className="w-full sm:w-34 md:w-72 lg:w-80 h-110 rounded-lg shadow-md" />
                   </div>
                 </div>
               ))}
