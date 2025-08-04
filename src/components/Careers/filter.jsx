@@ -60,9 +60,9 @@ const Filter = ({ onApply }) => {
   // }
 
   return (
-    <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 py-2 px-2 bg-white rounded-xl z-10 mt-15">
+    <div className="w-full flex flex-col lg:flex-row md:flex-row items-center justify-center gap-2 sm:gap-4 px-2 bg-white rounded-xl z-10 mt-10">
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 rounded-md bg-teal-600 text-white min-w-[150px] "
+        className="outline outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white min-w-[150px] "
         value={department}
         onChange={(e) => setDepartment(e.target.value)}
       >
@@ -72,7 +72,7 @@ const Filter = ({ onApply }) => {
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B]  p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline outline-1 outline-[#00A79B] w-full lg:w-auto p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
         value={experience}
         onChange={(e) => setExperience(e.target.value)}
       >
@@ -82,9 +82,9 @@ const Filter = ({ onApply }) => {
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white min-w-[150px]"
         value={location}
-        onChange={(e)=>setLocation(e.target.value)}
+        onChange={(e) => setLocation(e.target.value)}
       >
         <option value="">Location</option>
         {cityOptions.map((city, index) => (

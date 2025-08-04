@@ -182,6 +182,11 @@ export default function WhyChooseUsBanner() {
                       >
                         {slide.text}
                       </motion.p>
+                      <div>
+                        <img src={arrow1} alt="arrow"
+                        className='w-10'
+                         />
+                      </div>
                     </div>
                   </div>
                 </motion.div>
