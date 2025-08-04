@@ -1,21 +1,58 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import NavbarItem from "../Navbar/NavbarItem";
 import { IoIosArrowDropdown } from "react-icons/io";
-import NavButton from "./NavButton";
 import { RiMenuFold2Line } from "react-icons/ri";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
+import NavbarItem from "../Navbar/NavbarItem";
+import NavButton from "./NavButton";
 import NavModal from "../Navbar/NavModal";
 import Button from "../Button";
-import { Tooltip } from 'react-tooltip'
 
 export const navbarList = [
-  { id: 1, title: "welcome", imageUrl: null, link: "/" , tooltip:"welcome"},
-  { id: 2, title: "who we are", imageUrl: null, link: "/about", tooltip:"who we are" },
-  { id: 3, title: "meet the team", imageUrl: null, link: "/ourteams" , tooltip:"meet the team"},
-  { id: 4, title: "", imageUrl: "/Navbar/logo.png", link: "/ourteams" , tooltip:"mom"},
-  { id: 5, title: "careers", imageUrl: null, link: "/career" , tooltip:"careers"},
-  { id: 6, title: "for investors", imageUrl: null, link: "/investors", tooltip:"for investors" },
-  { id: 7, title: "connect", imageUrl: null, link: "/contactus" , tooltip:"connect"},
+  {
+    id: 1,
+    title: "welcome",
+    imageUrl: null,
+    link: "/",
+    tooltip: "welcome to mom pharmacy",
+  },
+  {
+    id: 2,
+    title: "about us",
+    imageUrl: null,
+    link: "/about",
+    tooltip: "explore this page to know more about us",
+  },
+  {
+    id: 3,
+    title: "our team",
+    imageUrl: null,
+    link: "/ourteams",
+    tooltip: "meet our incredible team",
+  },
+  { id: 4, title: "", imageUrl: "/Navbar/logo.png", link: "/", tooltip: "mom" },
+  {
+    id: 5,
+    title: "careers",
+    imageUrl: null,
+    link: "/career",
+    tooltip: "make your career grow with us",
+  },
+  {
+    id: 6,
+    title: "for investors",
+    imageUrl: null,
+    link: "/investors",
+    tooltip: "for investors who love business",
+  },
+  {
+    id: 7,
+    title: "contact us",
+    imageUrl: null,
+    link: "/contactus",
+    tooltip: "contact us for any feedback suggestions or grievances",
+  },
 ];
 
 const languageList = [
@@ -27,10 +64,10 @@ const languageList = [
 ];
 
 function RenderLanguage({ language, setActiveLanguage, setShowLanguages }) {
-  function handleChangeLanguage() {
+  const handleChangeLanguage = () => {
     setActiveLanguage(language);
     setShowLanguages(false);
-  }
+  };
 
   return (
     <li className="flex flex-col justify-stretch">
@@ -65,7 +102,6 @@ export function RenderLink({ showLink, setShowLink }) {
 }
 
 function Navbar() {
-  // shared state for both layouts
   const [showLink, setShowLink] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState(languageList[0]);
@@ -73,27 +109,23 @@ function Navbar() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    function handleActiveLanguage() {
-      const remainingLanguages = languageList.filter(
-        (item) => item.id !== activeLanguage.id
-      );
-      setInactiveLanguages(remainingLanguages);
-    }
-    handleActiveLanguage();
+    const remainingLanguages = languageList.filter(
+      (item) => item.id !== activeLanguage.id
+    );
+    setInactiveLanguages(remainingLanguages);
   }, [activeLanguage]);
 
   return (
     <div className="fixed top-0 left-0 w-full z-40">
       {/* Desktop/Large screens */}
       <div className="hidden md:block">
-        <div className="bg-[#00A79B] px-2 md:px-10 py-2 z-10 flex justify-between items-center sticky top-10 w-full h-[80px]">
+        <div className="bg-[#00A79B] px-2 md:px-10 py-2 flex justify-between items-center w-full h-[80px]">
           {/* Left: Home link */}
           <RenderLink setShowLink={setShowLink} showLink={showLink} />
-          {/* Center: Navbar links */}
-          <div className="items-center flex">
-            <ul className="flex items-center gap-6 font-[32px]">
-              {navbarList?.map((item) => (
-               
+
+          <div className="items-center flex gap-8">
+            <ul className="flex items-center gap-10 border-3 border-white  rounded-full  px-4 py-1 font-[32px]">
+              {navbarList.slice(0, 3).map((item) => (
                 <NavbarItem
                   key={item.id}
                   title={item.title}
@@ -101,11 +133,30 @@ function Navbar() {
                   link={item.link}
                   tooltip={item.tooltip}
                 />
-              
               ))}
             </ul>
-             <Tooltip id="react-tooltip" />
+            <div className="mx-2">
+              <img
+                src="/Navbar/logo.png"
+                alt="mom pharmacy"
+                className="w-20 h-70 object-contain"
+              />
+            </div>
+            <ul className="flex item-center gap-10 border-3 border-white rounded-full px-4 py-1 font-[32px]">
+              {navbarList.slice(4).map((item) => (
+                <NavbarItem
+                  key={item.id}
+                  title={item.title}
+                  image={item.imageUrl}
+                  link={item.link}
+                  tooltip={item.tooltip}
+                />
+              ))}
+            </ul>
+          
+            <Tooltip id="react-tooltip" />
           </div>
+
           {/* Right: Language selection */}
           <div className="flex flex-col items-center">
             <button
@@ -135,8 +186,7 @@ function Navbar() {
 
       {/* Mobile/Small screens */}
       <div className="block md:hidden mt-0">
-        <div className="bg-[#00A79B] px-2 py-2 z-10 flex justify-between items-center sticky top-0">
-          {/* Menu button */}
+        <div className="bg-[#00A79B] px-2 py-2 flex justify-between items-center">
           <NavButton onClick={() => setShowModal(true)}>
             <div className="flex items-center gap-1 ">
               <p>menu</p>
@@ -145,9 +195,11 @@ function Navbar() {
               </span>
             </div>
           </NavButton>
-          {/* Logo */}
-          <img src="/Navbar/logo.png" alt="mom pharmacy" className="w-30 h-20" />
-          {/* Language selection */}
+          <img
+            src="/Navbar/logo.png"
+            alt="mom pharmacy"
+            className="w-30 h-20"
+          />
           <div className="flex flex-col items-center">
             <button
               className="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center gap-1 hover:bg-amber-300 ease-in-out duration-100 min-w-28 justify-center"
@@ -172,6 +224,7 @@ function Navbar() {
             )}
           </div>
         </div>
+
         {/* Modal for mobile menu */}
         <AnimatePresence mode="wait">
           {showModal && (
