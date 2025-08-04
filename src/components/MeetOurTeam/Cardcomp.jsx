@@ -5,13 +5,13 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Profilecard from "./profilecard";
 
 export default function CardComp({ name, designation, img, about, isActive ,id ,  setActiveProfile }) {
-  
+
   return (
     <>
       <motion.div
-        className={`relative bg-[url('/idcard.png')] bg-center bg-h-10 bg-w-10 rounded-3xl shadow-md text-center px-4 py-6 gap-2 transition-all duration-300 ${isActive
-            ? "scale-105 shadow-xl border-b-4 border-r-2 border-l-2 w-1/4 h-1/4 border-[#00a99d] h-65 w-60"
-            : "opacity-80 scale-95"
+        className={`bg-h-10 bg-w-10 rounded-3xl shadow-md text-center md:px-4 py-6 transition-all duration-300 ${isActive
+            ? "scale-90 shadow-xl border-b-4 -ml-10 md:ml-0 md:w-60 border-r-2 z-30 border-l-2 border-[#00a99d] p-3 w-40"
+            : "opacity-80 md:scale-90 scale-40"
           }`}>
         <div className="relative flex justify-center">
           <img
@@ -28,9 +28,7 @@ export default function CardComp({ name, designation, img, about, isActive ,id ,
             Read More <FaArrowRightLong />
           </motion.div>
         )}
-      </motion.div>
-
-       
+      </motion.div>  
     </>
   );
 }

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Innovator() {
   return (
     <div className="mx-auto w-screen  xl:py-10 xl:px-5 md:py-10 md:px-5  bg-[#00A79B]   items-center justify-between">
-          <div className="xl:flex gap-10 md:flex ">
+          <div className="xl:flex gap-10 md:p-5 md:flex ">
             <div className="md:h-full m-auto mx-auto w-full  ">  
                 < img src="/pardhu.png" className="rounded-3xl border-10 border-[#E6F6F5]"/>
               </div>
@@ -77,7 +77,7 @@ export default function Innovator() {
                 />
               </div>
             </div>
-            <p className="text-white text-xl">
+            <p className="text-white p-3 text-xl">
               to bridge the gap between people and essential healthcare by
               delivering affordable, on-demand medication - with the speed of
               innovation and the compassion of family - ensuring that every home
