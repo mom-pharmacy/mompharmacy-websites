@@ -12,8 +12,7 @@ export default function JobDetails() {
   return (
     <div className="bg-gray-50 overflow-x-clip">
       <JobLanding role={role} job_no={job_no} employment_type={employment_type} location={location} experience={experience}/>
-      <KeyDetails role={role } job_no={job_no}  location={location} experience={experience} travel={travel} job_category={job_category} work_model={work_model} date_published={date_published} employment_type={employment_type} role_description={role_description} />
-      <Details eligibility={eligibility} about_employee={about_employee} employee_expect={employee_expect}/>
-      <Apply we_offer={we_offer} />
+      <KeyDetails role={role } employee_expect={employee_expect} about_employee={about_employee} eligibility={eligibility} job_no={job_no}  location={location} experience={experience} travel={travel} job_category={job_category} we_offer={we_offer} work_model={work_model} date_published={date_published} employment_type={employment_type} role_description={role_description} />
+      
     </div>)
 }

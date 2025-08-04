@@ -8,7 +8,6 @@ import NavbarItem from "../Navbar/NavbarItem";
 import NavButton from "./NavButton";
 import NavModal from "../Navbar/NavModal";
 import Button from "../Button";
-import { Tooltip } from 'react-tooltip'
 import { Link } from "react-router";
 
 export const navbarList = [
@@ -80,7 +79,7 @@ function RenderLanguage({ language, setActiveLanguage, setShowLanguages }) {
 
 export function RenderLink({ showLink, setShowLink }) {
   return (
-  <Link to="/momp">  <div
+   <Link to="/momp">  <div
       className="bg-white text-black py-2 px-3 rounded-full font-semibold flex flex-col items-center cursor-pointer"
       onMouseEnter={() => setShowLink(true)}
       onMouseLeave={() => setShowLink(false)}
@@ -125,11 +124,28 @@ function Navbar() {
         <div className="bg-[#00A79B] px-2 md:px-10 py-2 flex justify-between items-center w-full h-[80px]">
           {/* Left: Home link */}
           <RenderLink setShowLink={setShowLink} showLink={showLink} />
-          {/* Center: Navbar links */}
-          <div className="notranslate items-center flex">
-            <ul className="flex items-center gap-6 font-[32px]">
-              {navbarList?.map((item) => (
-               
+
+          <div className="items-center flex gap-8">
+            <ul className="flex items-center gap-10 border-3 border-white  rounded-full  px-4 py-1 font-[32px]">
+              {navbarList.slice(0, 3).map((item) => (
+                <NavbarItem
+                  key={item.id}
+                  title={item.title}
+                  image={item.imageUrl}
+                  link={item.link}
+                  tooltip={item.tooltip}
+                />
+              ))}
+            </ul>
+            <div className="mx-2">
+              <img
+                src="/Navbar/logo.png"
+                alt="mom pharmacy"
+                className="w-20 h-70 object-contain"
+              />
+            </div>
+            <ul className="flex item-center gap-10 border-3 border-white rounded-full px-4 py-1 font-[32px]">
+              {navbarList.slice(4).map((item) => (
                 <NavbarItem
                   key={item.id}
                   title={item.title}
