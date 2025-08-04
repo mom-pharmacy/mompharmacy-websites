@@ -24,7 +24,7 @@ export default function Journeyofhealthcare() {
     //     ></img>
     //   </motion.div>
     // </div>
-    <div className=" h-auto m-auto xl:w-[90%] items-center ">
+    <div className=" h-auto m-auto md:p-5 xl:w-[90%] items-center ">
       <div>
         <h1 className="m-5 xl:text-5xl md:text-3xl text-2xl  text-[#00A79B] font-semibold text-center ">
           A Journey of Healthcare <br />
@@ -32,7 +32,7 @@ export default function Journeyofhealthcare() {
         </h1>
       </div>
        
-        <div className="m-auto">
+        <div className="m-auto p-5">
           <img
             src="/Journy.png"
             className="w-full h-full object-cover pad rounded-xl "

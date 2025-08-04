@@ -30,11 +30,11 @@ const AllJobs = ({ Result, loading, error }) => {
 
   return (
     <div className="px-4 sm:px-5 md:px-10 lg:px-15">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+      <div className="flex flex-row sm:flex-row justify-between sm:items-center gap-4 mb-6">
         <p className="text-2xl sm:text-3xl font-['Fredoka_One']">all jobs</p>
 
-        <button className="group font-['Fredoka_One'] text-xl sm:text-2xl flex items-center rounded-3xl text-teal-600 border-2 px-4 py-2 hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black transition">
-          view saved jobs (1)
+        <button className="group font-['Fredoka_One'] text-sm lg:text-2xl flex items-center rounded-3xl text-teal-600 border-2 px-2 lg:py-2 lg:px-4 md:px-2 md:py-2 md:text-xl hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black transition">
+          saved jobs (1)
           <img
             src="./src/assets/savedicon.svg"
             alt="Saved Icon"
@@ -49,13 +49,11 @@ const AllJobs = ({ Result, loading, error }) => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-8">
             {(() => {
-           
               let flatJobs = [];
               if (isFlatList) {
                 flatJobs = jobs;
               } else if (Array.isArray(jobs)) {
-         
-                jobs.forEach(dept => {
+                jobs.forEach((dept) => {
                   if (Array.isArray(dept.jobUpload)) {
                     flatJobs = flatJobs.concat(dept.jobUpload);
                   }

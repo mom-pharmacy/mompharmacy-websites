@@ -14,14 +14,14 @@ function Filpcard() {
       
       >
         <h2
-          className="text-8xl sm:text-7xl font-bold"
+          className="text-5xl sm:text-7xl font-bold"
           style={{ fontFamily: "Fredoka One" }}
         >
           3a’s
         </h2>
-        <p className="text-xl md:text-7xl font-medium md:font-medium sm:text-xl mt-2 font-semibold font-['fredoka_one']">triple pillars of care</p>
+        <p className="text-2xl md:text-7xl font-medium md:font-medium sm:text-xl mt-2 font-semibold font-['fredoka_one']">triple pillars of care</p>
       </div>
-    <div className="flex justify-center items-center gap-10 ">
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-10 ">
    
       <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
         <div

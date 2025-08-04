@@ -72,10 +72,10 @@ const LoadingPage = (isVisible) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: "-100%",}}
-        //   exit={{ y: "-100%" }}
-          transition={{delay:3}}
+        //   initial={{ y: 0 }}
+        //   animate={{ y: "-100%",}}
+        // //   exit={{ y: "-100%" }}
+        //   transition={{delay:3}}
           className="bg-teal-600 h-screen "
         >
           <div className="flex justify-between p-5">
@@ -83,8 +83,8 @@ const LoadingPage = (isVisible) => {
               <img src={Logo} className="w-25 h-25" />
             </div>
             <div className=" text-center">
-              <img src={Image} className="w-8 h-7 relative top-4 left-70 " />
-              <p className="bg-white text-center px-10 py-2 rounded-2xl text-2xl font-bold">
+              <img src={Image} className="w-8 h-7 relative lg:top-4 lg:left-70 " />
+              <p className="bg-white text-center px-3 py-3 lg:px-10 lg:py-2 rounded-2xl lg:text-2xl text-xl font-bold">
                 a healthcare solution
               </p>
             </div>

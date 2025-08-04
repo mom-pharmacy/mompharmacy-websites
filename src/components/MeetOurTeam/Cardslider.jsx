@@ -60,8 +60,9 @@ export default function CardSlider() {
     return (
         <div className="w-full">
            {activeProfile && <Profilecard setActiveProfile={setActiveProfile} activeProfile={activeProfile}/>}
-            <p className="text-center mt-20 text-[#00A79B] text-5xl font-bold">Meet Our Team</p>
-            <div className="relative max-w-3xl mx-auto py-16 px-2">
+            <p className="text-center mt-20 text-[#00A79B] text-5xl font-bold">Experts</p>
+            <div className="text-center text-black-500 text-2xl p-4">departments across</div>
+            <div className="relative md:max-w-3xl w-full  mx-auto py-16 px-2">
                 {employeeDetails && <Swiper
                     spaceBetween={40}
                     slidesPerView={3}
@@ -75,7 +76,7 @@ export default function CardSlider() {
                     loop={true}
                     className="overflow-visible h-80">
                     {employeeDetails.map((person, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className="flex justify-center" > 
                             <CardComp
                                 name={person.name}
                                 designation={person.designation}

@@ -55,7 +55,7 @@ const OpenPositions = () => {
 
   return (
     <div>
-      <div className="px-4 py-10 bg-white">
+      <div className="px-4 pb-10 bg-white">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl font-['Fredoka_One'] md:text-5xl text-teal-600 mb-4">
             open positions
