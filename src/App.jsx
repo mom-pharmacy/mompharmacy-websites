@@ -18,7 +18,7 @@ import Founders from './pages/Founders'
 import teamour from './pages/teamour'
 import LoadingPage from './components/LoadingPage'
 import Momp from './pages/momp'
-import Lan from './components/multilanguage'
+// import Lan from './components/multilanguage'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 // import BacktoBottom from "./components/Home/backtobotton";
 
@@ -36,22 +36,23 @@ function App() {
 
     
   
-  useEffect(()=>{
-    const script=document.createElement("script");
-    script.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    document.body.appendChild(script);
-    window.googleTranslateElementInit=()=>{
-    new google.translate.TranslateElement({pageLanguage: 'te',includeLanguages:"en,ta,te,hi",layout:window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); 
-        };
-  },[])
+  // useEffect(()=>{
+  //   const script=document.createElement("script");
+  //   script.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  //   document.body.appendChild(script);
+  //   window.googleTranslateElementInit=()=>{
+  //   new google.translate.TranslateElement({pageLanguage: 'te',includeLanguages:"en,ta,te,hi",layout:window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); 
+  //       };
+  // },[])
   return (
+
     <>
       {loading ? (
         <LoadingPage />
       ) : (
         <>
           {showNavbar && <Navbar />}
-           <Lan/>
+   
            <div className='mt-20'>
              
           <Routes>
@@ -76,6 +77,7 @@ function App() {
         </>
       )}
     </>
+  
   );
 }
 

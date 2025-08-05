@@ -47,7 +47,7 @@ const MomsDesk = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-8 p-4 sm:p-6 md:p-8 bg-white">
+    <div className="flex flex-col justify-center items-center gap-8 p-4 md:p-8 bg-white">
       <motion.h1
         className="text-3xl sm:text-4xl md:text-5xl text-[#00A79B] font-bold text-center"  
         style={{ fontFamily: '"Fredoka One", sans-serif' }}
@@ -69,13 +69,12 @@ const MomsDesk = () => {
             >
 
               <div className="flex justify-center">
-                {/* <FaQuoteLeft size={50} color="#00a99d" /> */}
                 <img src={Quatation} className='h-10 w-10'/>
               </div>
 
               <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 lowercase">
                 {item.quote}
-              </p>
+              </p>    
               <span className="text-sm sm:text-base font-semibold text-gray-700 lowercase">
                 — {item.role}
               </span>
@@ -84,7 +83,7 @@ const MomsDesk = () => {
         </Slider>
       </motion.div>
 
-      <div className="flex justify-center mt-2">
+      <div className="flex justify-center">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -92,7 +91,7 @@ const MomsDesk = () => {
               setCurrent(idx);
               sliderRef.current.slickGoTo(idx);
             }}
-            className={`w-6 h-6 sm:w-5 sm:h-5 mx-1 rounded-full border-2 border-[#00A79B] transition
+            className={`w-4 h-4 lg:w-5 lg:h-5 mx-1 rounded-full border-2 border-[#00A79B] transition
               ${current === idx ? 'bg-[#00A79B]' : 'bg-white'}`}
             aria-label={`Go to slide ${idx + 1}`}
           />
