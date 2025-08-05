@@ -7,18 +7,9 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import CardComp from "./Cardcomp";
 import Profilecard from "./profilecard";
 
-const team = [
-    { name: "Gnaneswar ", designation: "Full Stack Developer", img: "/public/developer.png"},
-    { name: "Charan ", designation: "Full Stack Developer ", img: "/public/developer.png" },
-    { name: " Priya", designation: "Data Analaysts", img: "/public/developer.png" },
-    { name: "Sai", designation: "Tester", img: "/public/developer.png" },
-    { name: "Nandini", designation: "Ui/Ux", img: "/public/developer.png" },
-    { name: "Udai Sai", designation: "Full Stack Developer", img: "/public/developer.png" },
-];
 
 export default function CardSlider() {
     const [activeIndex, setActiveIndex] = useState(2);
-    const [showModal, setShowModal] = useState(false);
     const [activeProfile , setActiveProfile] = useState(null)
 
     const [employeeDetails , setEmployeeDetails] = useState(null)
@@ -60,35 +51,54 @@ export default function CardSlider() {
     return (
         <div className="w-full">
            {activeProfile && <Profilecard setActiveProfile={setActiveProfile} activeProfile={activeProfile}/>}
-            <p className="text-center mt-20 text-[#00A79B] text-5xl font-bold">Experts</p>
+            <p className="text-center mt-20 text-[#00A79B] text-5xl font-bold font-['fredoka_one']">experts</p>
             <div className="text-center text-black-500 text-2xl p-4">departments across</div>
-            <div className="relative md:max-w-3xl w-full  mx-auto py-16 px-2">
+            <div className="relative max-w-4xl md:max-w-3xl w-full  mx-auto py-16 px-2">
                 {employeeDetails && <Swiper
-                    spaceBetween={40}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                    onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                    navigation={{
-                        nextEl: ".next-arrow",
-                        prevEl: ".prev-arrow",
-                    }}
-                    modules={[Navigation]}
-                    loop={true}
-                    className="overflow-visible h-80">
-                    {employeeDetails.map((person, index) => (
-                        <SwiperSlide key={index} className="flex justify-center" > 
-                            <CardComp
-                                name={person.name}
-                                designation={person.designation}
-                                img={person.img}
-                                about={person.About}
-                                isActive={index === activeIndex}
-                                id={person.id}
-                                setActiveProfile = {setActiveProfile}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>}
+  centeredSlides={true}
+  onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+  navigation={{
+    nextEl: ".next-arrow",
+    prevEl: ".prev-arrow",
+  }}
+  modules={[Navigation]}
+  loop={true}
+  className="overflow-visible h-70"
+  breakpoints={{
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 1.5,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }}
+>
+  {employeeDetails.map((person, index) => (
+    <SwiperSlide key={index} className="flex justify-center w-full">
+      <CardComp
+        name={person.name}
+        designation={person.designation}
+        img={person.img}
+        about={person.About}
+        isActive={index === activeIndex}
+        id={person.id}
+        setActiveProfile={setActiveProfile}
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+                }
 
 
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-6">

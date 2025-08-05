@@ -35,15 +35,6 @@ function App() {
   }, []);
 
     
-  
-  // useEffect(()=>{
-  //   const script=document.createElement("script");
-  //   script.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  //   document.body.appendChild(script);
-  //   window.googleTranslateElementInit=()=>{
-  //   new google.translate.TranslateElement({pageLanguage: 'te',includeLanguages:"en,ta,te,hi",layout:window.google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); 
-  //       };
-  // },[])
   return (
 
     <>
@@ -52,7 +43,7 @@ function App() {
       ) : (
         <>
           {showNavbar && <Navbar />}
-   
+           
            <div className='mt-20'>
              
           <Routes>
