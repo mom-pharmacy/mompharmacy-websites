@@ -197,10 +197,10 @@ export default function WhyChooseUsBanner() {
                     <img src={tab.image1} alt={tab.label} className="w-full sm:w-64 md:w-72 lg:w-80 rounded-lg shadow-md h-110" />
                     <div className="inline mb-20">
                       <div className="text-200 font-['DM_Sans'] text-base">{tab.text1}</div>
-                      <img src={tab.image3} alt={tab.label} className="h-10 w-10 mr-5 rounded-lg " />
+                      <img src={tab.image3} alt={tab.label} className="h-15 w-15 mr-5 mt-5 rounded-lg " />
                     </div>
                     <div className="inline mt-30">
-                      <img src={tab.image4} alt={tab.label} className="h-10 w-10 ml-25 rounded-lg " />
+                      <img src={tab.image4} alt={tab.label} className="h-15 w-15 ml-53 mb-5 rounded-lg " />
                       <div className="text-200 font-['DM_Sans'] text-base">{tab.text2}</div>
                     </div>
                     <img src={tab.image2} alt={tab.label} className="w-full sm:w-34 md:w-72 lg:w-80 h-110 rounded-lg shadow-md" />
