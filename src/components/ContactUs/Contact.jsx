@@ -9,7 +9,7 @@ import DropDown from "./DropDown"
 import GlowButton from '../Buttons/GlowButton'
 import Heart from "../../assets/momp/dotheart.png";
 import Clock from "../../assets/momp/clock.png";
-
+import bgImage from '../../assets/bgImage.png'
 export default function Contact() {
 
   const [data, setData] = useState({
@@ -62,32 +62,11 @@ export default function Contact() {
               a step toward healthier living, together.
             </p>
           </motion.div>
-          {/* 
-          <motion.div
-            initial={{ x: "-70px", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-50%", opacity: 0 }}
-            transition={{ duration: 0.78, ease: "easeInOut", delay: 0.3 }}
-            className="space-y-2 text-sm md:text-base"
-          >
-            <p className="flex items-center gap-2">
-              <img src={Call} className="h-5 w-5" />
-              +91 77020 68334
-            </p>
-            <div className="flex items-center gap-2">
-              <img src={Email} className="h-5 w-5" />
-              <span className="text-[#FADB14] underline">ps@mompharmacy.in</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <img src={Location} className="h-6 w-6 mt-1" />
-              <span className="underline">
-                100 feet Rd, opp. biryani times, vip hills, silicon valley,
-                madhapur, hyderabad, telangana 500081
-              </span>
-            </div>
-          </motion.div> */}
 
-          <div className="justify-center items-center text-center py-10 flex flex-col gap-5">
+          <div
+            className="justify-center items-center text-center py-10 flex flex-col gap-5 bg-contain"
+            style={{ backgroundImage: `url(${bgImage})` }}
+          >
             <p className='text-3xl lg:text-4xl font-["Fredoka_One"] text-white font-bold '>
               mom pharmacy
             </p>

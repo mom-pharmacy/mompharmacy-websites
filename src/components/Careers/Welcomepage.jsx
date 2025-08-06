@@ -15,12 +15,11 @@ const Welcome = () => {
   return (
     <div className="bg-[#00a79b] pt-27 pb-6 px-2">
       <div className="flex flex-col lg:flex-row items-center justify-center mt-1">
-        <div className="w-full lg:w-1/2 flex flex-col items-center">
+        <div className="w-full lg:w-full flex flex-col items-center">
           <div className="space-y-4 mb-8 justify-center">
-           
             <p className="text-white text-2xl md:text-5xl lg:text-5xl font-['Fredoka_One'] flex justify-center">
               <BlurText
-                text="welcome to careers"
+                text="Live your purpose, love your work"
                 delay={150}
                 animateBy="words"
                 direction="top"
@@ -62,7 +61,7 @@ const Welcome = () => {
           </div>
         </div> */}
       </div>
-   </div>
+    </div>
   );
 };
 
