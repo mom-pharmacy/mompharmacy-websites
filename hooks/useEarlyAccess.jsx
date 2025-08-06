@@ -15,7 +15,7 @@ export default function useEarlyAccess(initialData) {
     setLoading(true);
     setError(false);
     try {
-      const response = await fetch("http://localhost:3000/EarlyAccess/EAccess", {
+      const response = await fetch("http://18.61.201.132:3000/EarlyAccess/EAccess", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

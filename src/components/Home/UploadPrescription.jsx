@@ -30,7 +30,7 @@ const UploadPrescription = ({ setShowUploadPrescription, showUploadPrescription 
     formData.append('imageUrl', data.imageUrl);
 
     try {
-      const response = await fetch('http://localhost:3000/UploadPrescription/Prescription', {
+      const response = await fetch('http://18.61.201.132:3000/UploadPrescription/Prescription', {
         method: 'POST',
         body: formData,
       });

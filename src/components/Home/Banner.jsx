@@ -6,6 +6,7 @@ import DownloadApp from "./DownloadApp";
 import Button from "../Button";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Welcome from "./Welcome";
 
 const Banner = () => {
 
@@ -87,7 +88,7 @@ const Banner = () => {
               </div>
 
         </div>
-
+<Welcome />
       </div>
     </>
   );

@@ -37,7 +37,7 @@ export const CareerProvider = ({ children }) => {
   const FilterJobs = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/job/search?role=${encodeURIComponent(
+        `http://18.61.201.132:3000/job/search?role=${encodeURIComponent(
           query
         )}&location=${encodeURIComponent(
           location

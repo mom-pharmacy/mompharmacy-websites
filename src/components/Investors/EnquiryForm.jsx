@@ -62,7 +62,7 @@ export default function EnquiryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/invest/add", {
+      const response = await fetch("http://18.61.201.132:3000/api/invest/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

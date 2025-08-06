@@ -59,9 +59,9 @@ const Footercards = () => {
     const [hoveredId, setHoveredId] = useState(false);
 
     return (
-        <div className='flex w-full h-30 justify-around items-center p-10 gap-10'>
+        <div className='flex w-full h-30 justify-around items-center gap-10'>
             {footerList.map((item) => (
-                <motion.div key={item.id} className='flex flex-col justify-start bg-white h-28 space-x-2 text-[#00a99d] p-5 w-150 rounded-2xl hover:bg-[#FADB14] hover:border-[#FADB14] cursor-pointer border border-transparent hover:text-black'
+                <motion.div key={item.id} className='flex flex-col justify-start bg-white  space-x-2 text-[#00a99d] p-5 w-150 rounded-2xl hover:bg-[#FADB14] hover:border-[#FADB14] cursor-pointer border border-transparent hover:text-black'
                     onHoverStart={() => setHoveredId(item.id)}
                     onHoverEnd={() => setHoveredId(false)}
                 >
@@ -72,7 +72,7 @@ const Footercards = () => {
                                 </div>
                             <FaArrowRightLong className={`${hoveredId === item.id ? 'text-black transition duration-500 -rotate-90' : 'text-[#00a99d] -rotate-30'}`} />
                           </div>
-                          <div className='ml-32'>
+                          <div className='ml-10 lg:ml-22 xl:ml-33'>
                             {hoveredId === item.id ?<img src={item.darkImg} alt={item.title} className={`w-10 h-10 mt-2 ${hoveredId === item.id ? 'fill-black ' : 'fill-current'} hover:text-black`} />:<img src={item.imageUrl} alt={item.title} className={`w-10 h-10 mt-2 ${hoveredId === item.id ? 'fill-black ' : 'fill-current'} hover:text-black`} />}
                         
                         </div>

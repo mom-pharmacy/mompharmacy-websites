@@ -21,7 +21,7 @@ export default function CardSlider() {
         async function getEmployeeDetails(){
             try{
                 setLoading(true)
-                const res = await fetch('http://localhost:3000/employee/allemployees')
+                const res = await fetch('http://18.61.201.132:3000/employee/allemployees')
                 setLoading(false)
                 if(!res.ok){
                     setError(true)

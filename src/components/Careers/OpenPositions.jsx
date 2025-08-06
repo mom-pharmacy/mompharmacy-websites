@@ -28,7 +28,7 @@ const OpenPositions = () => {
         searchParams.append("department", params.department);
 
       const res = await fetch(
-        `http://localhost:3000/job/search?${searchParams}`
+        `http://18.61.201.132:3000/job/search?${searchParams}`
       );
       const data = await res.json();
 

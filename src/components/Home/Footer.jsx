@@ -9,27 +9,27 @@ import Footercards from './footerComponent';
 
 function Footer() {
     return (
-     <div className='p-5 lg:p-0 xl:p-0 bg-linear-to-r/hsl from-[#01a69b] to-[#01a69b] '>
+     <div className='p-5 lg:p-5 xl:p-5 bg-linear-to-r/hsl from-[#01a69b] to-[#01a69b] '>
         <div className='hidden lg:block xl:block'>
         <Footercards/>
         </div>
-          <div className=' grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-2 mt-10 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 text-[16px] text-white '>
+          <div className=' grid grid-cols-1 gap-4 md:gap-2 xl:grid-cols-4 lg:gap-5 md:grid-cols-2 mt-10 sm:gap-y-10 lg:grid-cols-4 xl:gap-5 text-[16px] text-white '>
            
             <div>
                 <Link to='/'><img src="/Home/appicon.png" alt="mompharmacy logo" className='h-45 w-45 md:h-30 md:w-30'/></Link>
                 <h2 className='text-white font-bold text-[30px ] lg:text-center sm:text-start xl:ml-auto lg:ml-auto md:ml-13 ml-13 '></h2>
-                <p className='ml-6'>&copy;2025 mompharmacy<br/>&nbsp;&nbsp;&nbsp;all rights reserved</p>
+                <p className="">&copy;2025 mompharmacy<br/>&nbsp;&nbsp;&nbsp;all rights reserved</p>
             </div>
             <div className='xl:col-span-1'>
                 
                 <ul className=' xl:col-span-2'>
                     <li><button className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] mb-3 '><h2>contact info</h2></button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 '><img src="/Home/phone.jpg" alt="call icon" className='size-8' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 '><img src="/Home/email.jpg" alt="mail icon" className='size-8' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
+                    <li><button className='cursor-pointer flex items-center  '><img src="/Home/phone.jpg" alt="call icon" className='size-8' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
+                    <li><button className='cursor-pointer flex items-center'><img src="/Home/email.jpg" alt="mail icon" className='size-8' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
                     {/* <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-8 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li> */}
                 </ul>
                 <div className='absolute'>
-                    <ul className='relative top-115 lg:top-0 md:mb-15 flex gap-4 mt-10 justify-center m-auto'>
+                    <ul className='relative top-115 lg:top-0 md:mb-15 flex mt-10 justify-center m-auto'>
                         <li className='mx-5'>terms & conditions</li>
                         <li className='mx-5' >privacy policy</li>
                         <li className='mx-5'>cookies settings</li>
@@ -38,14 +38,14 @@ function Footer() {
             </div>
             <div className='xl:col-span-2'>
                 <ul className=' xl:col-span-2'>
-                    <li><button className='cursor-pointer text-center lg:mt-0 text-[25px] font-medium text-[#FADB14] mb-3 '><h2>our location</h2></button></li>
+                    <li><button className='cursor-pointer text-center  lg:mt-0 text-[25px] font-medium text-[#FADB14] mb-3 '><h2>our location</h2></button></li>
                     <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-9 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li>
                 </ul>
             </div>
             <div className='xl:col-span-2'>
                  <div className="text-black text-[15px] justify-end ">
                     <motion.div
-                        className="w-80 lg:w-110 xl:w-110 h-auto border-4 border-[#00A79B] bg-white rounded-3xl px-4 py-4 gap-2 flex flex-col justify-center"
+                        className="w-80 lg:w-80 xl:w-110 h-auto border-4 border-[#00A79B] bg-white rounded-3xl px-4 py-4 gap-2 flex flex-col justify-center"
                         whileHover={{
                             scale: 1.05,
                             boxShadow: "0px 10px 20px rgba(0,0,0,0.6)",
