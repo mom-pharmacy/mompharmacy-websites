@@ -7,7 +7,7 @@ const sliderAnimationQuotes = [
     {
         id:1 , 
         title:'Medicine is need',
-        image:pharmacy
+        image:careandcure
 
     },
     {
@@ -29,7 +29,7 @@ const sliderAnimationQuotes = [
     {
         id:5 , 
         title:"care today cure tommorrow",
-        image:careandcure
+        image:pharmacy
     },
     {
         id:6 , 
