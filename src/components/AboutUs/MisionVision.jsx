@@ -44,13 +44,13 @@ const MissionVision = () => {
                 {" "}
                 well-being.
               </span>{" "}
-              <img
+              {/* <img
                 src={ImageCapsule}
                 alt=""
-                className="absolute lg:left-12 lg:top-182 top-245 left-0 z-10 w-40 lg:w-60 md:w-40 z-1 drop-shadow-xl 
-                md:top-285
+                className="absolute lg:left-10 lg:top-220 top-274 -left-3 z-10 w-40 lg:w-60 md:w-40 z-1 drop-shadow-xl 
+                md:top-330 md:left-3
                 "
-              />
+              /> */}
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ const MissionVision = () => {
 
             <img src={heartbeat} alt="" className="w-12 h-10" />
           </div>
-          <div className="bg-[#F0FDFB] h-auto md:h-68 lg:h-55 sm:h-auto lg:w-110 w-80 border-teal-600 border-2 p-4 rounded-2xl hover:scale- transition-transform duration-300 ">
+          <div className="bg-[#F0FDFB] relative h-auto md:h-68 lg:h-55 sm:h-auto lg:w-110 w-80 border-teal-600 border-2 p-4 rounded-2xl hover:scale- transition-transform duration-300 ">
             <p className="text-gray-700 font-['DM_Sans'] text-lg leading-relaxed tracking-wide">
               to become the most trusted global name in doorstep healthcare,
               delivering
@@ -76,12 +76,12 @@ const MissionVision = () => {
               </span>{" "}
               — fast, reliable, and full of heart, making exceptional wellness
               accessible.
-              <img
+              {/* <img
                 src={ImageCapsule}
                 alt=""
-                className="absolute lg:left-154 lg:top-183 left-0 top-338 z-10
-                 w-40 lg:w-60 md:w-40 md:top-285 md:left-87 z-1 drop-shadow-xl "
-              />
+                className="absolute lg:-left-20 lg:top-27 -left-1 top-48 z-10 
+                 w-40 lg:w-60 md:w-40 md:top-49 md:-left-13 z-1 drop-shadow-xl "
+              /> */}
             </p>
           </div>
         </div>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 const API_KEY = "YUM5cTBsU1hVQ05iaW1TT0pjeUR5OUdkNFM1Qmpwa0N3Qk9Qc05rZw==";
+
+import Heart from "../../assets/momp/dotheart.png";
+import Clock from "../../assets/momp/clock.png";
 export default function EnquiryForm() {
   const [formData, setFormData] = useState({name: "",mobile: "",email: "",investment: "",country: "",state: "",city: "",background: "",});
   const [countries, setCountries] = useState([]);
@@ -80,11 +83,13 @@ export default function EnquiryForm() {
     }
   };
   return (
-    <div className="bg-white rounded-xl shadow border-2 border-[#00a99d] mt-10 max-w-6xl mx-auto px-4 py-6 sm:px-6 md:px-10">
-      <div className="bg-[#00a99d] rounded-2xl p-4 sm:p-6 text-white mb-8">
+    <div className="bg-white rounded-xl flex flex-col lg:flex-row gap-5 shadow border-2 border-[#00a99d] mt-10 w-auto mx-auto px-4 py-6  lg:px-3 lg:py-3 md:px-10">
+      <div className="bg-[#00a99d] rounded-2xl p-4 text-white mb-4 flex flex-col gap-5 lg:gap-50">
+        <div>
         <h1 className="text-2xl sm:text-3xl font-bold mb-1">enquiry form</h1>
         <p className="text-lg sm:text-xl mb-4">invest in us to create a healthy experience</p>
-        <div className="mb-2 flex items-center">
+        </div>
+        {/* <div className="mb-2 flex items-center">
           <img className="h-5 w-5 mr-2" src="/src/assets/Investors/call.png" alt="call" /><p>+91 7702068334</p>
         </div>
         <div className="mb-2 flex items-center text-[#fadb14]">
@@ -93,7 +98,30 @@ export default function EnquiryForm() {
         <div className="flex items-start">
           <img className="h-5 w-5 mr-2 mt-1" src="/src/assets/Investors/location.png" alt="location" />
           <p className="text-sm sm:text-base">100 Feet Rd, opp. Biryani Times, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081</p>
-        </div>
+        </div> */}
+
+<div className="justify-center items-center text-center flex flex-col gap-5 ">
+            <p className='text-3xl lg:text-3xl font-["Fredoka_One"] text-white font-bold '>
+              mom pharmacy
+            </p>
+            <div className="flex justify-between items-center bg-white h-auto w-auto relative rounded-xl">
+              <img
+                src={Heart}
+                alt="heart"
+                className="w-6 h-8 relative top-2 right-1"
+              />
+
+              <p className="text-sm font-['Fredoka_One'] text-black">
+                medicine & more on minutes
+              </p>
+              <img
+                src={Clock}
+                alt="heart"
+                className="w-6 h-6 relative bottom-3 left-1"
+              />
+            </div>
+          </div>
+
       </div>
       <form className="w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:flex-row gap-4 mb-5">
