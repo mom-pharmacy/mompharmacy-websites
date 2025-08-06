@@ -27,7 +27,7 @@ export default function KeyDetails({
   }, [inInView, mainControls]);
 
   return (
-    <div className="flex flex-col lg:flex-row  justify-between gap-10 lg:gap-12 px-2 sm:px-8 lg:px-10">
+    <div className="flex flex-col lg:flex-row  justify-between gap-10 py-5 lg:gap-12 px-5 sm:px-8 lg:px-10">
 
       <div className="w-full lg:w-1/2 h-auto ">
         <motion.div
@@ -86,9 +86,9 @@ export default function KeyDetails({
       <div className="w-full  lg:w-1/3 flex justify-center mb-10">
         <motion.div
 
-          className="w-full p-6 text-center  h-10"
+          className="w-full p-6 text-center"
         >
-          <h2 className="text-3xl font-['fredoka_one'] text-[#00a79b] item-left">Similar Jobs</h2>
+          <h2 className="text-3xl font-['fredoka_one'] text-[#00a79b] item-left mb-5">Similar Jobs</h2>
           <JobCard location={location} experience={experience} role={role}></JobCard>
 
 

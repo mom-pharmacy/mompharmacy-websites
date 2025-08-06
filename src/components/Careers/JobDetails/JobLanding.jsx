@@ -43,12 +43,12 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
   }, [showShareMenu]);
 
   return (
-    <div className="px-2 py-5 md:px-5 md:py-5 lg:py-5 lg:px-5">
+    <div className="px-5 py-5 md:px-5 md:py-5 lg:py-3 lg:px-5 mb-5">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-gradient-to-r from-[#00a79b] to-[#007d75] flex flex-col md:flex-row lg:flex-row rounded-xl p-3 md:p-8 mx-10 lg:p-10 mx-auto text-white relative overflow-hidden shadow-lg"
+        className="bg-gradient-to-r from-[#00a79b] to-[#007d75] flex flex-col md:flex-row lg:flex-row rounded-xl p-3 md:p-8 mx-10 lg:p-5 mx-auto text-white relative overflow-hidden shadow-lg"
       >
         {/* Title & Icons */}
         <div className="flex flex-col flex-1 justify-between items-start mb-3 ">

@@ -78,8 +78,9 @@ function RenderLanguage({ language, setActiveLanguage, setShowLanguages }) {
 }
 
 export function RenderLink({ showLink, setShowLink }) {
+
   return (
-   <Link to="/momp">  <div
+    <Link to="/momp">  <div
       className="bg-white text-black py-2 px-3 rounded-full font-semibold flex flex-col items-center cursor-pointer"
       onMouseEnter={() => setShowLink(true)}
       onMouseLeave={() => setShowLink(false)}
@@ -109,6 +110,26 @@ function Navbar() {
   const [activeLanguage, setActiveLanguage] = useState(languageList[0]);
   const [inactiveLanguages, setInactiveLanguages] = useState([]);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const scriptId = 'google-translate-script';
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
+    };
+  }, []);
+
 
   useEffect(() => {
     const remainingLanguages = languageList.filter(
@@ -155,34 +176,19 @@ function Navbar() {
                 />
               ))}
             </ul>
-          
+
             <Tooltip id="react-tooltip" />
           </div>
 
           {/* Right: Language selection */}
-          <div className="flex flex-col items-center">
-            <button
-              className="bg-white text-black px-4 py-2 rounded-full font-semibold flex items-center gap-1 hover:bg-amber-300 ease-in-out duration-100 min-w-28 justify-center"
-              onClick={() => setShowLanguages(!showLanguages)}
-            >
-              {activeLanguage.title}
-              <IoIosArrowDropdown className="mt-1" />
-            </button>
-            {showLanguages && (
-              <div className="absolute mt-10 bg-black/75 text-white p-3 rounded-2xl">
-                <ul className="flex flex-col gap-2">
-                  {inactiveLanguages.map((item) => (
-                    <RenderLanguage
-                      key={item.id}
-                      setShowLanguages={setShowLanguages}
-                      language={item}
-                      setActiveLanguage={setActiveLanguage}
-                    />
-                  ))}
-                </ul>
-              </div>
-            )}
+          <div className="flex items-center justify-center">
+            <div
+              id="google_translate_element"
+              className="inline-block align-middle mt-12 text-[0px] w-[100px]"
+            ></div>
           </div>
+
+
         </div>
       </div>
 

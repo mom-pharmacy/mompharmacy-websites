@@ -49,7 +49,7 @@ function SlideBarAnimation(){
     animate={{ x: ["0%", "-40%"] }}
         transition={{
           repeat: Infinity,
-          duration: 10,
+          duration: 20,
           ease: "linear",
         }}  className="flex bg-[#dcfffb] px-2 py-5 w-fit overflow-hidden gap-6 whitespace-nowrap font-semibold text-3xl ">
         {sliderAnimationQuotes.map(item=><div key={item.id} className='flex gap-5 items-center justify-center'>

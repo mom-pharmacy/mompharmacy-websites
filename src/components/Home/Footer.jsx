@@ -4,85 +4,10 @@ import { motion } from 'framer-motion'
 import { FaFacebook } from "react-icons/fa6";
 import {FaLinkedin } from "react-icons/fa6";
 import {FaInstagram } from "react-icons/fa6";
-import Image from '../../assets/arrow.png';
-import hear from '../../assets/hear.png';
-import book from '../../assets/book.png';
-import team from '../../assets/team.png';
-import career from '../../assets/career.png';
-import invest from '../../assets/invest.png';
-import contact from '../../assets/contact.png';
 function Footer() {
     return (
      <div >
           <div className='bg-linear-to-r/hsl from-[#01a69b] to-[#01a69b] grid grid-cols-1 gap-4 md:grid-cols-4 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 text-[16px] text-white '>
-           
-           <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>Welcome</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-5'/>
-            </div>
-            <img src={hear} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div>
-
-              <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>about us</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-6'/>
-            </div>
-            <img src={book} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div> 
-
-              <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>careers</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-8'/>
-            </div>
-            <img src={career} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div>
-
-               <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>our team</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-5'/>
-            </div>
-            <img src={team} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div>
-
-               <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>for investors</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-4'/>
-            </div>
-            <img src={invest} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div>
-
-               <div className='bg-[#fff] text-start m-12 rounded-3xl'>
-            <div className=''>
-            <p className='text-[#00a99d] ml-5 inline'>contact us</p>
-            <img src={Image} alt='arrow' className=' inline h-1/12 w-1/12 ml-5'/>
-            </div>
-            <img src={contact} alt='arrow' className='h-1/4 ml-20 mt-5 mb-0'/>
-            </div>
-
-
-
-
-
-            {/* <div className='bg-[#fff] p-10 rounded-2xl'>
-                <div className='text-xl text-[#00a99d] font-semibold'>about us</div>
-            </div>
-            <div className='bg-[#fff] p-10 rounded-2xl'>
-            <div className='text-xl text-[#00a99d] font-semibold'>our team</div>
-            </div>
-            <div className='bg-[#fff] p-10 rounded-2xl'>
-            <div className='text-xl text-[#00a99d] font-semibold'>careers</div>
-            </div>
-            <div className='bg-[#fff] p-10 rounded-2xl'>
-            <div className='text-xl text-[#00a99d] font-semibold'>for investors</div>
-            </div>
-            <div className='bg-[#fff] p-10 rounded-2xl'>
-            <div className='text-xl text-[#00a99d] font-semibold'>contact us</div>
-            </div> */}
             
    
 

@@ -8,13 +8,13 @@ import Departments from "../components/OurTeam/Departments";
 import CardComp from "../components/MeetOurTeam/Cardcomp";
 import CardSlider from "../components/MeetOurTeam/Cardslider";
 import MomLogo from "../components/Home/momLogo";
+import BacktoBottom from '../components/Home/backtobotton'
 function teamour() {
   return (
     <div className="">
+      <BacktoBottom/>
       <Maincard></Maincard>
       <Founder></Founder>
-      {/* <CardComp></CardComp>
-      <Departments></Departments> */}
        <CardSlider></CardSlider>
       <MomsDesk></MomsDesk>
       <MomLogo />
