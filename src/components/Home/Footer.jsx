@@ -1,44 +1,51 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-    import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
 import {FaLinkedin } from "react-icons/fa6";
 import {FaInstagram } from "react-icons/fa6";
+
+import Footercards from './footerComponent';
+
 function Footer() {
     return (
-     <div >
-          <div className='bg-linear-to-r/hsl from-[#01a69b] to-[#01a69b] grid grid-cols-1 gap-4 md:grid-cols-4 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 text-[16px] text-white '>
-            
-   
-
+     <div className='p-5 lg:p-0 xl:p-0 bg-linear-to-r/hsl from-[#01a69b] to-[#01a69b] '>
+        <div className='hidden lg:block xl:block'>
+        <Footercards/>
+        </div>
+          <div className=' grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-2 mt-10 sm:gap-y-10 xl:grid-cols-6 xl:gap-10 text-[16px] text-white '>
+           
             <div>
-                <Link to='/'><img src="/Home/logo.jpg" alt="mompharmacy logo" /></Link>
-                <h2 className='text-white font-bold text-[30px ] lg:text-center sm:text-start xl:ml-auto lg:ml-auto md:ml-13 ml-13 '>pharmacy</h2>
+                <Link to='/'><img src="/Home/appicon.png" alt="mompharmacy logo" className='h-45 w-45 md:h-30 md:w-30'/></Link>
+                <h2 className='text-white font-bold text-[30px ] lg:text-center sm:text-start xl:ml-auto lg:ml-auto md:ml-13 ml-13 '></h2>
+                <p className='ml-6'>&copy;2025 mompharmacy<br/>&nbsp;&nbsp;&nbsp;all rights reserved</p>
             </div>
-            <div>
-                <ul>
-                    <li ><button className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] mb-3'><h2>quick links</h2></button></li>
-                    <Link to="/"><li ><button class="relative text-white hover:text-[#FADB14] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-[#FADB14] before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-[#FADB14] after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                        home</button></li></Link>
-                    <Link to='/about'><li><button className='cursor-pointer text-start hover:underline hover:text-[#FADB14] '>about us</button></li></Link>
-                    <Link to='/ourteams'><li><button className='cursor-pointer text-start hover:underline hover:text-[#FADB14] '>our team</button></li></Link>
-                    <Link to='/career'><li><button className='cursor-pointer text-start hover:underline hover:text-[#FADB14] '>careers</button></li></Link>
-                    <Link to='/investors'><li><button className='cursor-pointer text-start hover:underline hover:text-[#FADB14] '>investors</button></li></Link>
-                    <Link to='/contactus'><li><button className='cursor-pointer text-start hover:underline hover:text-[#FADB14] '>contact us</button></li></Link>
+            <div className='xl:col-span-1'>
+                
+                <ul className=' xl:col-span-2'>
+                    <li><button className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] mb-3 '><h2>contact info</h2></button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 '><img src="/Home/phone.jpg" alt="call icon" className='size-8' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 '><img src="/Home/email.jpg" alt="mail icon" className='size-8' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
+                    {/* <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-8 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li> */}
                 </ul>
+                <div className='absolute'>
+                    <ul className='relative top-115 lg:top-0 md:mb-15 flex gap-4 mt-10 justify-center m-auto'>
+                        <li className='mx-5'>terms & conditions</li>
+                        <li className='mx-5' >privacy policy</li>
+                        <li className='mx-5'>cookies settings</li>
+                    </ul>
+                </div>
             </div>
             <div className='xl:col-span-2'>
                 <ul className=' xl:col-span-2'>
-                    <li><button className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] mb-3 '><h2>contact info</h2></button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/phone.jpg" alt="call icon" className='size-8' /><a href="tel:+91 7702068334">+91 7702068334</a> </button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/email.jpg" alt="mail icon" className='size-8' /> <a href="mailto:Ps@mompharmacy.in">Ps@mompharmacy.in</a></button></li>
-                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-8 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li>
+                    <li><button className='cursor-pointer text-center lg:mt-0 text-[25px] font-medium text-[#FADB14] mb-3 '><h2>our location</h2></button></li>
+                    <li><button className='cursor-pointer flex items-center gap-3 mb-3 '><img src="/Home/locationSymbol.jpg" alt=" location icon" className='size-9 animate-pulse' /> <span className='text-start'>100 Feet Rd, opp. biryani times, vip hills, silicon valley, madhapur, hyderabad, telangana 500081 </span></button></li>
                 </ul>
             </div>
             <div className='xl:col-span-2'>
                  <div className="text-black text-[15px] justify-end ">
                     <motion.div
-                        className="w-full h-auto border-4 border-[#00A79B] bg-white rounded-3xl px-4 py-4 gap-2 flex flex-col justify-center"
+                        className="w-80 lg:w-110 xl:w-110 h-auto border-4 border-[#00A79B] bg-white rounded-3xl px-4 py-4 gap-2 flex flex-col justify-center"
                         whileHover={{
                             scale: 1.05,
                             boxShadow: "0px 10px 20px rgba(0,0,0,0.6)",
@@ -66,7 +73,10 @@ function Footer() {
                     </motion.div>
                 </div>
                 <div className='flex justify-between'>
-                    <div><h2 className='text-[20px] font-medium text-[#FADB14] text-start mb-3'>follow us on</h2>
+                     <div className='flex justify-end mt-5'>
+                <img src="/Home/footerPillman.jpg" alt="footerpillman " className='xl:w-30 md:w-25 sm:w-20' />
+            </div>
+                    <div className='mr-25 mt-10'><h2 className='text-[20px] font-medium text-[#FADB14] text-start mb-3'>follow us on</h2>
 
                     <div className='flex gap-4 '>
                         <FaFacebook className="size-8 rounded-full bg-white text-[#00A79B] hover:text-black dark:bg-white border-8 border-white hover:border-[#FADB14] transform hover:bg-[#FADB14]  transition duration-500 hover:scale-125" />
@@ -75,13 +85,11 @@ function Footer() {
                     </div>
                 </div>
                
-                <div className='flex justify-end mt-5'>
-                <img src="/Home/footerPillman.jpg" alt="footerpillman " className='xl:w-30 md:w-25 sm:w-20' />
-            </div>
+               
                 </div>
             </div>
         </div>
-        <div className='flex flex-wrap justify-between py-1 xl:px-1 md:px-1 justify-center xl:gap-40 md:gap-5'>
+        <div className='flex flex-wrap justify-between py-1 xl:px-1 md:px-1 xl:gap-40 md:gap-5'>
            <div> 
             <h2 className='text-base text-[#00A79B]   '>© 2025 mom pharmacy||all rights reserved</h2>
             </div>
