@@ -11,9 +11,6 @@ const MissionVision = () => {
     <div className="bg-white py-8 px-2 p-2 md:px-20">
       <motion.div
         className="flex items-center flex-col lg:flex-row gap-5 justify-center lg:px-40 justify-center px-5 h-44 mb-10"
-        // initial={{ x: "-100%" }}
-        // animate={{ x: "0%" }}
-        // transition={{ duration: 5, ease: "easeInOut" }}
       >
         <img src={Doctor} alt="Delivery Boy" className="h-35 lg:h-35 md:h-30" />
         <p className="text-2xl lg:text-4xl md:text-4xl font-[Fredoka_One] text-[#444444]">
@@ -31,7 +28,7 @@ const MissionVision = () => {
               our mission
             </h2>
           </div>
-          <div className="bg-[#F0FDFB] flex items-center lg:h-55 sm:h-auto border-teal-600 w-80 lg:w-110 md:h-68 border-2 p-4 h-auto rounded-2xl group-hover:scale-105 transition-transform duration-300 ">
+          <div className="bg-[#F0FDFB] flex items-center lg:h-55 sm:h-auto border-teal-600 w-80 lg:w-110 md:h-68 border-2 p-4 h-auto rounded-2xl hover:scale-105 transition-transform duration-300 ">
             <p className="text-gray-700 font-['DM_Sans'] text-lg leading-relaxed tracking-wide">
               to bridge the gap between people and essential
               <span className="text-[#00A79B] font-semibold">
@@ -44,13 +41,7 @@ const MissionVision = () => {
                 {" "}
                 well-being.
               </span>{" "}
-              {/* <img
-                src={ImageCapsule}
-                alt=""
-                className="absolute lg:left-10 lg:top-220 top-274 -left-3 z-10 w-40 lg:w-60 md:w-40 z-1 drop-shadow-xl 
-                md:top-330 md:left-3
-                "
-              /> */}
+
             </p>
           </div>
         </div>
@@ -63,7 +54,7 @@ const MissionVision = () => {
 
             <img src={heartbeat} alt="" className="w-12 h-10" />
           </div>
-          <div className="bg-[#F0FDFB] relative h-auto md:h-68 lg:h-55 sm:h-auto lg:w-110 w-80 border-teal-600 border-2 p-4 rounded-2xl hover:scale- transition-transform duration-300 ">
+          <div className="bg-[#F0FDFB] relative h-auto md:h-68 lg:h-55 sm:h-auto lg:w-110 w-80 border-teal-600 border-2 p-4 rounded-2xl hover:scale-105 transition-transform duration-300 ">
             <p className="text-gray-700 font-['DM_Sans'] text-lg leading-relaxed tracking-wide">
               to become the most trusted global name in doorstep healthcare,
               delivering

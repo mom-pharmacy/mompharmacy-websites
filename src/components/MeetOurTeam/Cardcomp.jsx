@@ -33,7 +33,7 @@ export default function CardComp({ name, designation, img, about, isActive, id, 
 
           {isActive && (
             <motion.div
-              className="text-sm lg:text-lg md:text-md text-center text-[#00A79B] mt-2 flex inline-flex justify-center items-center gap-1 cursor-pointer"
+              className="text-sm lg:text-lg md:text-md text-center text-[#00A79B] mt-2 flex justify-center items-center gap-1 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => { setActiveProfile(id); }}
             >

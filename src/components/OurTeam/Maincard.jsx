@@ -15,7 +15,7 @@ function Maincard() {
             animate={{ width: "100%" }} 
             exit={{ width: 0 }}
             transition={{ duration: 1.1, ease: "easeInOut", delay: 0.3 }}
-            className="text-white xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] xl:ml-20 md:ml:40 text-center overflow-hidden whitespace-nowrap mb-2">
+            className="text-white xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] md:ml:40 text-center overflow-hidden whitespace-nowrap mb-2">
             a passionate team delivering
           </motion.h1>
           </div>
@@ -25,7 +25,7 @@ function Maincard() {
             animate={{ width: "100%" }}
             exit={{ width: 0 }}
             transition={{ duration: 1.1, ease: "easeInOut", delay: 0.7 }}
-            className="text-yellow-300 xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] xl:ml-20 text-center overflow-hidden whitespace-nowrap mb-2"
+            className="text-yellow-300 xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] text-center overflow-hidden whitespace-nowrap mb-2"
           >
             care, speed, and trust
           </motion.h1>
@@ -36,7 +36,7 @@ function Maincard() {
             animate={{ width: "100%" }}
             exit={{ width: 0 }}
             transition={{ duration: 1.1, ease: "circInOut", delay: 0.9 }}
-            className="text-white xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] xl:mr-20 text-center overflow-hidden whitespace-nowrap">
+            className="text-white xl:text-6xl md:text-4xl text-xl font-['fredoka_one'] text-center overflow-hidden whitespace-nowrap">
             every minute,with every medicine.
           </motion.h1>
           </div>

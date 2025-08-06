@@ -20,7 +20,7 @@ const[isHover, setHover]=useState(false)
     <div className="bg-[#00a79b] w-full inline-block pb-20 -mt-20">
       <motion.div className="px-2 py-2 flex justify-between">
         <div className="py-5">
-          <Button title="back" link="#" />
+          <Button onClick={()=> window.history.back()} title="back" />
         </div>
 
         <motion.div initial={{y:"-20%"}} animate={{y:0}} transition={{duration:1}} className="flex hidden lg:block" >
