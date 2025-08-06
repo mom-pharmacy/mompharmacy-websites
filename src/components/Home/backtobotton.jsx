@@ -12,7 +12,7 @@ export default function BackToBottom() {
     }
   const tobottom = () => {
     window.scrollTo({
-      top: document.documentElement.scrollHeight,
+      top: 1400,
       behavior: "smooth",
     });
    
@@ -37,7 +37,7 @@ export default function BackToBottom() {
       {button ? (
         <div className="fixed inset-x-0 bottom-10 flex justify-center z-10">
           <button
-            className="outline-1 px-2 py-2 bg-[#fff] text-white border-[#444444] rounded-full hover:text-black hover:bg-[#FADB14]"
+            className=" px-2 py-2 bg-[#fff] text-white rounded-full hover:text-black hover:bg-[#FADB14]"
             onClick={tobottom}
           >
             <img src={Downarrow} alt="downarrow" className="h-7 w-7" />
@@ -46,7 +46,7 @@ export default function BackToBottom() {
       ) : (
         <div className="fixed inset-x-0 bottom-10 flex justify-center z-10"> 
         <button
-          className="outline-1 px-2 py-2 bg-[#fff] text-white border-[#444444] rounded-full hover:text-black hover:bg-[#FADB14]"
+          className=" px-2 py-2 bg-[#fff] text-white  rounded-full hover:text-black hover:bg-[#FADB14]"
           onClick={totop}
         >
           <img src={Downarrow} alt="downarrow" className="h-7 w-7 rotate-180" />

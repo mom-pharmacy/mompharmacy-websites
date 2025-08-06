@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import JobCard from "../JobCard";
 import { useCareer } from "../../context/career";
 import { useNavigate } from "react-router";
-import Image from '../../assets/Careerpage/backwardarrow.png'
-import Image2 from '../../assets/Careerpage/forwardarrow.png'
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+// import Image from '../../assets/Careerpage/backwardarrow.png'
+// import Image2 from '../../assets/Careerpage/forwardarrow.png'
 
 const AllJobs = ({ Result, loading, error }) => {
   const { career } = useCareer();
@@ -84,38 +85,34 @@ const AllJobs = ({ Result, loading, error }) => {
             </div>
 
 
-            <div className="flex justify-center items-center mt-10 gap-4 flex-col sm:flex-row sm:6">
-              <span className="text-lg font-medium mr-290 sm:tetx-base md:text-lg sm:text-left">
+            <div className="flex justify-center items-center mt-10 gap-4 flex-row">
+
+              <span className="text-lg flex-1  text-['#444444'] font-medium sm:tetx-base md:text-lg sm:text-left">
                 Page {currentPage} of {totalPages}
               </span>
+
+              <div className="flex gap-2">
 
               <button
                 onClick={handlePrevious}
                 disabled={currentPage === 1}
-                className={`px-2 py-3 sm:p-1 bg-[#00a99d] rounded-full ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+                className={`p-2 bg-[#00a99d] rounded-full ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
                   }`}
               >
-                <img
-                  src={Image}
-                  alt="backarrow"
-                  className="w-5 sm:w-6"
-                />
+                 <FaArrowLeftLong className="text-2xl text-white" />
               </button>
 
               <button
                 onClick={handleNext}
                 disabled={currentPage === totalPages}
-                className={`px-2 py-3 sm:p-1 bg-[#00a99d] rounded-full ${currentPage === totalPages
+                className={`p-2 bg-[#00a99d] rounded-full ${currentPage === totalPages
                     ? "opacity-50 cursor-not-allowed"
                     : ""
                   }`}
               >
-                <img
-                src={Image2}
-                alt="forwardarrow"
-                className="w-5 sm:w-6"
-                />
+                 <FaArrowRightLong className="text-2xl text-white" />
               </button>
+              </div>
             </div>
           </>
         )}

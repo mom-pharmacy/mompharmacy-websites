@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
 import {FaLinkedin } from "react-icons/fa6";
 import {FaInstagram } from "react-icons/fa6";
+
 import Footercards from './footerComponent';
 
 function Footer() {

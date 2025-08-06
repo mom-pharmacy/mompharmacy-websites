@@ -96,7 +96,7 @@ function TalentedTeam() {
               <img
                 src={avatar.src}
                 alt={avatar.fallback}
-                className="xl:w-30 md:w-25 md:h-25 xl:h-30 w-20 h-20 rounded-full border-2 border-white object-cover"
+                className="xl:w-30 md:w-25 md:h-25 xl:h-30 w-20 h-20 rounded-full border-2 border-none object-cover"
               />
 
               <AnimatePresence>
