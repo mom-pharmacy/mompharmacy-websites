@@ -9,15 +9,13 @@ import AboutUs from "./pages/AboutUs";
 import Investors from "./pages/Investors";
 import ContactUs from "./pages/ContactUs";
 import JobDetails from "./pages/Careers/JobDetails";
-import Ourteam from "./pages/teamour";
-
 import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
-import teamour from './pages/teamour'
+import Teamour from './pages/Teamour'
 import LoadingPage from './components/LoadingPage'
-import Momp from './pages/momp'
+import Momp from './pages/Momp'
 // import Lan from './components/multilanguage'
 // import OpenCardComp from './components/OurTeam/OpenCardComp'
 // import BacktoBottom from "./components/Home/backtobotton";
@@ -50,7 +48,7 @@ function App() {
            
             <Route path="/" Component={Home} />
             <Route path="/animation" Component={AnimationTrail} />
-            <Route path="/ourteams" Component={teamour} />
+            <Route path="/ourteams" Component={Teamour} />
             <Route path="/about" Component={AboutUs} />
             <Route path="/investors" Component={Investors} />
             <Route path="/contactus" Component={ContactUs} />
