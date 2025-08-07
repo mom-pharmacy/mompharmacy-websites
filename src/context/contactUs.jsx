@@ -9,7 +9,7 @@ export const ContactUsProvider = ({ children }) => {
   const postContact = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("http://18.61.201.132:3000/contactus/contact", {
+      const res = await fetch("http://mom-load-balancer10-1035236598.ap-south-1.elb.amazonaws.com:3000/contactus/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
