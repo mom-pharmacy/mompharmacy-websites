@@ -62,7 +62,7 @@ export default function EnquiryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://18.61.201.132:3000/api/invest/add", {
+      const response = await fetch("http://mom-load-balancer10-1035236598.ap-south-1.elb.amazonaws.com:3000/api/invest/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
