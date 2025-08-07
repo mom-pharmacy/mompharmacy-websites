@@ -13,7 +13,7 @@ export const CareerProvider = ({ children }) => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/job/departments");
+      const response = await fetch("http://mom-load-balancer10-1035236598.ap-south-1.elb.amazonaws.com:3000/job/departments");
 
       if (!response.ok) {
         throw new Error(`error status: ${response.status}`);
