@@ -1,22 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import pill from "../../assets/Careerpage/bluepill.png"; // your image
+import pill from "../../assets/Careerpage/bluepill.png"; 
 
 export default function ScrollImage() {
   const { scrollY } = useViewportScroll();
 
-  // Control vertical position
   const y = useTransform(scrollY, [0, 1000, 4000], [0, 300, 600]);
 
-  // Control horizontal motion (zig-zag)
   const x = useTransform(scrollY, [0, 1000, 4000], [0, 200, -300]);
 
-  // Optional: rotation for realism
   const rotate = useTransform(scrollY, [0, 1000, 4000], [0, 10, -10]);
 
   return (
     <div className="relative h-[3000px] bg-orange-100">
-      {/* Animated image */}
       <motion.img
         src={pill}
         alt="floating pill"
@@ -24,7 +20,7 @@ export default function ScrollImage() {
         style={{ y, x, rotate }}
       />
 
-      {/* Content Sections */}
+
       <div className="h-screen flex items-center justify-start pl-20">
         <div>
           <h1 className="text-5xl font-bold mb-4">Bold Flavor</h1>

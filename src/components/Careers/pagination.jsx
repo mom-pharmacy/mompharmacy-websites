@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton, Typography } from "@material-tailwind/react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa"; // Importing Font Awesome arrow icons
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 export function SimplePagination() {
   const [active, setActive] = React.useState(1);
@@ -25,7 +25,7 @@ export function SimplePagination() {
         onClick={prev}
         disabled={active === 1}
       >
-        <FaArrowLeft className="h-4 w-4" /> {/* Using a React Icon component */}
+        <FaArrowLeft className="h-4 w-4" /> 
       </IconButton>
       <Typography color="gray" className="font-normal">
         Page <strong className="text-gray-900">{active}</strong> of
@@ -37,7 +37,7 @@ export function SimplePagination() {
         onClick={next}
         disabled={active === 10}
       >
-        <FaArrowRight className="h-4 w-4" /> {/* Using a React Icon component */}
+        <FaArrowRight className="h-4 w-4" /> 
       </IconButton>
     </div>
   );

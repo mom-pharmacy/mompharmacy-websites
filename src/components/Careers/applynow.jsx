@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../assets/tabletwithslate.png";
 import mother from '../../assets/Careerpage/mother.png';
 const Applynow = () => {
   return (
