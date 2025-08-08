@@ -3,8 +3,6 @@ import JobCard from "../JobCard";
 import { useCareer } from "../../context/career";
 import { useNavigate } from "react-router";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-// import Image from '../../assets/Careerpage/backwardarrow.png'
-// import Image2 from '../../assets/Careerpage/forwardarrow.png'
 import Save from "../../assets/savedicon.svg"
 
 const AllJobs = ({ Result, loading, error }) => {
@@ -49,7 +47,7 @@ const AllJobs = ({ Result, loading, error }) => {
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
   return (
-    <div className="px-4 sm:px-5 md:px-10 lg:px-15">
+    <div className="px-4 sm:px-5 md:px-10 lg:px-15 ">
       <div className="flex flex-row sm:flex-row justify-between sm:items-center gap-4 mb-6">
         <p className="text-2xl sm:text-3xl font-['Fredoka_One']">all jobs</p>
 
