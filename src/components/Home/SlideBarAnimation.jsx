@@ -2,7 +2,7 @@ import {motion, useScroll, useTransform} from 'framer-motion'
 import pharmacy from '../../assets/AboutUs/pharmacy.png'
 import careandcure from '../../assets/AboutUs/careandcure.png'
 import clock from '../../assets/AboutUs/clock.png'
-import BannerHeart from '../../assets/AboutUs/bannerheart.png'
+import BannerHeart from '../../assets/AboutUs/bannerHeart.png'
 const sliderAnimationQuotes = [
   {
     id: 1,
