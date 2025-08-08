@@ -119,7 +119,7 @@ export default function EnquiryForm() {
           </div>
         </div>
       </div>
-      <form className="w-full" onSubmit={handleSubmit}>
+      <form id="form" className="w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:flex-row gap-4 mb-5">
           <div className="w-full sm:w-1/2">
             <label

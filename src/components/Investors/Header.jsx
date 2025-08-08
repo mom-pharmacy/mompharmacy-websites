@@ -5,11 +5,25 @@ import GlowButton from '../Buttons/GlowButton';
 import { motion } from 'framer-motion';
 import EnquiryForm from './EnquiryForm';
 import PdfViewerComponent from './pdfViewer';
+
 function Header() {
     const [showPdf, setShowPdf] = useState(false);
     const pitchDeck = 'https://drive.google.com/file/d/1VmRHYLCTQ05DZ37zQ8FJHYmFxa-UFR9x/preview';
     const handlePdf = () => setShowPdf(true);
     const handleClosePdf = () => setShowPdf(false);
+
+    const handleClick = () => {
+        if (link.startsWith('#')) {
+            const id = link.replace('#', '');
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = link;
+        }
+    };
+
     return (
         <div>
             <div className='bg-[#00A79B] h-auto rounded-2xl py-5'>
@@ -26,7 +40,7 @@ function Header() {
                         <h3 className="text-[clamp(2.5rem,8vw,5.625rem)] text-white font-['Fredoka_One']">pharmacy</h3>
                     </motion.div>
                     <div className='flex flex-row gap-5 mt-10'>
-                        <GlowButton title="invest in us" link="#form" />
+                        <Button title="invest in us" link="#form" onClick={handleClick} />
                         <Button title="view pitch deck" onClick={handlePdf} />
                     </div>
                     {showPdf && (
@@ -46,7 +60,7 @@ function Header() {
                 </div>
 
             </div>
-            <div id="form" className='mt-10'>
+            <div id="form" onClick={handleClick} className='mt-10 xl:px-40 lg:px-40 py-5'>
                 <EnquiryForm />
             </div>
         </div>

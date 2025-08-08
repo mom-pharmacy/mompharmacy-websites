@@ -24,7 +24,7 @@ const Footers = () => {
             </div>
 
 
-            <div className='flex lg:p-5 lg:flex-row md:flex-cols-2 flex-col'>
+            <div className='flex lg:p-5 lg:flex-row justify-between md:flex-cols-2 flex-col'>
                 <div className=''>
                     <img src={AppIcon} alt="app logo" className='lg:w-35 lg:h-35 w-25 h-25' />
                     <p className="text-white py-5 text-lg">&copy;2025 mompharmacy<br />&nbsp;&nbsp;&nbsp;all rights reserved</p>
@@ -32,7 +32,7 @@ const Footers = () => {
                 </div>
 
                 <div>
-                    <div className='flex flex-col lg:flex-row lg:gap-20 '>
+                    <div className='flex flex-col lg:flex-row lg:gap-25 '>
                         <div className='p-1'>
                             <p className='cursor-pointer text-start text-[25px] font-medium text-[#FADB14] lg:mb-3 '>contact info</p>
                             <div className=' flex flex-col gap-4 text-white text-lg'>
@@ -52,7 +52,7 @@ const Footers = () => {
                         </div>
 
                     </div>
-                    <div className='py-5'>
+                    <div className='py-5 lg:py-15 xl:py-15'>
                         <ul className='flex justify-center text-white'>
                             <li className='mx-5'>terms & conditions</li>
                             <li className='mx-5' >privacy policy</li>
