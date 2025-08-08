@@ -5,31 +5,29 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@fontsource/fredoka-one";
 
+import cockroachpreneursImg from "../../assets/AboutUs/Carousel/cockroachpreneurs.png";
+import relentlesslearnersImg from "../../assets/AboutUs/carousel/rentlesslearners.png";
+import believersImg from "../../assets/AboutUs/carousel/believers.png";
+import healthImg from "../../assets/AboutUs/carousel/health.png";
+import fightersImg from "../../assets/AboutUs/carousel/fighters.png";
+
 const slideVariants = {
-  initial: {
-    x: 300,
-    opacity: 0,
-  },
+  initial: { x: 300, opacity: 0 },
   animate: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
   exit: {
     x: -300,
     opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeIn",
-    },
+    transition: { duration: 0.5, ease: "easeIn" },
   },
 };
 
 const CarouselComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -40,51 +38,58 @@ const CarouselComponent = () => {
     pauseOnHover: false,
     arrows: false,
     afterChange: (current) => setCurrentSlide(current),
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div style={{ position: "absolute", bottom: "25px", width: "100%" }}>
-        <ul style={{ margin: "0px", padding: "0px", textAlign: "center" }}> {dots} </ul>
+        <ul style={{ margin: "0px", padding: "0px", textAlign: "center" }}>
+          {dots}
+        </ul>
       </div>
     ),
-    customPaging: i => (
-      <div className="w-2.5 h-2.5 rounded-full transition-colors duration-300"
+    customPaging: (i) => (
+      <div
+        className="w-2.5 h-2.5 rounded-full transition-colors duration-300"
         style={{
-          backgroundColor: i === currentSlide ? '#FADB14' : 'rgba(255, 255, 255, 0.5)'
+          backgroundColor:
+            i === currentSlide
+              ? "#FADB14"
+              : "rgba(255, 255, 255, 0.5)",
         }}
       ></div>
-    )
+    ),
   };
 
   const slides = [
     {
       heading1: "we are",
       heading2: "cockroachpreneurs",
-      image: "/src/assets/AboutUs/carousel/cockroachpreneurs.png",
+      image: cockroachpreneursImg,
       description: "we survive, adapt, and keep building — no matter what.",
     },
     {
       heading1: "we are",
       heading2: "relentless learners",
-      image: "/src/assets/AboutUs/carousel/rentlesslearners.png",
+      image: relentlesslearnersImg,
       description: "growing through every failure, challenge, and change.",
     },
     {
       heading1: "we are the",
       heading2: "believers",
-      image: "/src/assets/AboutUs/carousel/believers.png",
+      image: believersImg,
       description: "fueled by vision, not just validation.",
     },
     {
       heading1: "we are the speed",
       heading2: "your health deserves",
-      image: "/src/assets/AboutUs/carousel/health.png",
-      description: "delivering care when every second counts."
+      image: healthImg,
+      description: "delivering care when every second counts.",
     },
     {
       heading1: "we are",
       heading2: "fighters",
-      image: "/src/assets/AboutUs/carousel/fighters.png",
-      description: "we are standing strong so our users don't have to fight alone.",
-    }
+      image: fightersImg,
+      description:
+        "we are standing strong so our users don't have to fight alone.",
+    },
   ];
 
   return (

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 // import Image from '../../assets/Careerpage/backwardarrow.png'
 // import Image2 from '../../assets/Careerpage/forwardarrow.png'
+import Save from "../../assets/savedicon.svg"
 
 const AllJobs = ({ Result, loading, error }) => {
   const { career } = useCareer();
@@ -55,7 +56,7 @@ const AllJobs = ({ Result, loading, error }) => {
         <button className="group font-['Fredoka_One'] text-sm lg:text-2xl flex items-center rounded-3xl text-teal-600 border-2 px-2 lg:py-2 lg:px-4 md:px-2 md:py-2 md:text-xl hover:border-[#FADB14] hover:bg-[#FADB14] hover:text-black transition">
           saved jobs (1)
           <img
-            src="./src/assets/savedicon.svg"
+            src={Save}
             alt="Saved Icon"
             className="w-5 h-5 ml-2"
           />

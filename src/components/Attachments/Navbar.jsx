@@ -160,7 +160,7 @@ function Navbar() {
             </ul>
             <div className="mx-2">
               <img
-                src="/Navbar/logo.png"
+                src="/Home/appicon.png"
                 alt="mom pharmacy"
                 className="w-20 h-70 object-contain"
               />
