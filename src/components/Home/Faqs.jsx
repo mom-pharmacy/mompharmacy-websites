@@ -53,13 +53,13 @@ function Faqs() {
                 <img src="/Home/pillmanFaqs.jpg" alt="pillman" />
             </div>
         </div>
-        {faqsList.map(item => <div key={item.id} className="cursor-pointer m-auto py-4 px-6 border-1 border-[#00A79B] shadow-2xs shadow-[#00A79B] xl:mt-5 md:mt-4 mt-4 rounded-xl">
+        {faqsList.map(item => <div key={item.id} className="cursor-pointer m-auto lg:py-4 lg:px-6 py-3 px-4 border-1 border-[#00A79B] xl:mt-5 md:mt-4 mt-4 rounded-xl">
             <div className="flex justify-between items-center">
                 <button onClick={() => {
                     console.log("this is logging")
                     setActiveAnswer(item.id)
                 }}
-                    className="xl:text-[24px] md:text-[24px] text-[20px] text-start font-medium  cursor-pointer"
+                    className="xl:text-[24px] md:text-[24px] text-[18px] text-start font-medium  cursor-pointer"
                 >{item.question} </button>
        <span
     className="cursor-pointer text-[#00A79B]"
@@ -83,7 +83,7 @@ function Faqs() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }} 
-                        className="overflow-hidden text-[18px] font-normal"
+                        className="overflow-hidden text-[16px] lg:text-[18px] font-normal"
                     >
                         <p className="pt-2">{item.answer}</p>
                     </motion.div>

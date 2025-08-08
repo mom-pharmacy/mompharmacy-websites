@@ -17,7 +17,7 @@ export default function JobLanding() {
 const[isHover, setHover]=useState(false)
 
   return (
-    <div className="bg-[#00a79b] w-full inline-block pb-20 -mt-20">
+    <div className="bg-[#00a79b] w-full inline-block pb-10 -mt-20">
       <motion.div className="px-2 py-2 flex justify-between">
         <div className="py-5">
           <Button onClick={()=> window.history.back()} title="back" />
@@ -63,7 +63,7 @@ const[isHover, setHover]=useState(false)
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center justify-cener lg:px-20 px-5" >
+          <div className="flex justify-between items-center justify-cener lg:px-30 px-20" >
           <div className="flex bg-white h-14 w-70 lg:w-140  relative bottom-25 py-1 rounded-xl">
             <img
               src={Heart}
@@ -80,7 +80,7 @@ const[isHover, setHover]=useState(false)
         <motion.div
           onHoverStart={() => setHover(true)}
           onHoverEnd={() => setHover(false)}
-          className="px-10 py-5 lg:px-20 lg:py-15"
+          className="px-10 lg:px-20 lg:py-15"
         >
           <motion.img
             src={img6}

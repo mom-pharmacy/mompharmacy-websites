@@ -8,7 +8,7 @@ function Button({ title = '', link = null, onClick= null, icon = null }) {
   return (
     <Link to={link} onClick={onClick}>
       <motion.button
-        className="min-w-[4px] max-w-[80px] h-[30px] lg:min-w-[100px] lg:max-w-[280px] lg:h-[38px] p-1 py-1 md:p-3 md:py-6 lg:p-3 lg:py-6 bg-white text-[#444444] border-2 border-white rounded-full
+        className="min-w-[4px] max-w-[180px] h-[30px] lg:min-w-[100px] md:max-w-[250px] lg:max-w-[280px] lg:h-[38px] p-1 py-1 md:p-3 md:py-6 lg:p-3 lg:py-6 bg-white text-[#444444] border-2 border-white rounded-full
                    whitespace-nowrap overflow-hidden text-ellipsis text-xs lg:text-lg  md:text-lg transition-all duration-300 
                    cursor-pointer flex flex-row items-center justify-center gap-1 font-['fredoka_one'] "
         animate={{ opacity: 1 }}
