@@ -26,7 +26,7 @@ const OpenPositions = () => {
         searchParams.append("department", params.department);
 
       const res = await fetch(
-        `http://18.61.201.132:3000/job/search?${searchParams}`
+        `${import.meta.env.VITE_BACKEND_URL}/job/search?${searchParams}`
       );
       const data = await res.json();
 

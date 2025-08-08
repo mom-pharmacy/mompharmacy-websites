@@ -13,7 +13,7 @@ export const CareerProvider = ({ children }) => {
     setError(null);
 
     try {
-      const response = await fetch("http://mom-load-balancer10-1035236598.ap-south-1.elb.amazonaws.com:3000/job/departments");
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/job/departments`);
 
       if (!response.ok) {
         throw new Error(`error status: ${response.status}`);
@@ -37,7 +37,7 @@ export const CareerProvider = ({ children }) => {
   const FilterJobs = async () => {
     try {
       const response = await fetch(
-        `http://18.61.201.132:3000/job/search?role=${encodeURIComponent(
+        `${import.meta.env.VITE_BACKEND_URL}/job/search?role=${encodeURIComponent(
           query
         )}&location=${encodeURIComponent(
           location
