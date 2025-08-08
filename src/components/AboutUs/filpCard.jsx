@@ -29,9 +29,10 @@ function Filpcard() {
           onMouseEnter={() => setIsFlipped1(true)}
           onMouseLeave={() => setIsFlipped1(false)}
         >
-          <div>
-          <img src={Love} alt="love" className="w-20 h-20 mb--54"/>
+          <div >
+          <img src={Love} alt="love" className="w-20 h-17 mb--54"/>
           <h2 className="text-5xl font-bold p-6 mb-4">accessibility</h2>
+          <p className="text-center block lg:hidden md:hidden  xl:hidden font-bold"> Flip here</p>
           </div>
         </div>
         <div
@@ -56,8 +57,9 @@ function Filpcard() {
           onMouseLeave={() => setIsFlipped2(false)}
         >
           <div>
-            <img src={Love} alt="love" className="w-20 h-20 mb--54 mr-5"/>
+            <img src={Love} alt="love" className="w-20 h-17 mb--54 mr-5"/>
           <h2 className="text-5xl font-bold p-6  text-center mb-4">affordability</h2>
+           <p className="text-center block lg:hidden md:hidden xl:hidden font-bold">Flip here</p>
           </div>
         </div>
         <div
@@ -76,15 +78,16 @@ function Filpcard() {
 
     
       <ReactCardFlip isFlipped={isFlipped3} flipDirection="horizontal">
-        <div
-          className="bg-[#00a79b] text-white  rounded-3xl shadow-lg flex flex-col items-left justify-left  cursor-pointer w-[350px] h-[300px]"
+        <div 
+         className="bg-[#00a79b] text-white  rounded-3xl shadow-lg flex flex-col items-left justify-left  cursor-pointer w-[350px] h-[300px]"
           onMouseEnter={() => setIsFlipped3(true)}
           onMouseLeave={() => setIsFlipped3(false)}
         >
           <div className="flex flex-col mb-20">
-            <img src ={Love} alt="love" className="w-20 h-20 mb--70"/>
+            <img src ={Love} alt="love" className="w-20 h-17 mb--70"/>
         
           <h2 className="text-5xl font-bold  p-6 text-center mb-4">availability</h2>
+         <p className="text-center block lg:hidden md:hidden xl:hidden font-bold">Flip here</p>
           </div>
         </div>
         <div
