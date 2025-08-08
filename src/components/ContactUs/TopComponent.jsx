@@ -1,9 +1,7 @@
 import React from "react";
-import Medicine from "../../assets/contactUs/medicine.gif";
 import { motion } from "framer-motion";
 import Button from "../Buttons/Button";
 import Contact from "./Contact";
-import GlowButton from "../Buttons/GlowButton";
 import bluePill from "../../assets/AboutUs/bluepill.png";
 import bluePillBottom from "../../assets/AboutUs/bluepillbottom.png";
 export default function TopComponent() {

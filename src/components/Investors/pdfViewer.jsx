@@ -12,12 +12,6 @@ function PdfViewerComponent({ fileUrl }) {
             style={{ border: 'none' }}
             title="Pitch Deck Viewer"
         />
-        // // for local pdf file
-        // <div style={{ height: '750px', width: '100%' }}> 
-        //     <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"> 
-        //         <Viewer fileUrl={fileUrl} />
-        //     </Worker>
-        // </div>
     );
 }
 

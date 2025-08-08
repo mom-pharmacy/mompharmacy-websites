@@ -10,7 +10,6 @@ export default function Departments() {
   function OpneCard() {
     setState(!state);
     console.log("card is opend Opencard ");
-    //  navigate('/opneCard')
   }
   return (
     <div>
