@@ -44,7 +44,7 @@ const Banner = () => {
         />
       </>
 
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden rounded-tr-2xl rounded-tl-2xl ">
         <div className="bg-[#00A79B] w-100% xl:h-110 md:h-110 h-auto flex flex-col gap-15 p-10">
             <div className="text-white font-['Fredoka_One'] text-[40px]">
               <h1 className="">

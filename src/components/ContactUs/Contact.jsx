@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-[#00A79B] max-w-auto flex items-center justify-center px-4 ">
+    <div className=" max-w-auto flex items-center justify-center px-4 py-5">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}

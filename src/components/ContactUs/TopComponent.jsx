@@ -20,13 +20,14 @@ export default function TopComponent() {
   };
   return (
     <>
-    <div className="bg-[#00A79B] p-2 sm:p-5 md:p-7 lg:p-8 text-white w-full text-center flex flex-col items-center">
+
+    <div className="bg-[#00A79B] rounded-2xl sm:p-5 md:p-7 lg:p-10 text-white w-full text-center flex flex-col items-center">
       <motion.h1
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
         exit={{ width: 0 }}
         transition={{ duration: 1.1, ease: "easeInOut", delay: 0.3 }}
-        className="text-white text-4xl sm:text-3xl md:text-5xl lg:text-7xl font-bold overflow-hidden whitespace-nowrap font-['Fredoka_One'] pt-20"
+        className="text-white text-4xl sm:text-3xl md:text-5xl lg:text-7xl font-bold overflow-hidden whitespace-nowrap font-['Fredoka_One'] pt-5"
       >
         have any innovative
       </motion.h1>

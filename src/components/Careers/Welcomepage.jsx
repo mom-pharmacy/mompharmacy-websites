@@ -9,7 +9,7 @@ const Welcome = () => {
     
   };
   return (
-    <div className="bg-[#00a79b] pt-27 pb-6 px-2">
+    <div className="bg-[#00a79b] rounded-2xl pt-27 pb-6 px-2">
       <div className="flex flex-col lg:flex-row items-center justify-center mt-1">
         <div className="w-full lg:w-full flex flex-col items-center">
           <div className="space-y-4 mb-8 justify-center">
