@@ -14,7 +14,7 @@ const StaggeredDropDown = ({ onSelect, selectedValue }) => {
             <motion.div animate={open ? "open" : "closed"} className="relative w-full sm:max-w-sm md:max-w-md lg:max-w-lg">
                 <button
                     onClick={() => setOpen((pv) => !pv)}
-                    className="w-full flex justify-between rounded-md text-lg p-3 text-white bg-[#00A79B] hover:bg-[#00A79B] transition-colors"
+                    className="w-full flex justify-between rounded-md text-lg p-3 text-white bg-[#00A79B] hover:bg-[#00A79B] transition-colors "
                 >
                     <span>{selectedValue || "select support type"}</span>
                     <motion.span variants={iconVariants}
@@ -29,8 +29,7 @@ const StaggeredDropDown = ({ onSelect, selectedValue }) => {
                     style={{ originY: "top", translateX: "-50%" }}
                     className="w-full flex flex-col gap-2 p-2 rounded-lg bg-white shadow-[0_0_5px_0_rgba(56,178,172,1)] absolute top-[120%] left-[50%] overflow-hidden"
                 >
-                    <Option setOpen={setOpen} text="suggestion" onSelect={onSelect}
-                    />
+                    <Option setOpen={setOpen} text="suggestion" onSelect={onSelect}/>
                     <Option setOpen={setOpen} text="grievance" onSelect={onSelect} />
 
                 </motion.ul>
