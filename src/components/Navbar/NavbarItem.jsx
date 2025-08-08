@@ -19,8 +19,8 @@ const NavbarItem = ({ title, image, link, setShowModal, tooltip }) => {
 
     return (
         <li className='text-white'>
-
-            <button onClick={handleNavigation}>
+            <Link to={link}>
+            <button>
                 <div
 
                     data-tooltip-id={`react-tooltip-${link}`}
@@ -41,6 +41,7 @@ const NavbarItem = ({ title, image, link, setShowModal, tooltip }) => {
                     {image && <img src={image} alt={title} className='w-24 h-20' />}
                 </div>
             </button>
+            </Link>
             <Tooltip id={`react-tooltip-${link}`} style={{ backgroundColor: "#FADB14", color: "#444444", borderRadius: "10px", width:"120px",fontSize:"13px",textAlign:"center",padding:0}} />
         </li>
     )
