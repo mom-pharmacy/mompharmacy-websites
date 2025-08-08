@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Call from "../../assets/contactUs/call.png";
-import Email from "../../assets/contactUs/email.png";
-import Location from "../../assets/contactUs/location.png";
 import Pills from "../../assets/contactUs/pills.png";
 import { motion } from "framer-motion";
 import { useContact } from "../../context/contactUs";
@@ -38,7 +35,7 @@ export default function Contact() {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-3xl shadow-lg border-4 border-[#00A79B] p-5 gap-3 lg:gap-6"
+        className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-3xl shadow-lg border-8 border-[#00A79B80] p-5 gap-3 lg:gap-6"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

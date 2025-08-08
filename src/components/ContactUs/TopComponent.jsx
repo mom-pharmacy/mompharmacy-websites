@@ -53,13 +53,7 @@ export default function TopComponent() {
         <Button title="get in touch" link="#form" onClick={handleClick}/>
         <Button title="give feedback" />
       </div>
-      {/* <img
-        src={Medicine}
-        alt="medicine"
-        className="w-40 sm:w-48 md:w-56 lg:w-50 mt-10 sm:mt-16 lg:absolute lg:bottom-4 lg:right-40"
-      /> */}
           <div className="absolute lg:top-55 lg:right-60 hidden lg:block md:block md:top-45 md:right-22"> 
-              {/* <img src="/Home/pillimage.gif" alt="pill image"></img> */}
               <img src={bluePill} alt="pill image" className="h-25 w-25 animate-bounce" />
               <img src={bluePillBottom} alt="pill image" className="w-25" />
             </div>

@@ -7,6 +7,12 @@ import { FaClock } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoBagHandle } from "react-icons/io5";
 import Button from "../../Button";
+import fresher from "../../../assets/Careerpage/fresher.png"
+import clock from "../../../assets/Careerpage/clock.png"
+import job from "../../../assets/Careerpage/job.png"
+import location1 from "../../../assets/Careerpage/location1.png"
+import full from "../../../assets/Careerpage/full.png"
+import share from "../../../assets/Careerpage/share.png" 
 
 
 
@@ -52,31 +58,31 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
       >
         {/* Title & Icons */}
         <div className="flex flex-col flex-1 justify-between items-start mb-3 ">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium mb-3 md:mb-5 lg:mb-5 font-['fredoka_one']">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium mb-3 md:mb-5 lg:mb-5 font-['fredoka_one'] text-[#FADB14]">
             {role || "Senior Software Engineer"}
           </h2>
 
           <div className="flex items-center gap-2 mb-5  ">
-            <FaClock style={{ height: 28 }} />
-            <span className="text-xs lg:text-xl md:text-xl">Posted 2hr ago </span>
-
-            <FaHashtag style={{ height: 20 }} className="ml-2" />
-            <span className="text-xs lg:text-xl md:text-xl">Job Id {job_no || "N/A"}</span>
+            <img src={clock} className="size-5"/>
+            <span className="text-xs lg:text-xl md:text-xl">posted 2hr ago </span>
+            <img src={job} className="size-5 ml-2"/>
+            <span className="text-xs lg:text-xl md:text-xl">job id {job_no || "N/A"}</span>
           </div>
 
           {/* Job Details & Apply */}
           <div className="flex flex-row  sm:flex-row sm:items-center sm:justify-between gap-4 flex-wrap text-sm sm:text-base">
             <div className="  w-auto flex items-center gap-2">
-              <FaLocationDot style={{ height: 25, marginTop: 3 }} />
-              <span className="text-xs lg:text-xl md:text-xl">{location},India</span>
+              <img src={location1} className="size-5 "/>
+              <span className="text-xs lg:text-xl md:text-xl">{location},india</span>
             </div>
             <div className="flex items-center gap-2 " >
-              <IoBagHandle style={{ height: 25, width: 23 }} />
+              <img src={fresher} className="size-5"/>
+
               <span className="text-xs lg:text-xl md:text-xl">{experience}</span>
             </div>
 
             <div className="flex items-center gap-2" >
-              <FaHome />
+              <img src={full} className="size-5"/>
               <span className="text-xs lg:text-xl md:text-xl">{employment_type}</span>
             </div>
 
@@ -88,7 +94,7 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
             <div className="flex-1 flex-row flex gap-1">
               <div>
 
-                <Button title="Save Job" icon={<FiBookmark />}></Button>
+                <Button title="save job" icon={<FiBookmark />}></Button>
               </div>
               <div>
                 {/* Share Icon */}
@@ -101,15 +107,15 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
                   whileHover={{
 
                     cursor: 'pointer',
-                    backgroundColor: '#fadb14',
+                    backgroundColor: '#fadb14ff',
 
                     ease: 'easeOut',
                   }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Share
-                  <FiShare2 className="h-5 w-5" />
+                  share
+                            <img src={share} className="size-5"/>
                   {showShareMenu && (
                     <div className="share-menu absolute z-60 top-8 right-0 bg-white mt-5 text-black border border-gray-200 rounded shadow-md p-2 flex flex-col min-w-[180px]">
                       <a
@@ -118,7 +124,7 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
                         rel="noopener noreferrer"
                         className="px-2 py-1 hover:bg-gray-100 rounded text-sm flex items-center gap-2"
                       >
-                        <FaLinkedinIn className="h-4 w-4" /> LinkedIn
+                        <FaLinkedinIn className="h-4 w-4" /> linked in
                       </a>
                       <a
                         href={shareLinks.facebook}
@@ -126,7 +132,7 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
                         rel="noopener noreferrer"
                         className="px-2 py-1 hover:bg-gray-100 rounded text-sm flex items-center gap-2"
                       >
-                        <FaFacebookF className="h-4 w-4" /> Facebook
+                        <FaFacebookF className="h-4 w-4" /> facebook
                       </a>
                       <a
                         href={shareLinks.whatsapp}
@@ -134,7 +140,7 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
                         rel="noopener noreferrer"
                         className="px-2 py-1 hover:bg-gray-100 rounded text-sm flex items-center gap-2"
                       >
-                        <FaWhatsapp className="h-4 w-4" /> WhatsApp
+                        <FaWhatsapp className="h-4 w-4" /> whatsApp
                       </a>
                       <button
                         onClick={handleCopyLink}
@@ -154,9 +160,9 @@ export default function JobLanding({ role, job_no, location, employment_type, ex
             <div>
               <Link
                 to="/apply"
-                className="bg-white text-[#444444] px-2 py-2 md:px-4 md:py-4 lg:px-4 lg:py-4  rounded-full text-sm md:text-lg lg:text-lg font-['fredoka_one'] transition hover:bg-[#e6f7f6] hover:text-[#007d75]"
+                className="bg-white text-[#444444] px-2 py-2 md:px-4 md:py-4 lg:px-4 lg:py-4  rounded-full text-sm md:text-lg lg:text-lg font-['fredoka_one'] transition hover:bg-[#e6f7f6] hover:bg-[#fadb14ff]"
               >
-                Apply Now
+                apply now
               </Link>
             </div>
           </div>

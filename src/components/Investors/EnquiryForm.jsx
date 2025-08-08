@@ -83,7 +83,7 @@ export default function EnquiryForm() {
     }
   };
   return (
-    <div className="bg-white rounded-xl flex flex-col lg:flex-row gap-5 shadow border-2 border-[#00a99d] mt-10 w-auto mx-auto px-4 py-6  lg:px-3 lg:py-3 md:px-10 ">
+    <div className="bg-white rounded-4xl flex flex-col lg:flex-row gap-5 shadow border-10 border-[#00A79B80] mt-10 w-auto mx-auto px-4 py-6  lg:px-3 lg:py-3 md:px-10 ">
       <div className="bg-[#00a99d] rounded-2xl p-4 text-white mb-4 flex flex-col gap-5 lg:gap-50">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold mb-1">enquiry form</h1>
@@ -277,7 +277,8 @@ export default function EnquiryForm() {
             placeholder="Tell us about your background"
           />
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+        <div className="flex justify-between ">
+          <div className="order-first">
           <button
             type="reset"
             onClick={() => {
@@ -296,10 +297,12 @@ export default function EnquiryForm() {
               setStates([]);
               setCities([]);
             }}
-            className="text-teal-500 hover:bg-teal-500 hover:text-white font-medium rounded-lg text-sm px-5 py-2.5 border-2 border-teal-500"
+            className="text-teal-500 hover:bg-teal-500 hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 border-2 border-teal-500"
           >
             reset
           </button>
+          </div>
+          <div className="order-last">
           <button
             type="submit"
             className="bg-[#00a99d] text-white font-medium rounded-lg text-sm px-5 py-2.5"
@@ -307,6 +310,7 @@ export default function EnquiryForm() {
             {" "}
             submit{" "}
           </button>
+          </div> 
         </div>
       </form>
     </div>
