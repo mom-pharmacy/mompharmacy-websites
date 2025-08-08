@@ -13,12 +13,14 @@ import { Career } from './pages/Careers/Career'
 import Footer from './components/Home/Footer'
 import EarlyAccess from './components/Home/EarlyAccess'
 import Founders from './pages/Founders'
-import Teamour from './pages/Teamour'
+import Teamour from './pages/teamour'
 import LoadingPage from './components/LoadingPage'
+<<<<<<< Updated upstream
 import Momp from './pages/Momp'
-// import Lan from './components/multilanguage'
-// import OpenCardComp from './components/OurTeam/OpenCardComp'
-// import BacktoBottom from "./components/Home/backtobotton";
+=======
+import Momp from './pages/momp'
+>>>>>>> Stashed changes
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,7 +44,7 @@ function App() {
         <>
           {showNavbar && <Navbar />}
            
-           <div className='mt-20'>
+           <div className='mt-20 p-3'>
              
           <Routes>
            
@@ -60,7 +62,7 @@ function App() {
           
           </Routes>
             </div>
-          {/* <EarlyAccess /> */}
+          <EarlyAccess />
         
           <Footer />
         </>

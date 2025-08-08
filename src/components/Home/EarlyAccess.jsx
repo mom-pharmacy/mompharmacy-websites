@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import EarlyAccessForm from './EarlyAccessForm'
-// import { Link } from 'react-router'
 
 const EarlyAccess = () => {
   const [earlyaccess,setEarlyAccess]=useState(false)

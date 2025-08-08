@@ -9,7 +9,7 @@ export const ContactUsProvider = ({ children }) => {
   const postContact = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("http://mom-load-balancer10-1035236598.ap-south-1.elb.amazonaws.com:3000/contactus/contact", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/contactus/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

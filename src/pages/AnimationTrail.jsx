@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 function AnimationTrail(){
 
-//    const x = useTransform()
+
 
 const x  = useScroll(scrollX)
 

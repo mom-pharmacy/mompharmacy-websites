@@ -67,12 +67,6 @@ const MissionVision = () => {
               </span>{" "}
               — fast, reliable, and full of heart, making exceptional wellness
               accessible.
-              {/* <img
-                src={ImageCapsule}
-                alt=""
-                className="absolute lg:-left-20 lg:top-27 -left-1 top-48 z-10 
-                 w-40 lg:w-60 md:w-40 md:top-49 md:-left-13 z-1 drop-shadow-xl "
-              /> */}
             </p>
           </div>
         </div>

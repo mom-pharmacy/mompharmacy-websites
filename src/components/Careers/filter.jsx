@@ -45,58 +45,38 @@ const Filter = ({ onApply }) => {
   const { departmentOptions, cityOptions, experienceOptions } =
     getDropdownData();
 
-  // const applyFilter = () => {
-  //   if (!location && !department && !experience) {
-  //     alert("Please select at least one filter.");
-  //     return;
-  //   }
-    
-
-  //   onApply({ location, department, experience });
-  // };
-
-  // const handleChange=(e)=>{
-  //   setLocation(e.target.value)
-  // }
-
   return (
     <div className="w-full flex flex-col lg:flex-row md:flex-row items-center justify-center gap-2 sm:gap-4 px-2 bg-white rounded-xl z-10 mt-10">
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white min-w-[150px] "
+        className="outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white min-w-[150px] "
         value={department}
         onChange={(e) => setDepartment(e.target.value)}
       >
-        <option value="">Department</option>
+        <option value="">select department</option>
         {departmentOptions.map((dept, index) => (
           <option key={index}>{dept}</option>
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B] w-full lg:w-auto p-2 rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline-1 outline-[#00A79B] w-full lg:w-auto p-2 rounded-md bg-teal-600  text-white min-w-[150px]"
         value={experience}
         onChange={(e) => setExperience(e.target.value)}
       >
-        <option value="">Experience</option>
+        <option value="">year of experience</option>
         {experienceOptions.map((exp, index) => (
           <option key={index}>{exp}</option>
         ))}
       </select>
       <select
-        className="outline outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white min-w-[150px]"
+        className="outline-1 outline-[#00A79B] p-2 w-full lg:w-auto rounded-md bg-teal-600 text-white  min-w-[150px]"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       >
-        <option value="">Location</option>
+        <option value="">select city</option>
         {cityOptions.map((city, index) => (
           <option key={index}>{city}</option>
         ))}
       </select>
-      {/* <button
-        className="bg-teal-600 px-4 py-2 text-lg rounded-xl text-white font-semibold hover:bg-teal-700 transition"
-        onClick={applyFilter}
-      >
-        Apply
-      </button> */}
     </div>
   );
 };

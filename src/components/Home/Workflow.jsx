@@ -65,7 +65,6 @@ function Workflow() {
         <div className="flex justify-end -mt-10 ml-10">
           <motion.div
             initial={{ x: 100, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
@@ -102,7 +101,6 @@ function Workflow() {
           />
           <motion.div
             initial={{ x: -100, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
@@ -128,7 +126,6 @@ function Workflow() {
         <div className="flex justify-end xl:-mt-30 md:-mt-20 -mt-6 ml-10">
           <motion.div
             initial={{ x: 100, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}

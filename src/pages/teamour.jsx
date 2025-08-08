@@ -1,5 +1,5 @@
 import Maincard from "../components/OurTeam/Maincard";
-import MomsDesk from "../components/OurTeam/slider";
+import MomsDesk from "../components/OurTeam/Slider";
 import Founder from "../components/OurTeam/founder";
 import CardSlider from "../components/MeetOurTeam/Cardslider";
 import MomLogo from "../components/Home/momLogo";

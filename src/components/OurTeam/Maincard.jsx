@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Maincard() {
   return (
-    <div className="flex flex-col items-center xl:h-auto justify-center md:h-auto pt-10 h-auto bg-[#00A79B] p-20 ">
+    <div className="flex flex-col items-center rounded-2xl xl:h-auto justify-center md:h-auto pt-10 h-auto bg-[#00A79B] p-20 ">
       <div className=" flex flex-col items-center">
         <img
           className="flex xl:h-50 xl:w-120 md:h-50 md:w-120 h-40 w-100 p-3 items-center animate-bounce"

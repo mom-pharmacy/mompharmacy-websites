@@ -11,7 +11,7 @@ const Profilecard = ({ setActiveProfile, activeProfile }) => {
         async function employeeDetails() {
             try {
                 setLoading(true);
-                const res = await fetch(`http://localhost:3000/employee/employee/${activeProfile}`);
+                const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/employee/employee/${activeProfile}`);
                 setLoading(false);
                 if (!res.ok) {
                     setError(true);

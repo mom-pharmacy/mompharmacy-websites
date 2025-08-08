@@ -15,12 +15,10 @@ const OpenPositions = () => {
 
       const searchParams = new URLSearchParams();
 
-      // Support query-based search
       if (params.query) {
         searchParams.append("role", params.query);
       }
 
-      // Add optional filters
       if (params.location) searchParams.append("location", params.location);
       if (params.experience)
         searchParams.append("experience", params.experience);
@@ -28,7 +26,7 @@ const OpenPositions = () => {
         searchParams.append("department", params.department);
 
       const res = await fetch(
-        `http://18.61.201.132:3000/job/search?${searchParams}`
+        `${import.meta.env.VITE_BACKEND_URL}/job/search?${searchParams}`
       );
       const data = await res.json();
 
@@ -61,10 +59,10 @@ const OpenPositions = () => {
             open positions
           </h2>
           <p className="text-xl md:text-2xl text-gray-800 mb-2">
-            calling all talent! We are hiring for the positions listed below.
+            calling all talent! we are hiring for the positions listed below.
           </p>
           <p className="text-lg md:text-2xl text-teal-600 mb-8">
-            if you are ready to join the mom team, apply today only!
+            if you are ready to join the mom team, apply today only
           </p>
 
           <div className="flex gap-2 lg:px-32">

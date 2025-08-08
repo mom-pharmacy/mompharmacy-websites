@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import Details from "./Details";
-// import SkillsCompetencies from "./SkillsCompetencies";
 import JobCard from "../../JobCard";
 
 export default function KeyDetails({
