@@ -42,7 +42,7 @@ function App() {
         <>
           {showNavbar && <Navbar />}
            
-           <div className='mt-20'>
+           <div className='mt-20 p-3'>
              
           <Routes>
            
@@ -60,7 +60,7 @@ function App() {
           
           </Routes>
             </div>
-          {/* <EarlyAccess /> */}
+          <EarlyAccess />
         
           <Footer />
         </>

@@ -158,11 +158,11 @@ function Navbar() {
                 />
               ))}
             </ul>
-            <div className="mx-2">
+            <div className="mx-2 ">
               <img
                 src="/Home/appicon.png"
                 alt="mom pharmacy"
-                className="w-20 h-70 object-contain"
+                className="w-20 object-contain"
               />
             </div>
             <ul className="flex item-center gap-10 border-3 border-white rounded-full px-4 py-1 font-[32px]">
@@ -194,7 +194,7 @@ function Navbar() {
 
       {/* Mobile/Small screens */}
       <div className="block md:hidden mt-0">
-        <div className="bg-[#00A79B] px-2 py-2 flex justify-between items-center">
+        <div className="bg-[#00A79B] px-1 py-1 flex justify-between items-center">
           <NavButton onClick={() => setShowModal(true)}>
             <div className="flex items-center gap-1 ">
               <p>menu</p>
@@ -204,9 +204,9 @@ function Navbar() {
             </div>
           </NavButton>
           <img
-            src="/Navbar/logo.png"
+            src="/Home/appicon.png"
             alt="mom pharmacy"
-            className="w-30 h-20"
+            className="w-15 h-15"
           />
           <div className="flex flex-col items-center">
             <button
@@ -217,8 +217,8 @@ function Navbar() {
               <IoIosArrowDropdown className="mt-1" />
             </button>
             {showLanguages && (
-              <div className="absolute mt-10 bg-black/75 text-white p-3 rounded-2xl">
-                <ul className="flex flex-col gap-2">
+              <div className="absolute mt-10 bg-black/75 text-white p-1 rounded-2xl">
+                <ul className="flex flex-col gap-5">
                   {inactiveLanguages.map((item) => (
                     <RenderLanguage
                       key={item.id}

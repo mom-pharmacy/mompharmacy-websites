@@ -8,11 +8,6 @@ import Workflow from "../components/Home/Workflow"
 import TalentedTeam from '../components/Home/TalentedTeam'
 import MomLogo from "../components/Home/momLogo"
 
-
-
-
-
-
 const Home = () => {
   return (
     <div className='overflow-x-clip'>
