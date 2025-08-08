@@ -16,9 +16,7 @@ import Founders from './pages/Founders'
 import Teamour from './pages/Teamour'
 import LoadingPage from './components/LoadingPage'
 import Momp from './pages/Momp'
-// import Lan from './components/multilanguage'
-// import OpenCardComp from './components/OurTeam/OpenCardComp'
-// import BacktoBottom from "./components/Home/backtobotton";
+
 
 function App() {
   const [loading, setLoading] = useState(true);

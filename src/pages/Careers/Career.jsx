@@ -5,7 +5,6 @@ import Applynow from "../../components/Careers/applynow";
 import CareerProgram from "../../components/Careers/CareerProgram";
 import OpenPositions from "../../components/Careers/OpenPositions";
 import MomLogo from "../../components/Home/momLogo";
-// import Animation from "../../components/Careers/animation"
 import BacktoBottom from '../../components/Home/backtobotton'
 
 export const Career = () => {
@@ -20,8 +19,7 @@ export const Career = () => {
       <OpenPositions />
       <MomLogo />
 
-      {/* <Animation /> */}
-      {/* <AllJobs /> */}
+  
     </div>
   );
 };

@@ -41,7 +41,6 @@ function TalentedTeam() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const countUpRef = useRef(null);
   const [inView, setInView] = useState(false);
-  // const countUpStart = useRef(() => { });
   const navigate = useNavigate();
 
   useEffect(() => {

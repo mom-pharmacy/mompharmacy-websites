@@ -30,9 +30,6 @@ function AskMom() {
               asking questions.
             </p>
           </div>
-          {/* <button className='py-2 px-3  bg-[#00A79B] rounded-xl text-white hover:bg-[#FADB14] font-bold'>
-                ask mom
-            </button> */}
           <Link to="/contactus">
             <button class="relative left-65 lg:left-0 md:left-0 xl:left-0 inline-flex shadow-xs shadow-[#00A79B] items-center justify-center px-2 py-2 overflow-hidden  font-bold tracking-tighter text-white bg-[#00A79B] rounded-2xl group">
               <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#FADB14] rounded-full group-hover:w-56 group-hover:h-56"></span>

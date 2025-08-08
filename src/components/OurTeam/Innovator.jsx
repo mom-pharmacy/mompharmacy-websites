@@ -90,10 +90,5 @@ export default function Innovator() {
           </div>
           </div>
         </div>
-    // <div className="  h-auto items-center  ">
-    //   <div className="m-2">
-        
-    //   </div>
-    // </div>
   );
 }
